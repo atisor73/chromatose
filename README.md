@@ -1,32 +1,33 @@
-## `palettes.py`
+## :art: `palettes.py`
 Nice lil home for some custom palettes I've found to be all right.
 
-## `viz.py`
+## :eyes: `viz.py`
 (Somewhat) helpful for visualizing how a diverging set of colors would look like on a plot and how they behave in dense vs. scattered visuals. Sometimes colors look great together on a swatch, but not so great in their pointillistic forms. 
 
 Currently there's a limitation to 7 colors (more categorical); I think I want a different kind of format for larger spaces (which tend to be quantitative). 
 
-<center>lazarus</center>
+<ins>lazarus</ins>
 
 ![](_imgs/lazarus.png)
 
-<center>inkling</center>
+*inkling*
 
 ![](_imgs/inkling.png)
 
-<center>selah</center>
+**selah**
 
 ![](_imgs/selah.png)
 
-<center>blonde</center>
+blonde
 
 ![](_imgs/blonde.png)
 
-<center>honeycombe</center>
+honeycombe
 
 ![](_imgs/honeycombe.png)
 
-<center>crepuscle</center>
+
+crepuscle
 
 ![](_imgs/crepuscle.png)
 

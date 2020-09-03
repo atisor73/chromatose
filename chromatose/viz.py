@@ -21,7 +21,7 @@ def palplot(palette, plot='all',bg_color=None):
         'pie' for wedges (adjacency comparison),
         'scatter' for some points,
         'all' for all
-    bg_color : background fill color (could be valid string color name or hex/rgb)
+    bg_color : background fill color (could be valid string or hex or rgb)
     """
     
     TOOLTIPS = """
@@ -38,6 +38,7 @@ def palplot(palette, plot='all',bg_color=None):
         
     if type(palette[0]) is not str:
         palette = rgb_to_hex(palette)
+
     # ****************************************************************************************************
     if plot=="swatch":
         df = pd.DataFrame(dict(palette=palette,
@@ -74,10 +75,10 @@ def palplot(palette, plot='all',bg_color=None):
                  0.003825, 0.003525, 0.002925, 0.002, 0.0013, 0.001, 0.002875]
         df = pd.DataFrame(dict(
                        angle=[a*2*np.pi for a in angles], 
-                       palette=(palette*10)[:len(angles)],
+                       palette=(palette*12)[:len(angles)],
                       ))
-        df['hex']=(palette*10)[:len(angles)]
-        df['rgb']=hex_to_rgb((palette*10)[:len(angles)])
+        df['hex']=(palette*12)[:len(angles)]
+        df['rgb']=hex_to_rgb((palette*12)[:len(angles)])
         
         pie = bokeh.plotting.figure(width=width, height=height,x_range=(-1.1,1.1),tooltips=TOOLTIPS)
         pie.wedge(x=0,y=0,radius=1,
