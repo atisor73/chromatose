@@ -7,18 +7,21 @@ bokeh.io.output_notebook()
 def hex_to_rgb(palette):
     return [tuple(int(h.lstrip("#")[i:i+2], 16) for i in (0, 2, 4)) for h in palette]
 
-def palplot(palette, plot='all',):
-    """
-    Displays palettes via bokeh (prefers 7 colors or less... this might change.) 
-    Prefers 7 colors or less. Hover for hex value. Click on scatter to hide a color. 
+def rgb_to_hex(palette):
+    return ["#%02x%02x%02x" % (r,g,b) for (r,g,b) in palette]
     
+def palplot(palette, plot='all',bg_color=None):
+    """
+    Displays palette via bokeh. Hover for hex/rgb value.
     Arguments
     ---------
-    palette : pass in list of hex values
-    plot : 'swatch' for squares, 
-        'pie' for wedges,
-        'scatter' for scatter,
+    palette : list of hex strings or rgb tuples
+    plot : 
+        'swatch' for squares, 
+        'pie' for wedges (adjacency comparison),
+        'scatter' for some points,
         'all' for all
+    bg_color : background fill color (could be valid string color name or hex/rgb)
     """
     
     TOOLTIPS = """
@@ -32,19 +35,27 @@ def palplot(palette, plot='all',):
     
     if len(palette) > 7:
         raise RunTimeError("Palette too large! (< 7 colors preferred)")
+        
+    if type(palette[0]) is not str:
+        palette = rgb_to_hex(palette)
     # ****************************************************************************************************
     if plot=="swatch":
         df = pd.DataFrame(dict(palette=palette,
                            x=np.arange(len(palette)),
                            y=[0]*len(palette)
                           ))
+        
         df['hex']=palette
         df['rgb']=hex_to_rgb(palette)
         
         height = 60
         width = 350 #height*len(palette)
         size = height/1.2
-        swatch = bokeh.plotting.figure(width=width, height=height, x_range=(-1,len(palette)),tooltips=TOOLTIPS)
+        swatch = bokeh.plotting.figure(width=width, 
+                                       height=height, 
+                                       x_range=(-1,len(palette)),
+                                       y_range=(-height,height),
+                                       tooltips=TOOLTIPS)
         
         swatch.square(source=df, x='x',y='y', size=size, color='palette')
 
@@ -76,7 +87,7 @@ def palplot(palette, plot='all',):
                    fill_color="palette",
                    source=df
                )
-        
+        pie.background_fill_color=bg_color
         pie.axis.visible=False
         pie.grid.grid_line_color=None
         pie.toolbar.autohide=True
@@ -117,10 +128,15 @@ def palplot(palette, plot='all',):
         height = 60
         width = 350 # height*len(palette)
         size = height/1.2
-        swatch = bokeh.plotting.figure(width=width, height=height, x_range=(-1,len(palette)),tooltips=TOOLTIPS)
+        swatch = bokeh.plotting.figure(width=width, 
+                                       height=height, 
+                                       x_range=(-1,len(palette)),
+                                       y_range=(-height,height),
+                                       tooltips=TOOLTIPS)
         
         swatch.square(source=df, x='x',y='y', size=size, color='palette')
-
+        swatch.background_fill_color=bg_color
+        
         swatch.axis.visible=False
         swatch.grid.grid_line_color=None
         swatch.toolbar.autohide=True
@@ -128,7 +144,6 @@ def palplot(palette, plot='all',):
         # pie ***********************************************************************
         width, height = 350,350
         
-        # data from bridge hand distributions (4-4-3-2, 5-4-3-1, etc... )
         angles = [0.216875, 0.1545, 0.127375, 0.1069, 0.103925,
                  0.055875, 0.04665,0.0355, 0.032275, 0.03, 0.018975, 
                  0.0131, 0.0128, 0.00925, 0.007075, 0.00635, 0.005125,
@@ -148,6 +163,7 @@ def palplot(palette, plot='all',):
                    fill_color="palette",
                    source=df
                )
+        pie.background_fill_color=bg_color
         
         pie.axis.visible=False
         pie.grid.grid_line_color=None
@@ -167,6 +183,8 @@ def palplot(palette, plot='all',):
         for i,y in enumerate(ys):
             scatter.circle(x,y,color=palette[i],legend_label=f'{palette[i]}',size=3)
             scatter.line(x,fits[i],color=palette[i],legend_label=f'{palette[i]}',line_width=3)
+        scatter.background_fill_color=bg_color
+        
         scatter.legend.click_policy='hide'
         scatter.legend.location="top_left"
         scatter.grid.grid_line_color=None
