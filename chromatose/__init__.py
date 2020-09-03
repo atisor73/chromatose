@@ -1,2 +1,2 @@
 from .palettes import *
-from .swatch import *
+from .viz import *

@@ -7,10 +7,11 @@ bokeh.io.output_notebook()
 def hex_to_rgb(palette):
     return [tuple(int(h.lstrip("#")[i:i+2], 16) for i in (0, 2, 4)) for h in palette]
 
-
 def palplot(palette, plot='all',):
     """
-    Displays palette via bokeh. Hover for hex value.
+    Displays palettes via bokeh (prefers 7 colors or less... this might change.) 
+    Prefers 7 colors or less. Hover for hex value. Click on scatter to hide a color. 
+    
     Arguments
     ---------
     palette : pass in list of hex values
@@ -29,7 +30,9 @@ def palplot(palette, plot='all',):
             </div>
             """
     
-    
+    if len(palette) > 7:
+        raise RunTimeError("Palette too large! (< 7 colors preferred)")
+    # ****************************************************************************************************
     if plot=="swatch":
         df = pd.DataFrame(dict(palette=palette,
                            x=np.arange(len(palette)),
@@ -39,7 +42,7 @@ def palplot(palette, plot='all',):
         df['rgb']=hex_to_rgb(palette)
         
         height = 60
-        width = height*len(palette)
+        width = 350 #height*len(palette)
         size = height/1.2
         swatch = bokeh.plotting.figure(width=width, height=height, x_range=(-1,len(palette)),tooltips=TOOLTIPS)
         
@@ -50,7 +53,7 @@ def palplot(palette, plot='all',):
         swatch.toolbar.autohide=True
         bokeh.io.show(swatch)
         
-        
+    # ****************************************************************************************************
     if plot=="pie":
         width, height = 350,350
         
@@ -79,7 +82,7 @@ def palplot(palette, plot='all',):
         pie.toolbar.autohide=True
         bokeh.io.show(pie)
         
-        
+    # ****************************************************************************************************
     if plot=="scatter":
         n=500
         x = np.linspace(0,8,n)
@@ -112,7 +115,7 @@ def palplot(palette, plot='all',):
         df['rgb']=hex_to_rgb(palette)
         
         height = 60
-        width = height*len(palette)
+        width = 350 # height*len(palette)
         size = height/1.2
         swatch = bokeh.plotting.figure(width=width, height=height, x_range=(-1,len(palette)),tooltips=TOOLTIPS)
         
@@ -125,6 +128,7 @@ def palplot(palette, plot='all',):
         # pie ***********************************************************************
         width, height = 350,350
         
+        # data from bridge hand distributions (4-4-3-2, 5-4-3-1, etc... )
         angles = [0.216875, 0.1545, 0.127375, 0.1069, 0.103925,
                  0.055875, 0.04665,0.0355, 0.032275, 0.03, 0.018975, 
                  0.0131, 0.0128, 0.00925, 0.007075, 0.00635, 0.005125,
