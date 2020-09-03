@@ -6,11 +6,11 @@ Nice lil home for some custom palettes I've found to be all right.
 
 Currently there's a limitation to 7 colors (more categorical); I think I want a different kind of format for larger spaces (which tend to be quantitative). 
 
-:small_red_triangle: *lazarus*
+**lazarus**
 
 ![](_imgs/lazarus.png)
 
-:radio_button: *inkling*
+**inkling**
 
 ![](_imgs/inkling.png)
 
@@ -18,7 +18,7 @@ Currently there's a limitation to 7 colors (more categorical); I think I want a 
 
 ![](_imgs/selah.png)
 
-***blonde***
+**blonde**
 
 ![](_imgs/blonde.png)
 
@@ -27,7 +27,7 @@ Currently there's a limitation to 7 colors (more categorical); I think I want a 
 ![](_imgs/honeycombe.png)
 
 
-*crepuscle*
+**crepuscle**
 
 ![](_imgs/crepuscle.png)
 
