@@ -163,7 +163,7 @@ def clean_plot(p, bg_color):
     return p
 
 
-def palplot(palette, plot='all',bg_color=None,alpha=1.0):
+def palplot(palette, plot='all',bg_color="white",alpha=1.0):
     """
     Displays palette via bokeh. Hover for hex/rgb value.
     Arguments
@@ -174,8 +174,10 @@ def palplot(palette, plot='all',bg_color=None,alpha=1.0):
         'pie' for wedges (adjacency comparison),
         'scatter' for some points,
         'all' for all (this is the default)
-    bg_color : background fill color, valid name hex or rgb 
-    alpha : alpha of entire palette
+    bg_color : background fill color, 
+        valid name hex or rgb 
+    alpha : alpha of entire palette, 
+        fraction btw 0.0 and 1.0
     """    
     # HOVER FORMAT STRING (for swatch and pie plots)
     TOOLTIPS = """
@@ -237,8 +239,7 @@ def palplot(palette, plot='all',bg_color=None,alpha=1.0):
         p.wedge(x=0,y=0,radius=1,
                    start_angle=bokeh.transform.cumsum('angle',include_zero=True),
                    end_angle=bokeh.transform.cumsum('angle'),
-#                    line_color=bg_color, #"white", 
-                    line_color="palette",
+                   line_color= bg_color, # "palette", # -> (no spaces btw wedges)
                    fill_color="palette",
                    fill_alpha=alpha,
                    source=df
