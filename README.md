@@ -35,9 +35,9 @@ Currently there's a limitation to 7 colors (more categorical); I think I want a 
 
 ![](_imgs/leather.png)
 
-**gooch**
+**gucci**
 
-![](_imgs/gooch.png)
+![](_imgs/gucci.png)
 
 **shore**
 
@@ -53,9 +53,9 @@ Currently there's a limitation to 7 colors (more categorical); I think I want a 
 ![](_imgs/chilaquiles.png)
 
 
-**spiffy**
+**spiff**
 
-![](_imgs/spiffy.png)
+![](_imgs/spiff.png)
 
 
 **splenda**
@@ -98,9 +98,9 @@ Currently there's a limitation to 7 colors (more categorical); I think I want a 
 ![](_imgs/fraiche.png)
 
 
-**melanin**
+**cheshire**
 
-![](_imgs/melanin.png)
+![](_imgs/cheshire.png)
 
 
 **carmine**
@@ -160,9 +160,9 @@ Currently there's a limitation to 7 colors (more categorical); I think I want a 
 
 
 
-**acid**
+**lysergic**
 
-![](_imgs/acid.png)
+![](_imgs/lysergic.png)
 
 
 **citrullus**
