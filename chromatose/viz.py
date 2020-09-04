@@ -163,7 +163,7 @@ def clean_plot(p, bg_color):
     return p
 
 
-def palplot(palette, plot='all',bg_color=None):
+def palplot(palette, plot='all',bg_color=None,alpha=1.0):
     """
     Displays palette via bokeh. Hover for hex/rgb value.
     Arguments
@@ -175,6 +175,7 @@ def palplot(palette, plot='all',bg_color=None):
         'scatter' for some points,
         'all' for all (this is the default)
     bg_color : background fill color, valid name hex or rgb 
+    alpha : alpha of entire palette
     """    
     # HOVER FORMAT STRING (for swatch and pie plots)
     TOOLTIPS = """
@@ -188,7 +189,7 @@ def palplot(palette, plot='all',bg_color=None):
     _copy_palette = palette.copy() # copy so legend displays original inputs 
     
     if len(palette) > 7:
-        raise RunTimeError("Palette too large! (< 7 colors preferred)")
+        raise RuntimeError("Palette too large! (< 7 colors preferred)")
     
     # REFORMATTING INPUT PALETTE ..........
     # convert RGB -> hex
@@ -201,8 +202,8 @@ def palplot(palette, plot='all',bg_color=None):
         if "#" not in p:
             palette[_] = html_colors[p.lower()]
             
-    # ****************************************************************************************************
-    if plot=="swatch":
+            
+    def swatch():
         df = pd.DataFrame(dict(palette=palette,
                            x=np.arange(len(palette)),
                            y=[0]*len(palette)  ))
@@ -210,142 +211,69 @@ def palplot(palette, plot='all',bg_color=None):
         df['hex']=palette
         df['rgb']=hex_to_rgb(palette)
         
-        height = 60
-        width = 350 #height*len(palette)
+        height, width = 60, 325
         size = height/1.2
-        swatch = bokeh.plotting.figure(width=width, 
-                                       height=height, 
+        p = bokeh.plotting.figure(width=width, height=height, 
                                        x_range=(-1,len(palette)),
                                        y_range=(-height,height),
                                        tooltips=TOOLTIPS)
-        swatch.square(source=df, x='x',y='y', size=size, color='palette')
-        
-        swatch = clean_plot(swatch, bg_color)
-        bokeh.io.show(swatch)
-        
-    # ****************************************************************************************************
-    if plot=="pie":
-        width, height = 350,350
-        
+        p.square(source=df, x='x',y='y', size=size, color='palette',alpha=alpha)
+        p = clean_plot(p, bg_color)
+        return p 
+    
+    def pie():
+        width, height = 325,325
         angles = [0.216875, 0.1545, 0.127375, 0.1069, 0.103925,
                  0.055875, 0.04665,0.0355, 0.032275, 0.03, 0.018975, 
                  0.0131, 0.0128, 0.00925, 0.007075, 0.00635, 0.005125,
                  0.003825, 0.003525, 0.002925, 0.002, 0.0013, 0.001, 0.002875]
         df = pd.DataFrame(dict( angle=[a*2*np.pi for a in angles], 
-                                palette=(palette*12)[:len(angles)],
-                          ))
+                                palette=(palette*12)[:len(angles)], ))
         df['hex']=(palette*12)[:len(angles)]
         df['rgb']=hex_to_rgb((palette*12)[:len(angles)])
         
-        pie = bokeh.plotting.figure(width=width, height=height,x_range=(-1.1,1.1),tooltips=TOOLTIPS)
-        pie.wedge(x=0,y=0,radius=1,
+        p = bokeh.plotting.figure(width=width, height=height,
+                                  x_range=(-1.1,1.1),tooltips=TOOLTIPS)
+        p.wedge(x=0,y=0,radius=1,
                    start_angle=bokeh.transform.cumsum('angle',include_zero=True),
                    end_angle=bokeh.transform.cumsum('angle'),
-                   line_color="white", 
+                   line_color=bg_color, #"white", 
                    fill_color="palette",
+                   fill_alpha=alpha,
                    source=df
                )
-        pie = clean_plot(pie, bg_color)
-        bokeh.io.show(pie)
+        p = clean_plot(p, bg_color)
+        return p
     
-    
-    # ****************************************************************************************************
-    if plot=="scatter":
-        n=500
+    def scatter():
+        n = 500
         x = np.linspace(0,8,n)
         ys, fits = np.empty((len(palette),n)), np.empty((len(palette),n))
         for i, _ in enumerate(palette):
             ys[i] = np.exp(np.power(x, i*0.1)) + np.random.uniform(-0.1*x, 0.1*x, size=len(x))
             fits[i] = np.exp(np.power(x, i*0.1)) + np.random.uniform(-0.01*x, 0.01*x, size=len(x))
 
-        scatter = bokeh.plotting.figure(width=475,height=350)
+        p = bokeh.plotting.figure(width=450,height=325)
         for i,y in enumerate(ys):
-            scatter.circle(x,y,color=palette[i],size=3,legend_label=f'{_copy_palette[i]}')
-            scatter.line(x,fits[i],color=palette[i],line_width=3,legend_label=f'{_copy_palette[i]}')
+            p.circle(x,y,color=palette[i],size=3,
+                     legend_label=f'{_copy_palette[i]}',alpha=alpha)
+            p.line(x,fits[i],color=palette[i],line_width=3,
+                   legend_label=f'{_copy_palette[i]}',line_alpha=alpha)
         
-        scatter.legend.click_policy='hide'
-        scatter.legend.location="top_left"
-        scatter=clean_plot(scatter, bg_color)
-        
-        bokeh.io.show(scatter)
+        p.legend.click_policy='hide'
+        p.legend.location="top_left"
+        p = clean_plot(p, bg_color)
+        return p
     
+    #**********************************************************************
+    if plot=="swatch":
+        bokeh.io.show(swatch())
+        
+    if plot=="pie":
+        bokeh.io.show(pie())
+    
+    if plot=="scatter":
+        bokeh.io.show(scatter())
         
     if plot=="all":
-        # swatch ***********************************************************************
-        df = pd.DataFrame(dict(palette=palette,
-                           x=np.arange(len(palette)),
-                           y=[0]*len(palette)
-                          ))
-        df['hex']=palette
-        df['rgb']=hex_to_rgb(palette)
-        
-        height = 60
-        width = 350 # height*len(palette)
-        size = height/1.2
-        swatch = bokeh.plotting.figure(width=width, 
-                                       height=height, 
-                                       x_range=(-1,len(palette)),
-                                       y_range=(-height,height),
-                                       tooltips=TOOLTIPS)
-        
-        swatch.square(source=df, x='x',y='y', size=size, color='palette')
-        swatch = clean_plot(swatch, bg_color)
-        
-        # pie ***********************************************************************
-        width, height = 350,350
-        
-        angles = [0.216875, 0.1545, 0.127375, 0.1069, 0.103925,
-                 0.055875, 0.04665,0.0355, 0.032275, 0.03, 0.018975, 
-                 0.0131, 0.0128, 0.00925, 0.007075, 0.00635, 0.005125,
-                 0.003825, 0.003525, 0.002925, 0.002, 0.0013, 0.001, 0.002875]
-        df = pd.DataFrame(dict(
-                       angle=[a*2*np.pi for a in angles], 
-                       palette=(palette*10)[:len(angles)],
-                      ))
-        df['hex']=(palette*12)[:len(angles)]
-        df['rgb']=hex_to_rgb((palette*12)[:len(angles)])
-        
-        pie = bokeh.plotting.figure(width=width, height=height,x_range=(-1.1,1.1),tooltips=TOOLTIPS)
-        pie.wedge(x=0,y=0,radius=1,
-                   start_angle=bokeh.transform.cumsum('angle',include_zero=True),
-                   end_angle=bokeh.transform.cumsum('angle'),
-                   line_color="white", 
-                   fill_color="palette",
-                   source=df)
-        pie = clean_plot(pie, bg_color)
-        
-        
-        # scatter ***********************************************************************
-        n=500
-        x = np.linspace(0,8,n)
-        ys, fits = np.empty((len(palette),n)), np.empty((len(palette),n))
-        for i, _ in enumerate(palette):
-            ys[i] = np.exp(np.power(x, i*0.1)) + np.random.uniform(-0.1*x, 0.1*x, size=len(x))
-            fits[i] = np.exp(np.power(x, i*0.1)) + np.random.uniform(-0.01*x, 0.01*x, size=len(x))
-
-        width, height = 475, 350
-        scatter = bokeh.plotting.figure(width=width,height=height)
-        for i,y in enumerate(ys):
-            scatter.circle(x,y,color=palette[i],legend_label=f'{_copy_palette[i]}',size=3)
-            scatter.line(x,fits[i],color=palette[i],legend_label=f'{_copy_palette[i]}',line_width=3)
-        scatter.legend.click_policy='hide'
-        scatter.legend.location="top_left"
-        scatter = clean_plot(scatter, bg_color)
-        
-        bokeh.io.show(bokeh.layouts.layout([[pie, scatter], swatch]))
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
+        bokeh.io.show(bokeh.layouts.layout([[pie(), scatter()], swatch()]))
