@@ -107,3 +107,47 @@ medium = ['#e3a201',
           '#d55101', 
           '#0d936a']
 
+juniper = [ "#216583",
+            '#6C567B',
+            "#D1274B",
+            '#35477D',
+            "#cd5c5c",
+            "#FB9E91",    
+            ]
+
+polya = ["#A43955",
+         "#2C2B26",
+         "#6A6B5F",
+         "#738C79",
+         "#ECBE13"]
+
+ostrich = [ # turn alpha on
+    "navy",
+    "orangered",
+    "teal",
+    "midnightblue",
+    '#d45d79',
+    ]
+
+fraiche = ['#472b62',
+           "#f5f0e3",
+          '#bc4873',
+           "#222222",
+           '#fb5b5a',
+      ]
+
+melanin=['#730068',
+         '#347474',
+         '#470938',
+         '#1a3e59',
+         '#b21f66',
+         '#111d5e',]
+
+carmine = [
+    'maroon',
+    "#f0f0f0",
+    "#222222",
+    'lightcoral',
+    'indianred',
+    'firebrick',
+    ]

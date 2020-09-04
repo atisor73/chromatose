@@ -237,7 +237,8 @@ def palplot(palette, plot='all',bg_color=None,alpha=1.0):
         p.wedge(x=0,y=0,radius=1,
                    start_angle=bokeh.transform.cumsum('angle',include_zero=True),
                    end_angle=bokeh.transform.cumsum('angle'),
-                   line_color=bg_color, #"white", 
+#                    line_color=bg_color, #"white", 
+                    line_color="palette",
                    fill_color="palette",
                    fill_alpha=alpha,
                    source=df
