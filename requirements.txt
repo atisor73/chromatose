@@ -1,7 +1,4 @@
 numpy
 scipy
 pandas
-panel
 bokeh==1.4.0
-
-twine==1.13.0

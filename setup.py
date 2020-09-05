@@ -1,21 +1,21 @@
 from setuptools import setup, find_packages
 
-with open("README.md", "r") as readme_file:
-    readme = readme_file.read()
 
 setup(
     name="chromatose",
     version="0.0.1",
-    description="personal palette collection & visualizer",
-    long_description = readme,
+    description="Personal palette collection & mini-palette visualizer",
+    long_description = "Personal palette collection in `palettes` & mini-palette visualizer with `palplot`",
     long_description_content_type="text/markdown",
     url="https://github.com/atisor73/chromatose",
+    license="MIT",
     author='Rosita Fu',
     author_email='rosita.fu99@gmail.com',
-    packages=find_packages(),
+    packages=find_packages(exclude=),
     install_requires=['numpy','scipy','panel','pandas','bokeh'],
     classifiers=[
         "Programming Language :: Python :: 3.7",
         "License :: OSI Approved :: MIT License",
+        "Topic :: Scientific/Engineering :: Visualization"
     ]
 )
