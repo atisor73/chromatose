@@ -6,13 +6,13 @@ Somewhat helpful for visualizing how a diverging set of colors would look like o
 
 Currently there's a limitation to 7 colors (more categorical); I think I want a different kind of format for larger spaces (which tend to be quantitative). 
 
+**frieda**
+
+![](_imgs/frieda.png)
+
 **plath**
 
 ![](_imgs/plath.png)
-
-**inkling**
-
-![](_imgs/inkling.png)
 
 **selah**
 
@@ -27,9 +27,9 @@ Currently there's a limitation to 7 colors (more categorical); I think I want a 
 ![](_imgs/honeycombe.png)
 
 
-**crepuscle**
+**crepuscule**
 
-![](_imgs/crepuscle.png)
+![](_imgs/crepuscule.png)
 
 **leather**
 
@@ -39,9 +39,9 @@ Currently there's a limitation to 7 colors (more categorical); I think I want a 
 
 ![](_imgs/gucci.png)
 
-**shore**
+**sandbar**
 
-![](_imgs/shore.png)
+![](_imgs/sandbar.png)
 
 **fiestaware**
 
@@ -53,9 +53,9 @@ Currently there's a limitation to 7 colors (more categorical); I think I want a 
 ![](_imgs/chilaquiles.png)
 
 
-**spiff**
+**eleven**
 
-![](_imgs/spiff.png)
+![](_imgs/eleven.png)
 
 
 **splenda**
@@ -165,6 +165,6 @@ Currently there's a limitation to 7 colors (more categorical); I think I want a 
 ![](_imgs/lysergic.png)
 
 
-**citrullus**
+**pepo**
 
-![](_imgs/citrullus.png)
+![](_imgs/pepo.png)

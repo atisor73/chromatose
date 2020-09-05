@@ -1,3 +1,5 @@
 numpy
+scipy
 pandas
+panel
 bokeh==1.4.0

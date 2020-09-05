@@ -13,5 +13,9 @@ setup(
     author='Rosita Fu',
     author_email='rosita.fu99@gmail.com',
     packages=find_packages(),
-    install_requires=['numpy','pandas','bokeh']
+    install_requires=['numpy','scipy','panel','pandas','bokeh'],
+    classifiers=[
+        "Programming Language :: Python :: 3.7",
+        "License :: OSI Approved :: MIT License",
+    ]
 )

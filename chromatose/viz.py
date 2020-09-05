@@ -1,8 +1,17 @@
 import numpy as np
 import pandas as pd
+import scipy.stats
 import bokeh.io
 import bokeh.plotting
 bokeh.io.output_notebook()
+
+# see if panel is installed 
+try:
+    import panel as pn
+    pn.extension()
+    panel = True
+except:
+    panel = False
 
 
 # dictionary for html names -> hex conversion
@@ -154,7 +163,6 @@ def hex_to_rgb(palette):
 def rgb_to_hex(palette):
     return ["#%02x%02x%02x" % (r,g,b) for (r,g,b) in palette]
 
-
 def clean_plot(p, bg_color):
     p.background_fill_color=bg_color
     p.axis.visible=False
@@ -173,7 +181,8 @@ def palplot(palette, plot='all',bg_color="white",alpha=1.0):
         'swatch' for squares, 
         'pie' for wedges (adjacency comparison),
         'scatter' for some points,
-        'all' for all (this is the default)
+        'line' for some lines,
+        'all' for all (with dropdown menu for lines/points)
     bg_color : background fill color, 
         valid name hex or rgb 
     alpha : alpha of entire palette, 
@@ -267,6 +276,32 @@ def palplot(palette, plot='all',bg_color="white",alpha=1.0):
         p = clean_plot(p, bg_color)
         return p
     
+    def line():
+        n = 500
+        x = np.linspace(0,4,n)
+        ys = np.empty((len(palette),n))
+        for i, _ in enumerate(palette):
+            ys[i] = scipy.stats.gamma.pdf(x, a=3, loc=0, scale=1/(i+1.4))
+
+        p = bokeh.plotting.figure(width=450,height=325)
+        for i,y in enumerate(ys):
+            p.line(x,ys[i],color=palette[i],line_width=3.5,
+                   legend_label=f'{_copy_palette[i]}',line_alpha=alpha)
+
+        p.legend.click_policy='hide'
+        p.legend.location="top_right"
+        p.background_fill_color=bg_color
+        p.axis.visible=False
+        p.toolbar.autohide=True
+        return p
+        
+    if panel == True:
+        glyph = pn.widgets.Select(options=['points','lines'],width=400,margin=[3,4])
+        @pn.depends(glyph.param.value)
+        def data(glyph="points"):
+            if glyph == "points": return scatter()
+            if glyph == "lines": return line()        
+        
     #**********************************************************************
     if plot=="swatch":
         bokeh.io.show(swatch())
@@ -277,5 +312,11 @@ def palplot(palette, plot='all',bg_color="white",alpha=1.0):
     if plot=="scatter":
         bokeh.io.show(scatter())
         
+    if plot=="line":
+        bokeh.io.show(line())
+        
     if plot=="all":
-        bokeh.io.show(bokeh.layouts.layout([[pie(), scatter()], swatch()]))
+        if panel == True:
+            return pn.Row(pn.Column(pie(), swatch()), pn.Column(glyph,data))
+        elif panel == False:
+            bokeh.io.show(bokeh.layouts.layout([[pie(), scatter()], swatch()]))
