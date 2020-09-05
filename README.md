@@ -1,5 +1,18 @@
+# chromatose
+<hr>
+
 ## `palettes.py` :art:
-Nice lil home for some custom palettes I've found to be all right.
+Nice lil home for some custom palettes I've found to be all right. Now pippable!
+
+|       |      |      |      |          |
+|----------|----------|----------|----------|----------|
+frieda | plath | selah | blonde | honeycombe
+crepuscule | leather | gucci | sandbar | fiestaware
+chilaquiles | eleven | splenda | gremlin | pollen
+medium | juniper | polya | ostrich | fraiche
+cheshire | carmine | joan | pinot | addams
+minuit | fugazi | clementine | leda | pugsley
+bellhooks | wes | lysergic | pepo |
 
 ## `viz.py` :eyes:
 Somewhat helpful for visualizing how a diverging set of colors would look like on a plot and how they behave in dense vs. scattered visuals. Sometimes colors look great together on a swatch, but not so great in their pointillistic forms. The method's called `palplot`, inspired by seaborn's palplot, but with more functionality (less blurry too).
