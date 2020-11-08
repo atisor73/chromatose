@@ -43,6 +43,31 @@ Currently there's a limitation to 7 colors (more categorical); I think I want a 
 
 ![](_imgs/honeycombe.png)
 
+**rainbow**
+
+![](_imgs/rainbow.png)
+
+**lysergic**
+
+![](_imgs/lysergic.png)
+
+
+**pepo**
+
+![](_imgs/pepo.png)
+
+
+**reese**
+
+![](_imgs/reese.png)
+
+**lufte**
+
+![](_imgs/lufte.png)
+
+**pitaya**
+
+![](_imgs/pitaya.png)
 
 **crepuscule**
 
@@ -52,13 +77,10 @@ Currently there's a limitation to 7 colors (more categorical); I think I want a 
 
 ![](_imgs/leather.png)
 
-**gucci**
+**spiff**
 
-![](_imgs/gucci.png)
+![](_imgs/spiff.png)
 
-**sandbar**
-
-![](_imgs/sandbar.png)
 
 **fiestaware**
 
@@ -103,11 +125,6 @@ Currently there's a limitation to 7 colors (more categorical); I think I want a 
 **polya**
 
 ![](_imgs/polya.png)
-
-
-**ostrich**
-
-![](_imgs/ostrich.png)
 
 
 **fraiche**
@@ -177,31 +194,10 @@ Currently there's a limitation to 7 colors (more categorical); I think I want a 
 
 
 
-**lysergic**
-
-![](_imgs/lysergic.png)
-
-
-**pepo**
-
-![](_imgs/pepo.png)
-
-
-**reese**
-
-![](_imgs/reese.png)
-
-**lufte**
-
-![](_imgs/lufte.png)
-
 **oolong**
 
 ![](_imgs/oolong.png)
 
-**pitaya**
-
-![](_imgs/pitaya.png)
 
 **alice**
 
@@ -214,10 +210,6 @@ Currently there's a limitation to 7 colors (more categorical); I think I want a 
 **belle**
 
 ![](_imgs/belle.png)
-
-**spiff**
-
-![](_imgs/spiff.png)
 
 **yoshi**
 
@@ -247,10 +239,19 @@ Currently there's a limitation to 7 colors (more categorical); I think I want a 
 
 ![](_imgs/mona.png)
 
+**gucci**
+
+![](_imgs/gucci.png)
+
+**sandbar**
+
+![](_imgs/sandbar.png)
+
 **eeyore**
 
 ![](_imgs/eeyore.png)
 
-**rainbow**
+**ostrich**
 
-![](_imgs/rainbow.png)
+![](_imgs/ostrich.png)
+
