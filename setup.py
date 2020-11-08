@@ -7,7 +7,7 @@ setup(
     description="Personal palette collection & mini-palette visualizer",
     long_description = "Personal palette collection in `palettes` & mini-palette visualizer with `palplot`",
     url="https://github.com/atisor73/chromatose",
-    download_url="https://github.com/atisor73/chromatose/archive/v0.0.2.tar.gz"
+    download_url="https://github.com/atisor73/chromatose/archive/v0.0.2.tar.gz",
     license="MIT",
     author='Rosita Fu',
     author_email='rosita.fu99@gmail.com',
