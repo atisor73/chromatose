@@ -1,4 +1,5 @@
 numpy
 scipy
 pandas
+colour
 bokeh==1.4.0

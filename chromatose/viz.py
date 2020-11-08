@@ -9,11 +9,17 @@ bokeh.io.output_notebook()
 try:
     import panel as pn
     pn.extension()
-    panel = True
+    panel = True  
 except:
     panel = False
 
-
+# see if colour is installed for interpolation
+try: 
+    from colour import Color
+except: 
+    import warnings
+    warnings.warn("Interpolation `palpolate` will not work without first installing `Colour`")
+    
 # dictionary for html names -> hex conversion
 html_colors = {'black': '#000000',
  'navy': '#000080',
@@ -232,7 +238,7 @@ def palplot(palette, plot='all', bg_color="white", alpha=1.0, shuffle=False, sca
     if shuffle == True: palette = np.random.shuffle(palette)
     
     try: _copy_palette = palette.copy()       # copy so legend displays original inputs 
-    except: raise TypeError("Palette should be a list or smth")
+    except: raise TypeError("Palette should be a list or somethin'")
     
     if len(palette) > 7: raise RuntimeError("Palette too large! (< 7 colors preferred)")
     
@@ -403,5 +409,41 @@ def palplot(palette, plot='all', bg_color="white", alpha=1.0, shuffle=False, sca
             bokeh.io.show(bokeh.layouts.layout([[pie(), points()], swatch()]))
 
             
-# def palpolate(palette):
+def _pair_interpolate(start_color, end_color, num, redundant=True):
+    '''interpolation via colour, weak method, will be customized to hsb/hsv/hsl later'''
+    start, end = Color(start_color), Color(end_color)
+    colors = list(start.range_to(end, num))
+    colors = [c.hex for c in colors]
+    if redundant==False: return colors
+    return colors[:-1] # don't include last one to avoid redundancy
+
+def palpolate(palette, desired_length):
+    """
+    Weak interpolation via Colour, input list of colours
+    Arguments
+    ---------
+    palette : list of hex strings or rgb tuples or HTML names (any combination)
+    desired_length : integer, approximate desired length of final palette
     
+    Returns 
+    ---------
+    interpolated palette
+    """    
+    # REFORMATTING INPUT PALETTE ..............................
+    for _, p in enumerate(palette):           # convert RGB -> hex
+        if type(p) is not str:
+            palette[_] = rgb_to_hex([p])[0]
+    for _, p in enumerate(palette):           # convert HTML color names -> hex
+        if "#" not in p:
+            palette[_] = html_colors[p.lower()]
+            
+    # BEGIN INTERPOLATION........................................
+    interpolated_palette = []
+    num = int(desired_length / (len(palette)-1))    
+    redundant=True
+    if len(palette)==2: redundant=False        # no need to exclude last one 
+    for i in range(len(palette[:-1])):
+        if i == len(palette)-1: redundant=False
+        lst = _pair_interpolate(palette[i], palette[i+1], num, redundant=redundant)
+        interpolated_palette.extend(lst)
+    return interpolated_palette
