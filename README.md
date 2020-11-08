@@ -171,10 +171,6 @@ Currently there's a limitation to 7 colors (more categorical); I think I want a 
 
 ![](_imgs/bellhooks.png)
 
-**wes**
-
-![](_imgs/wes.png)
-
 **oolong**
 
 ![](_imgs/oolong.png)
@@ -183,17 +179,17 @@ Currently there's a limitation to 7 colors (more categorical); I think I want a 
 
 ![](_imgs/alice.png)
 
-**neko**
+**wes**
 
-![](_imgs/neko.png)
+![](_imgs/wes.png)
 
 **belle**
 
 ![](_imgs/belle.png)
 
-**yoshi**
+**neko**
 
-![](_imgs/yoshi.png)
+![](_imgs/neko.png)
 
 **phoebe**
 
@@ -203,25 +199,17 @@ Currently there's a limitation to 7 colors (more categorical); I think I want a 
 
 ![](_imgs/pam.png)
 
-**menthol**
-
-![](_imgs/menthol.png)
-
 **dwight**
 
 ![](_imgs/dwight.png)
 
+**menthol**
+
+![](_imgs/menthol.png)
+
 **riley**
 
 ![](_imgs/riley.png)
-
-**gucci**
-
-![](_imgs/gucci.png)
-
-**sandbar**
-
-![](_imgs/sandbar.png)
 
 **eeyore**
 
@@ -231,3 +219,14 @@ Currently there's a limitation to 7 colors (more categorical); I think I want a 
 
 ![](_imgs/ostrich.png)
 
+**gucci**
+
+![](_imgs/gucci.png)
+
+**sandbar**
+
+![](_imgs/sandbar.png)
+
+**yoshi**
+
+![](_imgs/yoshi.png)
