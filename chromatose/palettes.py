@@ -1,5 +1,3 @@
-__version__ = "0.0.1"
-
 
 selah = ['#405950',
          '#3e242f',
@@ -57,7 +55,6 @@ gucci = ['#e8b789',
          '#26183a', 
          '#e81f05']
 
-
 sandbar = ['#000000', 
          '#a1d9da', 
          '#d1923f', 
@@ -69,7 +66,6 @@ fiestaware = ['#ab0b11',
               '#36a3c2', 
               '#dfcd00', 
               '#5a006e']
-
 
 chilaquiles = ['#749e81', 
                '#821b07', 
@@ -86,7 +82,6 @@ splenda = ['#6487cc',
            '#d49a8e', 
            '#c0c7f6', 
            '#e396bd']
-
 
 gremlin = ['#3a5b84', 
            '#9d2020', 
@@ -152,14 +147,11 @@ carmine = [
     'firebrick',
     ]
 
-
-
 joan = ['#166161', 
         '#0e3244', 
         '#c4ad75', 
         '#e3dac5', 
         '#0a152e']
-
 
 pinot = ['#9e1b3e', 
          '#bdc9a9', 
@@ -171,7 +163,6 @@ addams = ['#9faeb2',
           '#ab6e7d', 
           '#1c2630']
 
-
 minuit = ['#180d56', 
           '#282985', 
           '#3c9496', 
@@ -179,13 +170,11 @@ minuit = ['#180d56',
           '#98133c',
           '#d85156']
 
-
 fugazi = ['#000208', 
           '#a49b87', 
           '#ece6d3', 
           '#04133f', 
           '#ca4138']
-
 
 clementine = ['#fa4c49', 
               '#faf5d7', 
@@ -193,7 +182,6 @@ clementine = ['#fa4c49',
               '#faa851', 
               '#0b2a45', 
               '#0d0432']
-
 
 leda=['#2c2f30', 
       '#8fa7d7', 
@@ -207,13 +195,11 @@ pugsley = ['#eadca3',
            '#911501', 
            '#07093e']
 
-
 bellhooks = ['#100a0b', 
              '#facab6', 
              '#b38577', 
              '#d66f31', 
              '#2e211f']
-
 
 wes = ['#d7adad', 
        '#94afbf', 
@@ -223,16 +209,149 @@ wes = ['#d7adad',
        '#4a4634',
       ]
 
-
 lysergic = ['#4d53b5',
         '#011b5a',
         '#238cb5', 
         '#75bcbd', 
         '#b92c60']
 
-
 pepo = ['#29937b',
              '#044032',
              '#902a42',
              '#3f0914',
              '#e4607c']
+
+reese =["#300a19",
+        "#d89f21",
+        "#a94434",
+        "#bc6333",
+        "#d896b0",]
+
+lufte = ["#9fc0c1",
+         "#eba8b5",
+         "#65042d",
+         "#714c36"]
+
+oolong = ['#977500', 
+          '#f9f2c1', 
+          '#ffc670', 
+          '#bf033f', 
+          '#ae3f03', 
+          '#896056']
+
+pitaya = ["#cb4f70",
+          "#1b718c",
+          "#779e1a",
+          "#f49044"]
+
+alice = ["#52357b",
+        "#301b4f",
+        "#b03653",
+        "#966da1",]
+
+neko = ['#b85e00',
+        '#f59994',
+        "#c0b490",
+        "#0d2b52"]
+
+belle = [ "#b8131a", 
+         "#ffb82b", 
+         "#dd0336", 
+         "#e9d1a5", 
+         "#792159" ]
+
+spiff = ["#46308d",
+         "#2ea58e",
+         "#e97d86",
+         "#7e92bd"]
+
+yoshi = ["#111129", 
+         "#228dc3", 
+         "#cd355c",
+         "#d0e44e"]
+
+phoebe = ["#f71237",
+          "#1c0517",
+          "#8ba794",
+          "#fe5f8e",
+          "#fde4d1",
+          "#991a40",
+          "#eeecec",
+         ]
+
+pam = ["#634131",
+       "#448168",
+       "#d0726f",
+       "#5e7235",
+       "#e1d281"]
+
+menthol = ["#f40505",
+           "#c8eaea",
+           "#020437",
+           "#e4ebe9",
+           "#f7bc25"]
+
+dwight = [(135, 36, 36),
+            '#9dab86',
+            (193,142, 142),
+            (216, 180,180)
+         ]
+
+riley = ['#66c2a5', 
+         '#fc8d62', 
+         '#8da0cb', 
+         '#e78ac3',
+         '#a6d854']
+
+mona = ['#9a1024',
+        '#d14f1e',
+        "#f6e5d1",
+        "#819d66",
+        "#4f1c36"]
+
+eeyore = ["#6d93b3",
+          "#eba516",
+          "#de9586",
+          "#8bb046"]
+
+rainbow = ['#c21019',
+           '#f56327',
+           "#fab01d",
+           '#026f69',
+           '#750a2b']
+
+all_palettes = ["selah",
+                "frieda",
+                "honeycombe",
+                "crepuscule",
+                "juniper",
+                "plath",
+                "blonde",
+                "leather",
+                "gucci",
+                "sandbar",
+                "fiestaware",
+                "chilaquiles",
+                "eleven",
+                "splenda",
+                "gremlin",
+                "pollen",
+                "medium",
+                "juniper",
+                "polya",
+                "ostrich",
+                "fraiche",
+                "cheshire",
+                "carmine",
+                "joan",
+                "pinot",
+                "addams",
+                "minuit",
+                "fugazi",
+                "clementine",
+                "leda",
+                "pugsley",
+                "bellhooks",
+                "wes",
+                "lysergic",
+                "pepo",]

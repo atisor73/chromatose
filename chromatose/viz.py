@@ -159,19 +159,44 @@ html_colors = {'black': '#000000',
 def hex_to_rgb(palette):
     return [tuple(int(h.lstrip("#")[i:i+2], 16) for i in (0, 2, 4)) for h in palette]
 
-
 def rgb_to_hex(palette):
     return ["#%02x%02x%02x" % (r,g,b) for (r,g,b) in palette]
 
-def clean_plot(p, bg_color):
+def _clean_plot(p, bg_color):
     p.background_fill_color=bg_color
     p.axis.visible=False
     p.grid.grid_line_color=None
     p.toolbar.autohide=True
     return p
 
+def _generate_scatter(x_range, size, slope=1, glyph="circle"):
+    x = np.random.uniform(low=x_range[0],high=x_range[1],size=size)    
+    y = slope*x
+    
+    if glyph == "circle":
+        x_error = np.random.choice([-1,1])*np.random.random(size=size)
+        mu, sigma = 0, np.random.random(size)
+        y_error = mu + sigma * np.random.standard_cauchy(size=size)
+        
+    elif glyph == "triangle":
+        x_error = np.random.choice([-1,1],size=size)*np.random.lognormal(-0.5,1,size=size)
+        c = np.random.choice([-1,1],size=size)*np.random.random(size)
+        y_error = np.random.exponential(0.7,size=size)
+    x += x_error
+    y += y_error
+    return np.abs(x), np.abs(y)
 
-def palplot(palette, plot='all',bg_color="white",alpha=1.0):
+def _rug(x, y, p, color):
+    rug_range_x, rug_range_y = (-0.6,-0.3), (-0.6,-0.2)
+    rug_thick = 1.4
+    rug_alpha = 0.8
+    xx, yy = [(_x,_x) for _x in x], [rug_range_y for _ in x]        # along x-axis 
+    p.multi_line(xx, yy, color=color, line_width=rug_thick, alpha=rug_alpha)
+    xx, yy = [rug_range_x for _ in x], [(_y,_y) for _y in y]        # along y-axis
+    p.multi_line(xx, yy, color=color, line_width=rug_thick, alpha=rug_alpha)
+    pass
+
+def palplot(palette, plot='all', bg_color="white", alpha=1.0, shuffle=False, scatter_kwargs=None,):
     """
     Displays palette via bokeh. Hover for hex/rgb value.
     Arguments
@@ -180,13 +205,18 @@ def palplot(palette, plot='all',bg_color="white",alpha=1.0):
     plot : 
         'swatch' for squares, 
         'pie' for wedges (adjacency comparison),
-        'scatter' for some points,
+        'points' for some points,
         'line' for some lines,
-        'all' for all (with dropdown menu for lines/points)
+        'scatter' for a scatterplot,
+        'all' for all (with dropdown menu for lines/points/scatter)
     bg_color : background fill color, 
         valid name hex or rgb 
     alpha : alpha of entire palette, 
         fraction btw 0.0 and 1.0
+    shuffle : shuffles palette, boolean,
+    scatter_kwargs : dicitonary, 'click_policy' is boolean,
+        if True, legend is on plot and can click/hide
+        if False, legend is off plot, no overlap
     """    
     # HOVER FORMAT STRING (for swatch and pie plots)
     TOOLTIPS = """
@@ -197,22 +227,22 @@ def palplot(palette, plot='all',bg_color="white",alpha=1.0):
                 </div>
             </div>
             """
-    _copy_palette = palette.copy() # copy so legend displays original inputs 
     
-    if len(palette) > 7:
-        raise RuntimeError("Palette too large! (< 7 colors preferred)")
+    palette = list(palette)
+    if shuffle == True: palette = np.random.shuffle(palette)
+    
+    try: _copy_palette = palette.copy()       # copy so legend displays original inputs 
+    except: raise TypeError("Palette should be a list or smth")
+    
+    if len(palette) > 7: raise RuntimeError("Palette too large! (< 7 colors preferred)")
     
     # REFORMATTING INPUT PALETTE ..........
-    # convert RGB -> hex
-    for _, p in enumerate(palette):
+    for _, p in enumerate(palette):           # convert RGB -> hex
         if type(p) is not str:
             palette[_] = rgb_to_hex([p])[0]
-
-    # convert HTML color names -> hex
-    for _, p in enumerate(palette):
+    for _, p in enumerate(palette):           # convert HTML color names -> hex
         if "#" not in p:
             palette[_] = html_colors[p.lower()]
-            
             
     def swatch():
         df = pd.DataFrame(dict(palette=palette,
@@ -229,7 +259,7 @@ def palplot(palette, plot='all',bg_color="white",alpha=1.0):
                                        y_range=(-height,height),
                                        tooltips=TOOLTIPS)
         p.square(source=df, x='x',y='y', size=size, color='palette',alpha=alpha)
-        p = clean_plot(p, bg_color)
+        p = _clean_plot(p, bg_color)
         return p 
     
     def pie():
@@ -253,10 +283,10 @@ def palplot(palette, plot='all',bg_color="white",alpha=1.0):
                    fill_alpha=alpha,
                    source=df
                )
-        p = clean_plot(p, bg_color)
+        p = _clean_plot(p, bg_color)
         return p
     
-    def scatter():
+    def points():
         n = 500
         x = np.linspace(0,8,n)
         ys, fits = np.empty((len(palette),n)), np.empty((len(palette),n))
@@ -273,7 +303,7 @@ def palplot(palette, plot='all',bg_color="white",alpha=1.0):
         
         p.legend.click_policy='hide'
         p.legend.location="top_left"
-        p = clean_plot(p, bg_color)
+        p = _clean_plot(p, bg_color)
         return p
     
     def line():
@@ -294,29 +324,84 @@ def palplot(palette, plot='all',bg_color="white",alpha=1.0):
         p.axis.visible=False
         p.toolbar.autohide=True
         return p
+    
+    click_policy, fit_line = False, True
+    try: 
+        if scatter_kwargs['click_policy'] == True: click_policy = True
+        if scatter_kwargs['line'] == False:        fit_line = False
+    except: pass
+    
+    # inspired by @jmaasch's scatter plots in R
+    def scatter():
+        x_ranges = []                         # manually constructing ranges
+        for _ in range(len(palette)):
+            low = _*2.3
+            high = low + 2
+            x_ranges.append((low, high))
+        x_ranges_flat = [_ for x_range in x_ranges for _ in x_range]
+        xmin, xmax = min(x_ranges_flat), max(x_ranges_flat)
+
+        p = bokeh.plotting.figure(x_range=(-0.6, 1.01*xmax),     # make plot
+                                  y_range=(-0.6, 1.01*xmax),
+                                  height=325,width=450)
+        size = 30
+        # begin scattering and rugging 
+        for i, x_range in enumerate(x_ranges):
+            x, y = _generate_scatter(x_range,size,glyph="circle")
+            if click_policy == True:
+                p.circle(x=x,y=y,color=palette[i],size=6,fill_alpha=0.8,legend_label=f"{palette[i]}")
+            else: p.circle(x=x,y=y,color=palette[i],size=6,fill_alpha=0.8)
+            _rug(x, y, p, palette[i])
+
+            x,y = _generate_scatter(x_range,size,glyph="triangle")
+            if click_policy == True:
+                p.triangle(x=x,y=y,color=palette[i],size=6,alpha=1,legend_label=f"{palette[i]}")
+            else: p.triangle(x=x,y=y,color=palette[i],size=6,alpha=1)
+            _rug(x, y, p, palette[i])
+        
+        if fit_line: p.line(x=(0,50),y=(0,50),color='black')     # line_fit
+        
+        # cleaning
+        p.xgrid.grid_line_color, p.ygrid.grid_line_color = None, None
+        p.xaxis.visible, p.yaxis.visible = False,False
+        p.xaxis.major_tick_line_color, p.yaxis.major_tick_line_color = None, None
+        p.xaxis.minor_tick_line_color, p.yaxis.minor_tick_line_color = None, None
+        p.toolbar.autohide=True
+        
+        # fitting legend
+        if click_policy == True:
+            p.legend.click_policy='hide'
+            p.legend.location="bottom_right"
+            p.width=475
+        else: 
+            legend = bokeh.models.Legend(
+                    items=[(palette[i], [p.circle(color=palette[i])]) for i in range(len(palette))],
+                    location='center')
+            p.add_layout(legend, 'right')
+            p.width=560
+        return p
         
     if panel == True:
-        glyph = pn.widgets.Select(options=['points','lines'],width=400,margin=[3,4])
+        glyph = pn.widgets.Select(options=['points','lines','scatter'],width=400,margin=[3,4])
         @pn.depends(glyph.param.value)
         def data(glyph="points"):
-            if glyph == "points": return scatter()
-            if glyph == "lines": return line()        
+            if glyph == "points": return points()
+            if glyph == "lines": return line()
+            if glyph == "scatter": return scatter()
         
     #**********************************************************************
-    if plot=="swatch":
-        bokeh.io.show(swatch())
-        
-    if plot=="pie":
-        bokeh.io.show(pie())
-    
-    if plot=="scatter":
-        bokeh.io.show(scatter())
-        
-    if plot=="line":
-        bokeh.io.show(line())
+    if plot=="swatch": return swatch()
+    if plot=="pie": return pie()
+    if plot=="points": return points()
+    if plot=="scatter": return scatter()
+    if plot=="line": return line()
         
     if plot=="all":
         if panel == True:
             return pn.Row(pn.Column(pie(), swatch()), pn.Column(glyph,data))
         elif panel == False:
-            bokeh.io.show(bokeh.layouts.layout([[pie(), scatter()], swatch()]))
+            bokeh.io.show(bokeh.layouts.layout([[pie(), points()], swatch()]))
+
+            
+# def palpolate(palette):
+    

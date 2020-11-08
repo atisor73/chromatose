@@ -12,7 +12,11 @@ chilaquiles | eleven | splenda | gremlin | pollen
 medium | juniper | polya | ostrich | fraiche
 cheshire | carmine | joan | pinot | addams
 minuit | fugazi | clementine | leda | pugsley
-bellhooks | wes | lysergic | pepo |
+bellhooks | wes | lysergic | pepo |  reese
+lufte | oolong | pitaya | alice | neko
+belle | spiff | yoshi | phoebe | pam
+menthol | dwight | riley | mona | eeyore
+rainbow
 
 ## `viz.py` :eyes:
 Somewhat helpful for visualizing how a diverging set of colors would look like on a plot and how they behave in dense vs. scattered visuals. Sometimes colors look great together on a swatch, but not so great in their pointillistic forms. The method's called `palplot`, inspired by seaborn's palplot, but with more functionality (less blurry too).
@@ -181,3 +185,72 @@ Currently there's a limitation to 7 colors (more categorical); I think I want a 
 **pepo**
 
 ![](_imgs/pepo.png)
+
+
+**reese**
+
+![](_imgs/reese.png)
+
+**lufte**
+
+![](_imgs/lufte.png)
+
+**oolong**
+
+![](_imgs/oolong.png)
+
+**pitaya**
+
+![](_imgs/pitaya.png)
+
+**alice**
+
+![](_imgs/alice.png)
+
+**neko**
+
+![](_imgs/neko.png)
+
+**belle**
+
+![](_imgs/belle.png)
+
+**spiff**
+
+![](_imgs/spiff.png)
+
+**yoshi**
+
+![](_imgs/yoshi.png)
+
+**phoebe**
+
+![](_imgs/phoebe.png)
+
+**pam**
+
+![](_imgs/pam.png)
+
+**menthol**
+
+![](_imgs/menthol.png)
+
+**dwight**
+
+![](_imgs/dwight.png)
+
+**riley**
+
+![](_imgs/riley.png)
+
+**mona**
+
+![](_imgs/mona.png)
+
+**eeyore**
+
+![](_imgs/eeyore.png)
+
+**rainbow**
+
+![](_imgs/rainbow.png)
