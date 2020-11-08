@@ -354,4 +354,24 @@ all_palettes = ["selah",
                 "bellhooks",
                 "wes",
                 "lysergic",
-                "pepo",]
+                "pepo",
+                "reese",
+                "lufte",
+                "oolong",
+                "pitaya",
+                "alice",
+                "neko",
+                "belle",
+                "spiff",
+                "yoshi",
+                "phoebe",
+                "pam",
+                "menthol",
+                "dwight",
+                "riley",
+                "mona",
+                "eeyore",
+                "rainbow"
+               ]
+
+
