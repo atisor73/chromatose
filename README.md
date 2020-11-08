@@ -43,23 +43,21 @@ Currently there's a limitation to 7 colors (more categorical); I think I want a 
 
 ![](_imgs/honeycombe.png)
 
-**rainbow**
-
-![](_imgs/rainbow.png)
-
 **lysergic**
 
 ![](_imgs/lysergic.png)
-
 
 **pepo**
 
 ![](_imgs/pepo.png)
 
-
 **reese**
 
 ![](_imgs/reese.png)
+
+**rainbow**
+
+![](_imgs/rainbow.png)
 
 **lufte**
 
@@ -73,54 +71,45 @@ Currently there's a limitation to 7 colors (more categorical); I think I want a 
 
 ![](_imgs/crepuscule.png)
 
-**leather**
-
-![](_imgs/leather.png)
-
 **spiff**
 
 ![](_imgs/spiff.png)
 
+**leather**
 
-**fiestaware**
-
-![](_imgs/fiestaware.png)
-
-
-**chilaquiles**
-
-![](_imgs/chilaquiles.png)
-
+![](_imgs/leather.png)
 
 **eleven**
 
 ![](_imgs/eleven.png)
 
+**chilaquiles**
+
+![](_imgs/chilaquiles.png)
+
+**fiestaware**
+
+![](_imgs/fiestaware.png)
 
 **splenda**
 
 ![](_imgs/splenda.png)
 
-
-**gremlin**
-
-![](_imgs/gremlin.png)
-
-
-**pollen**
-
-![](_imgs/pollen.png)
-
-
 **medium**
 
 ![](_imgs/medium.png)
-
 
 **juniper**
 
 ![](_imgs/juniper.png)
 
+**pollen**
+
+![](_imgs/pollen.png)
+
+**gremlin**
+
+![](_imgs/gremlin.png)
 
 **polya**
 
@@ -150,54 +139,45 @@ Currently there's a limitation to 7 colors (more categorical); I think I want a 
 
 ![](_imgs/pinot.png)
 
-
 **addams**
 
 ![](_imgs/addams.png)
-
 
 **minuit**
 
 ![](_imgs/minuit.png)
 
-
-
 **fugazi**
 
 ![](_imgs/fugazi.png)
-
-
 
 **clementine**
 
 ![](_imgs/clementine.png)
 
+**mona**
+
+![](_imgs/mona.png)
 
 **leda**
 
 ![](_imgs/leda.png)
 
-
 **pugsley**
 
 ![](_imgs/pugsley.png)
-
 
 **bellhooks**
 
 ![](_imgs/bellhooks.png)
 
-
 **wes**
 
 ![](_imgs/wes.png)
 
-
-
 **oolong**
 
 ![](_imgs/oolong.png)
-
 
 **alice**
 
@@ -234,10 +214,6 @@ Currently there's a limitation to 7 colors (more categorical); I think I want a 
 **riley**
 
 ![](_imgs/riley.png)
-
-**mona**
-
-![](_imgs/mona.png)
 
 **gucci**
 
