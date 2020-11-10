@@ -23,6 +23,8 @@ Somewhat helpful for visualizing how a diverging set of colors would look like o
 
 Currently there's a limitation to 7 colors (more categorical); I think I want a different kind of format for larger spaces (which tend to be quantitative). 
 
+Rough RGB interpolator called `palpolate` (<em>pal</em>-(ette inter)-<em>polate</em>), can handle input lists of any size and user can control output size. Will add HSL/HSV interpolator when I have time.
+
 **frieda**
 
 ![](_imgs/frieda.png)
@@ -111,15 +113,13 @@ Currently there's a limitation to 7 colors (more categorical); I think I want a 
 
 ![](_imgs/gremlin.png)
 
-**polya**
-
-![](_imgs/polya.png)
-
-
 **fraiche**
 
 ![](_imgs/fraiche.png)
 
+**polya**
+
+![](_imgs/polya.png)
 
 **cheshire**
 
@@ -211,13 +211,17 @@ Currently there's a limitation to 7 colors (more categorical); I think I want a 
 
 ![](_imgs/riley.png)
 
+**ostrich**
+
+![](_imgs/ostrich.png)
+
 **eeyore**
 
 ![](_imgs/eeyore.png)
 
-**ostrich**
+**yoshi**
 
-![](_imgs/ostrich.png)
+![](_imgs/yoshi.png)
 
 **gucci**
 
@@ -227,6 +231,4 @@ Currently there's a limitation to 7 colors (more categorical); I think I want a 
 
 ![](_imgs/sandbar.png)
 
-**yoshi**
-
-![](_imgs/yoshi.png)
+*"The last color she remembered was the indigo chips in the headstone. After that she became as color conscious as a hen."* 
