@@ -25,6 +25,7 @@ def heatmap(
     interpolation_method='rgb',
     curve=False,
     directions=['up','down','up'],
+    return_palette=False
     ):
     """
     Displays heatmap via bokeh. Hover for hex/rgb value.
@@ -48,10 +49,13 @@ def heatmap(
         each entry corresponds to r, g, b
         'up' pushes intermediate values higher (lighter)
         'down' pushes intermediate values lower (darker)
+    return_palette : boolean
+        if True, returns interpolated palette as list
+        if False, no returns
         
     Returns
     --------
-    No returns, outputs plot directly.
+    outputs plot directly, no returns unless return_palette is set to True
     """
     
     if interpolate == True: colors = palpolate(palette,
@@ -107,3 +111,6 @@ def heatmap(
     p.toolbar.autohide=True
     
     bokeh.io.show(p)
+    
+    if return_palette == True:
+        return colors
