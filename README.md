@@ -27,208 +27,208 @@ Rough RGB interpolator called `palpolate` (<em>pal</em>-(ette inter)-<em>polate<
 
 **frieda**
 
-![](_imgs/frieda.png)
+![](imgs/frieda.png)
 
 **plath**
 
-![](_imgs/plath.png)
+![](imgs/plath.png)
 
 **selah**
 
-![](_imgs/selah.png)
+![](imgs/selah.png)
 
 **blonde**
 
-![](_imgs/blonde.png)
+![](imgs/blonde.png)
 
 **honeycombe**
 
-![](_imgs/honeycombe.png)
+![](imgs/honeycombe.png)
 
 **lysergic**
 
-![](_imgs/lysergic.png)
+![](imgs/lysergic.png)
 
 **pepo**
 
-![](_imgs/pepo.png)
+![](imgs/pepo.png)
 
 **reese**
 
-![](_imgs/reese.png)
+![](imgs/reese.png)
 
 **rainbow**
 
-![](_imgs/rainbow.png)
+![](imgs/rainbow.png)
 
 **lufte**
 
-![](_imgs/lufte.png)
+![](imgs/lufte.png)
 
 **pitaya**
 
-![](_imgs/pitaya.png)
+![](imgs/pitaya.png)
 
 **crepuscule**
 
-![](_imgs/crepuscule.png)
+![](imgs/crepuscule.png)
 
 **spiff**
 
-![](_imgs/spiff.png)
+![](imgs/spiff.png)
 
 **leather**
 
-![](_imgs/leather.png)
+![](imgs/leather.png)
 
 **eleven**
 
-![](_imgs/eleven.png)
+![](imgs/eleven.png)
 
 **chilaquiles**
 
-![](_imgs/chilaquiles.png)
+![](imgs/chilaquiles.png)
 
 **fiestaware**
 
-![](_imgs/fiestaware.png)
+![](imgs/fiestaware.png)
 
 **splenda**
 
-![](_imgs/splenda.png)
+![](imgs/splenda.png)
 
 **medium**
 
-![](_imgs/medium.png)
+![](imgs/medium.png)
 
 **juniper**
 
-![](_imgs/juniper.png)
+![](imgs/juniper.png)
 
 **pollen**
 
-![](_imgs/pollen.png)
+![](imgs/pollen.png)
 
 **gremlin**
 
-![](_imgs/gremlin.png)
+![](imgs/gremlin.png)
 
 **fraiche**
 
-![](_imgs/fraiche.png)
+![](imgs/fraiche.png)
 
 **polya**
 
-![](_imgs/polya.png)
+![](imgs/polya.png)
 
 **cheshire**
 
-![](_imgs/cheshire.png)
+![](imgs/cheshire.png)
 
 
 **carmine**
 
-![](_imgs/carmine.png)
+![](imgs/carmine.png)
 
 
 **joan**
 
-![](_imgs/joan.png)
+![](imgs/joan.png)
 
 **pinot**
 
-![](_imgs/pinot.png)
+![](imgs/pinot.png)
 
 **addams**
 
-![](_imgs/addams.png)
+![](imgs/addams.png)
 
 **minuit**
 
-![](_imgs/minuit.png)
+![](imgs/minuit.png)
 
 **fugazi**
 
-![](_imgs/fugazi.png)
+![](imgs/fugazi.png)
 
 **clementine**
 
-![](_imgs/clementine.png)
+![](imgs/clementine.png)
 
 **mona**
 
-![](_imgs/mona.png)
+![](imgs/mona.png)
 
 **leda**
 
-![](_imgs/leda.png)
+![](imgs/leda.png)
 
 **pugsley**
 
-![](_imgs/pugsley.png)
+![](imgs/pugsley.png)
 
 **bellhooks**
 
-![](_imgs/bellhooks.png)
+![](imgs/bellhooks.png)
 
 **oolong**
 
-![](_imgs/oolong.png)
+![](imgs/oolong.png)
 
 **alice**
 
-![](_imgs/alice.png)
+![](imgs/alice.png)
 
 **wes**
 
-![](_imgs/wes.png)
+![](imgs/wes.png)
 
 **belle**
 
-![](_imgs/belle.png)
+![](imgs/belle.png)
 
 **neko**
 
-![](_imgs/neko.png)
+![](imgs/neko.png)
 
 **phoebe**
 
-![](_imgs/phoebe.png)
+![](imgs/phoebe.png)
 
 **pam**
 
-![](_imgs/pam.png)
+![](imgs/pam.png)
 
 **dwight**
 
-![](_imgs/dwight.png)
+![](imgs/dwight.png)
 
 **menthol**
 
-![](_imgs/menthol.png)
+![](imgs/menthol.png)
 
 **riley**
 
-![](_imgs/riley.png)
+![](imgs/riley.png)
 
 **ostrich**
 
-![](_imgs/ostrich.png)
+![](imgs/ostrich.png)
 
 **eeyore**
 
-![](_imgs/eeyore.png)
+![](imgs/eeyore.png)
 
 **yoshi**
 
-![](_imgs/yoshi.png)
+![](imgs/yoshi.png)
 
 **gucci**
 
-![](_imgs/gucci.png)
+![](imgs/gucci.png)
 
 **sandbar**
 
-![](_imgs/sandbar.png)
+![](imgs/sandbar.png)
 
 *"The last color she remembered was the indigo chips in the headstone. After that she became as color conscious as a hen."* 
