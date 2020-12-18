@@ -92,7 +92,10 @@ rainbow
 
 **frieda**
 
-![](imgs/frieda.png){:height="50%" width="50%"}
+![](imgs/frieda.png)
+<img src="https://github.com/atisor73/chromatose/imgs/frieda.png" width="400" height="100">
+
+
 
 **plath**
 
