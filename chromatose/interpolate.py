@@ -72,8 +72,8 @@ def palpolate(
     method : string 'rgb' or 'hsv' or 'hsl'
          interpolation metric, default 'rgb'
     curve : boolean
-        if True: fit to 2ndº polynomial
-        if False: simple linear interpolation
+        if True, fit to 2ndº polynomial
+        if False, simple linear interpolation
         default False
     directions : list of 3 strings, 'up' or 'down'
         each entry corresponds to r, g, b

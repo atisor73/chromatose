@@ -9,13 +9,44 @@ The stored palettes are typically diverging, and mostly for personal record. Vis
 ## `viz` :eyes:
 
 ### ct.swatch( )
-Outputs basic swatch. 
+- **`palette`** : list or iterable  
+    any combination of hex strings or rgb tuples or HTML names
+- `alpha` : fraction between 0.0 and 1.0  
+    *alpha transparency of entire palette*
 
 ### ct.palplot( ) 
 Visualizations include swatches, pies, points, lines, scatters. Somewhat helpful for seeing how colors behave on a plot, in dense or scattered visuals. Sometimes colors look great together on a swatch, but not so great in their pointillistic forms. 
+- **`palette`** : list or iterable  
+    any combination of hex strings or rgb tuples or HTML
+- `bg_color` : HTML or hex string  
+    *background fill color*
+- `alpha` : fraction between 0.0 and 1.0  
+    *alpha transparency of entire palette* 
+- `shuffle` : boolean  
+    *shuffles palette*
 
 ### ct.heatmap( )
 Volcano data lifted from R.
+
+- **`palette`** : list or iterable   
+    any combination of hex strings or rgb tuples or HTML
+- `interpolate` : boolean  
+    *if True, interpolates palette*
+    *if False, generates heatmap with input directly*
+- `desired_length` : integer  
+    *approximate desired length of final palette*
+- `interpolation_method` : string 'rgb' or 'hsv' or 'hsl'  
+    *interpolation metric*
+- `curve` : boolean  
+    *if True, fit to 2ndº polynomial*  
+    *if False, simple linear interpolation*
+- `directions` : list of 3 strings, 'up' or 'down'  
+    *each entry corresponds to r, g, b*  
+    *'up' pushes intermediate values higher (lighter)*  
+    *'down' pushes intermediate values lower (darker)*
+- `return_palette` : boolean  
+    *if True, returns interpolated palette as list*  
+    *if False, no returns*
 
 
 
@@ -28,10 +59,19 @@ Rough RGB interpolator called `palpolate` (<em>pal</em>-(ette inter)-<em>polate<
 
 There are a multitude of beautiful gradients in packages like bokeh and colorcet that are, for the most part, static. The interpolation scheme here can be used to create entirely new ones given only a few endpoints. This part is still in development, but currently uses linear or polynomial fits in color space metrics RGB, HSL, or HSV. Heatmaps are a great way to visualize the results.
 
-
-
-
-
+- **`palette`** : list or iterable   
+    any combination of hex strings or rgb tuples or HTML
+- **`desired_length`** : integer  
+    approximate desired length of final palette
+- `method` : string 'rgb' or 'hsv' or 'hsl'  
+    *interpolation metric, default 'rgb'*
+- `curve` : boolean  
+    *if True, fit t 2ndº polynomial*  
+    *if False, simple linear interpolation*
+- `directions` : list of 3 strings, 'up' or 'down'  
+    *each entry corresponds to r, g, b*  
+    *'up' pushes intermediate values higher (lighter)*  
+    *'down' pushes intermediate values lower (darker)*
 
 
 ## `palettes` :art:
@@ -49,9 +89,10 @@ belle | spiff | yoshi | phoebe | pam
 menthol | dwight | riley | mona | eeyore
 rainbow
 
+
 **frieda**
 
-![](imgs/frieda.png)
+![](imgs/frieda.png){:height="50%" width="50%"}
 
 **plath**
 

@@ -9,13 +9,13 @@ from .utils import *
 from .interpolate import *
 
 
-
 # reading in volcanic data..........................................................
 _df = pd.read_csv('volcanoes.csv')
 _df.reset_index(level=0, inplace=True)
 _df = _df.melt(id_vars='index')
 _df = _df.rename(columns={'index':'row','variable':'col'})
 _df = _df.astype('float')
+    
 
 
 def heatmap(
