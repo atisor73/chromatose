@@ -1,3 +1,5 @@
+import warnings
+
 import numpy as np
 import pandas as pd
 import scipy.stats
@@ -5,6 +7,7 @@ import bokeh.io
 import bokeh.plotting
 
 from .utils import *
+from . import heat
 from . import palettes
 
 try:
@@ -85,7 +88,7 @@ def swatch(
     df['hex']=palette
     df['rgb']=hex_to_rgb(palette)
 
-    height, width = 62, 70*len(palette)
+    height, width = 62, 72*len(palette)
     if len(palette) > 10: width=650
     size = height/1.2
     p = bokeh.plotting.figure(width=width, height=height,
@@ -156,6 +159,7 @@ def palplot(
     palette = hex_palette(palette)
     length = len(palette)
     
+        
     def _swatch():
         df = pd.DataFrame(dict(palette=palette,
                            x=np.arange(len(palette)),
@@ -175,7 +179,8 @@ def palplot(
         return p
     
     def _pie():
-        width, height = 325, 325
+        if len(palette) < 9: line_color = bg_color
+        else: line_color = None
         width, height = 300, 300
         angles = [0.216875, 0.1545, 0.127375, 0.1069, 0.103925,
                  0.055875, 0.04665,0.0355, 0.032275, 0.03, 0.018975,
@@ -202,7 +207,8 @@ def palplot(
         p.wedge(x=0,y=0,radius=1,
                    start_angle=bokeh.transform.cumsum('angle',include_zero=True),
                    end_angle=bokeh.transform.cumsum('angle'),
-                   line_color= bg_color, # "palette", # -> (no spaces btw wedges)
+                   line_color=line_color, # "palette", # -> (no spaces btw wedges)
+                   line_width=0.5,
                    fill_color="palette",
                    fill_alpha=alpha,
                    source=df
@@ -274,6 +280,7 @@ def palplot(
     except: pass
     
     # inspired by @jmaasch's scatter plots in R
+    
     def _scatter():
         x_ranges = []                         # manually constructing ranges
         for _ in range(len(palette)):
@@ -339,6 +346,12 @@ def palplot(
             if glyph == "scatter": return _scatter()
         
     #**********************************************************************
+    if len(palette) > 40:
+        warnings.warn("Big palette! Un-interpolated heat map instead. ")
+        map = heat.heatmap(palette, interpolate=False, return_plot=True)
+        bokeh.io.show(bokeh.layouts.layout([[[_pie(), _swatch()], map]]))
+        return
+        
     if plot=="swatch": return _swatch()
     if plot=="pie": return _pie()
     if plot=="points": return _points()

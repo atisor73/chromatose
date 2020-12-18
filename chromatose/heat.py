@@ -14,12 +14,12 @@ from .interpolate import *
 _path = os.path.join(os.path.dirname(__file__), 'volcanoes.csv')
 _df = pd.read_csv(_path)
 _df.reset_index(level=0, inplace=True)
+_df = _df.drop(columns=' 1 ')
 _df = _df.melt(id_vars='index')
 _df = _df.rename(columns={'index':'row','variable':'col'})
 _df = _df.astype('float')
     
-
-
+    
 def heatmap(
     palette,
     interpolate=True,
@@ -27,7 +27,8 @@ def heatmap(
     interpolation_method='rgb',
     curve=False,
     directions=['up','down','up'],
-    return_palette=False
+    return_palette=False,
+    return_plot=False
     ):
     """
     Displays heatmap via bokeh. Hover for hex/rgb value.
@@ -60,16 +61,19 @@ def heatmap(
     outputs plot directly, no returns unless return_palette is set to True
     """
 
-    if interpolate == True: colors = palpolate(palette,
-                                               desired_length,
-                                               method=interpolation_method,
-                                               curve=curve,
-                                               directions=directions
-                                              )
+    if interpolate == True:
+        colors = palpolate( palette,
+                            desired_length,
+                            method=interpolation_method,
+                            curve=curve,
+                            directions=directions )
+                            
     else: colors = palette
         
-    mapper = LinearColorMapper(palette=colors, low=_df.value.min(), high=_df.value.max())
-    
+    mapper = LinearColorMapper( palette=colors,
+                                low=_df.value.min(),
+                                high=_df.value.max() )
+
     # formatting TOOLTIPS...............................................................
     hex_str_dict = {}
     for value in np.unique(_df.value):
@@ -85,14 +89,17 @@ def heatmap(
             <div>
                 <span style="font-size:15px; font-weight:bold; color:midnightblue;">color: @color</span> <br>
                 <span style="font-size:12px; margin-left:3em; font-weight:bold; color:lapisblue;">(@rgb)</span> <br>
+                'value: '@value<br>
+                'row: '@row<br>
+                'column: '@col<br>
             </div>
         </div>
         """
     
     # PLOTTING...........................................................................
-    p = bokeh.plotting.figure(width=720, height=350,
-                          x_range=(_df.row.min(), _df.row.max()),
-                          y_range=(_df.col.min(), _df.col.max()),
+    p = bokeh.plotting.figure(width=600, height=300,
+                          x_range=(_df.row.min()+1, _df.row.max()),
+                          y_range=(_df.col.min()+1, _df.col.max()),
                           tooltips=TOOLTIPS
                          )
     p.rect(source=_df, x='row', y='col',
@@ -112,7 +119,11 @@ def heatmap(
     p.xaxis.visible, p.yaxis.visible = False, False
     p.toolbar.autohide=True
     
-    bokeh.io.show(p)
-    
+    if return_plot == True:
+        return p
+    else:
+        bokeh.io.show(p)
+
     if return_palette == True:
         return colors
+        
