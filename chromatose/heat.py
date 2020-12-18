@@ -89,9 +89,6 @@ def heatmap(
             <div>
                 <span style="font-size:15px; font-weight:bold; color:midnightblue;">color: @color</span> <br>
                 <span style="font-size:12px; margin-left:3em; font-weight:bold; color:lapisblue;">(@rgb)</span> <br>
-                'value: '@value<br>
-                'row: '@row<br>
-                'column: '@col<br>
             </div>
         </div>
         """

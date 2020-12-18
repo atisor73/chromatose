@@ -55,7 +55,7 @@ Volcano data lifted from R. Hot stuff.
 ## `interpolation` :scissors:
 
 ### ct.palpolate( )
- `palpolate` (<em>pal</em>-(ette inter)-<em>polate</em>): 
+ `palpolate` (<em>pal</em>-(ette inter)-<em>polate</em>):   
     input lists of any size and user can control output size. 
 
 There are a multitude of beautiful gradients in packages like bokeh and colorcet that are, for the most part, static. The interpolation scheme here can be used to create entirely new ones given only a few endpoints. This part is still in development, but currently uses linear or polynomial fits in color space metrics RGB, HSL, or HSV. Heatmaps are a good way to visualize the results!
