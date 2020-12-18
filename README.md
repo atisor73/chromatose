@@ -1,9 +1,40 @@
 # chromatose
 <hr>
+A package for storing and visualizing palettes, and constructing new ones via interpolation.<br> 
+The stored palettes are typically diverging, and mostly for personal record. Visualizations include swatches, pies, points, lines, scatters, and heatmaps. There are a multitude of beautiful gradients in packages like bokeh and colorcet that are,  for the most part, static. The interpolation scheme here can be used to create entirely new ones given only a few endpoints. This part is still in development, but currently uses linear or polynomial fits in color space metrics RGB, HSL, or HSV. Heatmaps are a great way to visualize the results. Chromatose is now pippable!
 
-## `palettes.py` :art:
-Nice lil home for some custom palettes I've found to be all right. Now pippable!
 
+
+
+## `viz` :eyes:
+
+### ct.swatch( )
+Outputs basic swatch. 
+
+### ct.palplot( ) 
+Visualizations include swatches, pies, points, lines, scatters. Somewhat helpful for seeing how colors behave on a plot, in dense or scattered visuals. Sometimes colors look great together on a swatch, but not so great in their pointillistic forms. 
+
+### ct.heatmap( )
+Volcano data lifted from R.
+
+
+
+
+
+## `interpolation` :scissors:
+
+### ct.palpolate( )
+Rough RGB interpolator called `palpolate` (<em>pal</em>-(ette inter)-<em>polate</em>), can handle input lists of any size and user can control output size. 
+
+There are a multitude of beautiful gradients in packages like bokeh and colorcet that are, for the most part, static. The interpolation scheme here can be used to create entirely new ones given only a few endpoints. This part is still in development, but currently uses linear or polynomial fits in color space metrics RGB, HSL, or HSV. Heatmaps are a great way to visualize the results.
+
+
+
+
+
+
+
+## `palettes` :art:
 |       |      |      |      |          |
 |----------|----------|----------|----------|----------|
 frieda | plath | selah | blonde | honeycombe
@@ -17,13 +48,6 @@ lufte | oolong | pitaya | alice | neko
 belle | spiff | yoshi | phoebe | pam
 menthol | dwight | riley | mona | eeyore
 rainbow
-
-## `viz.py` :eyes:
-Somewhat helpful for visualizing how a diverging set of colors would look like on a plot and how they behave in dense vs. scattered visuals. Sometimes colors look great together on a swatch, but not so great in their pointillistic forms. The method's called `palplot`, inspired by seaborn's palplot, but with more functionality (less blurry too).
-
-Currently there's a limitation to 7 colors (more categorical); I think I want a different kind of format for larger spaces (which tend to be quantitative). 
-
-Rough RGB interpolator called `palpolate` (<em>pal</em>-(ette inter)-<em>polate</em>), can handle input lists of any size and user can control output size. Will add HSL/HSV interpolator when I have time.
 
 **frieda**
 

@@ -10,9 +10,9 @@ from . import palettes
 try:
     import panel as pn     # see if panel is installed
     pn.extension()
-    panel = True
+    _panel = True
 except:
-    panel = False
+    _panel = False
     
     
 def _clean_plot(p, bg_color):
@@ -323,7 +323,7 @@ def palplot(
             p.width=525
         return p
         
-    if panel == True:
+    if _panel == True:
         if len(palette) > 7:
             glyph = pn.widgets.Select(
                 options=['lines','scatter'],
@@ -346,9 +346,9 @@ def palplot(
     if plot=="line": return _line()
         
     if plot=="all":
-        if panel == True:
+        if _panel == True:
             return pn.Row(pn.Column(_pie(), _swatch()), pn.Column(glyph,data))
-        elif panel == False:
+        elif _panel == False:
             bokeh.io.show(bokeh.layouts.layout([[_pie(), _points()], _swatch()]))
             
             

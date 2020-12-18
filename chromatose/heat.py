@@ -3,7 +3,7 @@ import pandas as pd
 
 import bokeh.io
 import bokeh.plotting
-from bokeh.models import ColorBar, LinearColorMapper, BasicTicker, PrintfTickFormatter
+from bokeh.models import ColorBar, LinearColorMapper
 
 from .utils import *
 from .interpolate import *
@@ -11,11 +11,11 @@ from .interpolate import *
 
 
 # reading in volcanic data..........................................................
-df = pd.read_csv('volcanoes.csv')
-df.reset_index(level=0, inplace=True)
-df = df.melt(id_vars='index')
-df = df.rename(columns={'index':'row','variable':'col'})
-df = df.astype('float')
+_df = pd.read_csv('volcanoes.csv')
+_df.reset_index(level=0, inplace=True)
+_df = _df.melt(id_vars='index')
+_df = _df.rename(columns={'index':'row','variable':'col'})
+_df = _df.astype('float')
 
 
 def heatmap(
@@ -66,18 +66,18 @@ def heatmap(
                                               )
     else: colors = palette
         
-    mapper = LinearColorMapper(palette=colors, low=df.value.min(), high=df.value.max())
+    mapper = LinearColorMapper(palette=colors, low=_df.value.min(), high=_df.value.max())
     
     # formatting TOOLTIPS...............................................................
     hex_str_dict = {}
-    for value in np.unique(df.value):
-        fraction = (value-df.value.min())/(df.value.max()-df.value.min())
+    for value in np.unique(_df.value):
+        fraction = (value-_df.value.min())/(_df.value.max()-_df.value.min())
         index = int(np.round(fraction*len(mapper.palette)))
         hex_str = mapper.palette[index-1]
         hex_str_dict[value] = hex_str
-    hex_strs = [hex_str_dict[value] for value in df.value]
-    df['color'] = hex_strs
-    df['rgb'] = hex_to_rgb(hex_strs)
+    hex_strs = [hex_str_dict[value] for value in _df.value]
+    _df['color'] = hex_strs
+    _df['rgb'] = hex_to_rgb(hex_strs)
     TOOLTIPS = """
         <div>
             <div>
@@ -89,11 +89,11 @@ def heatmap(
     
     # PLOTTING...........................................................................
     p = bokeh.plotting.figure(width=720, height=350,
-                          x_range=(df.row.min(), df.row.max()),
-                          y_range=(df.col.min(), df.col.max()),
+                          x_range=(_df.row.min(), _df.row.max()),
+                          y_range=(_df.col.min(), _df.col.max()),
                           tooltips=TOOLTIPS
                          )
-    p.rect(source=df, x='row', y='col',
+    p.rect(source=_df, x='row', y='col',
            width=1, height=1,
            fill_color={'field': 'value', 'transform': mapper},
            line_color=None,
