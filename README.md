@@ -1,14 +1,14 @@
 # chromatose
 <hr>
-A package for storing and visualizing palettes, and constructing new ones via interpolation.<br> 
-The stored palettes are typically diverging, and mostly for personal record. Visualizations include swatches, pies, points, lines, scatters, and heatmaps. There are a multitude of beautiful gradients in packages like bokeh and colorcet that are,  for the most part, static. The interpolation scheme here can be used to create entirely new ones given only a few endpoints. This part is still in development, but currently uses linear or polynomial fits in color space metrics RGB, HSL, or HSV. Heatmaps are a great way to visualize the results. Chromatose is now pippable!
-
+A package for storing and visualizing palettes, and constructing new ones via interpolation. Now pippable!
+<br> 
 
 
 
 ## `viz` :eyes:
 
 ### ct.swatch( )
+watch me swatch...
 - **`palette`** : list or iterable  
     any combination of hex strings or rgb tuples or HTML names
 - `alpha` : fraction between 0.0 and 1.0  
@@ -26,7 +26,7 @@ Visualizations include swatches, pies, points, lines, scatters. Somewhat helpful
     *shuffles palette*
 
 ### ct.heatmap( )
-Volcano data lifted from R.
+Volcano data lifted from R. Hot stuff.
 
 - **`palette`** : list or iterable   
     any combination of hex strings or rgb tuples or HTML
@@ -57,7 +57,7 @@ Volcano data lifted from R.
 ### ct.palpolate( )
 Rough RGB interpolator called `palpolate` (<em>pal</em>-(ette inter)-<em>polate</em>), can handle input lists of any size and user can control output size. 
 
-There are a multitude of beautiful gradients in packages like bokeh and colorcet that are, for the most part, static. The interpolation scheme here can be used to create entirely new ones given only a few endpoints. This part is still in development, but currently uses linear or polynomial fits in color space metrics RGB, HSL, or HSV. Heatmaps are a great way to visualize the results.
+There are a multitude of beautiful gradients in packages like bokeh and colorcet that are, for the most part, static. The interpolation scheme here can be used to create entirely new ones given only a few endpoints. This part is still in development, but currently uses linear or polynomial fits in color space metrics RGB, HSL, or HSV. Heatmaps are a good way to visualize the results!
 
 - **`palette`** : list or iterable   
     any combination of hex strings or rgb tuples or HTML
@@ -290,13 +290,5 @@ rainbow
 **yoshi**
 
 <img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/yoshi.png" width="85%" height="85%">
-
-**gucci**
-
-<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/gucci.png" width="85%" height="85%">
-
-**sandbar**
-
-<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/sandbar.png" width="85%" height="85%">
 
 *"The last color she remembered was the indigo chips in the headstone. After that she became as color conscious as a hen."* 

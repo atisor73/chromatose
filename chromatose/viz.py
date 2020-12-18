@@ -85,7 +85,7 @@ def swatch(
     df['hex']=palette
     df['rgb']=hex_to_rgb(palette)
 
-    height, width = 62, 62*len(palette)
+    height, width = 62, 70*len(palette)
     if len(palette) > 10: width=650
     size = height/1.2
     p = bokeh.plotting.figure(width=width, height=height,

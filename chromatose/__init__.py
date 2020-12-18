@@ -9,9 +9,8 @@ There are a multitude of beautiful gradients in packages like bokeh and colorcet
 from .palettes import *
 from .viz import *
 from .interpolate import *
-from .heat import *
 from .utils import *
-
+from .heat import *
 
 __author__ = "Rosita Fu"
 __version__ = "0.0.3"

@@ -1,1 +1,2 @@
 include chromatose/volcanoes.csv
+include chromatose/*.csv

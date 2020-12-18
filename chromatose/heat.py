@@ -10,11 +10,12 @@ from .interpolate import *
 
 
 # reading in volcanic data..........................................................
-_df = pd.read_csv('volcanoes.csv')
-_df.reset_index(level=0, inplace=True)
-_df = _df.melt(id_vars='index')
-_df = _df.rename(columns={'index':'row','variable':'col'})
-_df = _df.astype('float')
+
+# _df = pd.read_csv("volcanoes.csv")
+# _df.reset_index(level=0, inplace=True)
+# _df = _df.melt(id_vars='index')
+# _df = _df.rename(columns={'index':'row','variable':'col'})
+# _df = _df.astype('float')
     
 
 
@@ -57,6 +58,13 @@ def heatmap(
     --------
     outputs plot directly, no returns unless return_palette is set to True
     """
+    
+    _df = pd.read_csv("volcanoes.csv")
+    _df.reset_index(level=0, inplace=True)
+    _df = _df.melt(id_vars='index')
+    _df = _df.rename(columns={'index':'row','variable':'col'})
+    _df = _df.astype('float')
+    
     
     if interpolate == True: colors = palpolate(palette,
                                                desired_length,
