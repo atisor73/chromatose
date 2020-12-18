@@ -92,210 +92,211 @@ rainbow
 
 **frieda**
 
-<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/frieda.png" width="80%" height="80%">
+<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/frieda.png" width="85%" height="85%">
 
 
 
 **plath**
 
-![](imgs/plath.png)
+<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/plath.png" width="85%" height="85%">
 
 **selah**
 
-![](imgs/selah.png)
+<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/selah.png" width="85%" height="85%">
 
 **blonde**
 
-![](imgs/blonde.png)
+<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/blonde.png" width="85%" height="85%">
 
 **honeycombe**
 
-![](imgs/honeycombe.png)
+<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/honeycombe.png" width="85%" height="85%">
 
 **lysergic**
 
-![](imgs/lysergic.png)
+<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/lysergic.png" width="85%" height="85%">
+
 
 **pepo**
 
-![](imgs/pepo.png)
+<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/pepo.png" width="85%" height="85%">
 
 **reese**
 
-![](imgs/reese.png)
+<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/reese.png" width="85%" height="85%">
 
 **rainbow**
 
-![](imgs/rainbow.png)
+<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/rainbow.png" width="85%" height="85%">
 
 **lufte**
 
-![](imgs/lufte.png)
+<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/lufte.png" width="85%" height="85%">
 
 **pitaya**
 
-![](imgs/pitaya.png)
+<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/pitaya.png" width="85%" height="85%">
 
 **crepuscule**
 
-![](imgs/crepuscule.png)
+<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/crepuscle.png" width="85%" height="85%">
 
 **spiff**
 
-![](imgs/spiff.png)
+<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/spiff.png" width="85%" height="85%">
 
 **leather**
 
-![](imgs/leather.png)
+<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/leather.png" width="85%" height="85%">
 
 **eleven**
 
-![](imgs/eleven.png)
+<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/eleven.png" width="85%" height="85%">
 
 **chilaquiles**
 
-![](imgs/chilaquiles.png)
+<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/chilaquiles.png" width="85%" height="85%">
 
 **fiestaware**
 
-![](imgs/fiestaware.png)
+<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/fiestaware.png" width="85%" height="85%">
 
 **splenda**
 
-![](imgs/splenda.png)
+<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/splenda.png" width="85%" height="85%">
 
 **medium**
 
-![](imgs/medium.png)
+<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/medium.png" width="85%" height="85%">
 
 **juniper**
 
-![](imgs/juniper.png)
+<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/juniper.png" width="85%" height="85%">
 
 **pollen**
 
-![](imgs/pollen.png)
+<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/pollen.png" width="85%" height="85%">
 
 **gremlin**
 
-![](imgs/gremlin.png)
+<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/gremlin.png" width="85%" height="85%">
 
 **fraiche**
 
-![](imgs/fraiche.png)
+<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/fraiche.png" width="85%" height="85%">
 
 **polya**
 
-![](imgs/polya.png)
+<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/polya.png" width="85%" height="85%">
 
 **cheshire**
 
-![](imgs/cheshire.png)
+<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/cheshire.png" width="85%" height="85%">
 
 
 **carmine**
 
-![](imgs/carmine.png)
+<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/camine.png" width="85%" height="85%">
 
 
 **joan**
 
-![](imgs/joan.png)
+<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/joan.png" width="85%" height="85%">
 
 **pinot**
 
-![](imgs/pinot.png)
+<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/pinot.png" width="85%" height="85%">
 
 **addams**
 
-![](imgs/addams.png)
+<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/addams.png" width="85%" height="85%">
 
 **minuit**
 
-![](imgs/minuit.png)
+<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/minuit.png" width="85%" height="85%">
 
 **fugazi**
 
-![](imgs/fugazi.png)
+<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/fugazi.png" width="85%" height="85%">
 
 **clementine**
 
-![](imgs/clementine.png)
+<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/clementine.png" width="85%" height="85%">
 
 **mona**
 
-![](imgs/mona.png)
+<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/mona.png" width="85%" height="85%">
 
 **leda**
 
-![](imgs/leda.png)
+<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/leda.png" width="85%" height="85%">
 
 **pugsley**
 
-![](imgs/pugsley.png)
+<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/pugsley.png" width="85%" height="85%">
 
 **bellhooks**
 
-![](imgs/bellhooks.png)
+<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/bellhooks.png" width="85%" height="85%">
 
 **oolong**
 
-![](imgs/oolong.png)
+<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/oolong.png" width="85%" height="85%">
 
 **alice**
 
-![](imgs/alice.png)
+<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/alice.png" width="85%" height="85%">
 
 **wes**
 
-![](imgs/wes.png)
+<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/wes.png" width="85%" height="85%">
 
 **belle**
 
-![](imgs/belle.png)
+<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/belle.png" width="85%" height="85%">
 
 **neko**
 
-![](imgs/neko.png)
+<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/neko.png" width="85%" height="85%">
 
 **phoebe**
 
-![](imgs/phoebe.png)
+<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/phoebe.png" width="85%" height="85%">
 
 **pam**
 
-![](imgs/pam.png)
+<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/pam.png" width="85%" height="85%">
 
 **dwight**
 
-![](imgs/dwight.png)
+<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/dwight.png" width="85%" height="85%">
 
 **menthol**
 
-![](imgs/menthol.png)
+<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/menthol.png" width="85%" height="85%">
 
 **riley**
 
-![](imgs/riley.png)
+<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/riley.png" width="85%" height="85%">
 
 **ostrich**
 
-![](imgs/ostrich.png)
+<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/ostrich.png" width="85%" height="85%">
 
 **eeyore**
 
-![](imgs/eeyore.png)
+<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/eeyore.png" width="85%" height="85%">
 
 **yoshi**
 
-![](imgs/yoshi.png)
+<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/yoshi.png" width="85%" height="85%">
 
 **gucci**
 
-![](imgs/gucci.png)
+<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/gucci.png" width="85%" height="85%">
 
 **sandbar**
 
-![](imgs/sandbar.png)
+<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/sandbar.png" width="85%" height="85%">
 
 *"The last color she remembered was the indigo chips in the headstone. After that she became as color conscious as a hen."* 
