@@ -93,7 +93,7 @@ rainbow
 **frieda**
 
 ![](imgs/frieda.png)
-<img src="https://github.com/atisor73/chromatose/imgs/frieda.png" width="400" height="100">
+<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/frieda.png" width="400" height="100">
 
 
 
