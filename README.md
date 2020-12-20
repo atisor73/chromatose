@@ -8,8 +8,9 @@ A package for storing and visualizing palettes, and constructing new ones via in
 ## `viz` :eyes:
 
 ### ct.swatch( )
-watch me swatch...
-<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/1swatch.jpg" width="80%" height="80%">
+watch me swatch... 
+
+<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/1swatch.jpg" width="60%" height="60%">
 
 - **`palette`** : list or iterable  
     any combination of hex strings or rgb tuples or HTML names
@@ -30,7 +31,7 @@ Visualizations include swatches, pies, points, lines, scatters. Somewhat helpful
 
 ### ct.heatmap( )
 Volcano data lifted from R. Hot stuff.
-<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/5heatmap.png" width="70%" height="70%">
+<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/5heatmap.png" width="65%" height="65%">
 
 Default interpolation (below), but can switch it off (above). 
 
