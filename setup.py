@@ -1,9 +1,6 @@
 from setuptools import setup, find_packages
 
-from os import path
-direc = path.abspath(path.dirname(__file__))
-with open(path.join(direc, 'README.md'), encoding='utf-8') as f:
-    long_description = f.read()
+long_description = "Chromatose is a package for storing and visualizing palettes and constructing new ones via interpolation.\n\nThe stored palettes are typically diverging, and mostly for personal record.\nVisualizations include swatches, pies, points, lines, scatters, and heatmaps.\nThere are a multitude of beautiful gradients in packages like bokeh and colorcet that are,  for the most part, static. The interpolation scheme here can be used to create entirely new ones given only a few endpoints. This part is still in development, but currently uses linear or polynomial fits in color space metrics RGB, HSL, or HSV. Heatmaps are a great way to visualize the results."
 
 setup(
     name="chromatose",
