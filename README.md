@@ -29,7 +29,7 @@ Visualizations include swatches, pies, points, lines, scatters. Somewhat helpful
 
 ### ct.heatmap( )
 Volcano data lifted from R. Hot stuff.  
-<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/3interpolate.jpg" width="56%" height="56%">
+<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/5heatmap.png" width="56%" height="56%">
 Default interpolation (below) but can also turn this off (above).  
 
 - **`palette`** : list or iterable   
