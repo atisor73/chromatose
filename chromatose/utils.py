@@ -195,7 +195,7 @@ palette_dict = {
     "riley": riley,
     "mona": mona,
     "eeyore": eeyore,
-    "rainbow":rainbow
+    "rainbow":rainbow,
 }
 
 def hex_to_rgb(palette):
