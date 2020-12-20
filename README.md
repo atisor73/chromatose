@@ -9,6 +9,7 @@ A package for storing and visualizing palettes, and constructing new ones via in
 
 ### ct.swatch( )
 watch me swatch...
+<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/1swatch.jpg" width="100%" height="100%">
 - **`palette`** : list or iterable  
     any combination of hex strings or rgb tuples or HTML names
 - `alpha` : fraction between 0.0 and 1.0  
@@ -16,6 +17,7 @@ watch me swatch...
 
 ### ct.palplot( ) 
 Visualizations include swatches, pies, points, lines, scatters. Somewhat helpful for seeing how colors behave on a plot, in dense or scattered visuals. Sometimes colors look great together on a swatch, but not so great in their pointillistic forms. 
+<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/2palplot.jpg" width="100%" height="100%">
 - **`palette`** : list or iterable  
     any combination of hex strings or rgb tuples or HTML
 - `bg_color` : HTML or hex string  
@@ -27,6 +29,10 @@ Visualizations include swatches, pies, points, lines, scatters. Somewhat helpful
 
 ### ct.heatmap( )
 Volcano data lifted from R. Hot stuff.
+<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/5heatmap.jpg" width="100%" height="100%">
+
+Default interpolation (below), but can switch it off (above). 
+
 
 - **`palette`** : list or iterable   
     any combination of hex strings or rgb tuples or HTML
@@ -60,6 +66,10 @@ Volcano data lifted from R. Hot stuff.
 
 There are a multitude of beautiful gradients in packages like bokeh and colorcet that are, for the most part, static. The interpolation scheme here can be used to create entirely new ones given only a few endpoints. This part is still in development, but currently uses linear or polynomial fits in color space metrics RGB, HSL, or HSV. Heatmaps are a good way to visualize the results!
 
+<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/3interpolate.png" width="100%" height="100%">
+
+<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/4interpolate.png" width="100%" height="100%">
+
 - **`palette`** : list or iterable   
     any combination of hex strings or rgb tuples or HTML
 - **`desired_length`** : integer  
@@ -88,7 +98,9 @@ bellhooks | wes | lysergic | pepo |  reese
 lufte | oolong | pitaya | alice | neko
 belle | spiff | yoshi | phoebe | pam
 menthol | dwight | riley | mona | eeyore
-rainbow
+rainbow | bluefish | BuPu9 | BuPu256 | holst
+joker | joker256 | rach | rach256 | moxxi
+moxxi256 | salvia | salvia256
 
 
 **frieda**
@@ -178,9 +190,6 @@ rainbow
 
 <img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/pollen.png" width="89%" height="89%">
 
-**gremlin**
-
-<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/gremlin.png" width="89%" height="89%">
 
 **fraiche**
 
@@ -195,11 +204,6 @@ rainbow
 <img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/cheshire.png" width="89%" height="89%">
 
 
-**carmine**
-
-<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/camine.png" width="89%" height="89%">
-
-
 **joan**
 
 <img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/joan.png" width="89%" height="89%">
@@ -207,6 +211,11 @@ rainbow
 **pinot**
 
 <img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/pinot.png" width="89%" height="89%">
+
+**salvia***
+
+<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/salvia.png" width="89%" height="89%">
+
 
 **addams**
 
@@ -272,10 +281,6 @@ rainbow
 
 <img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/dwight.png" width="89%" height="89%">
 
-**menthol**
-
-<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/menthol.png" width="89%" height="89%">
-
 **riley**
 
 <img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/riley.png" width="89%" height="89%">
@@ -291,5 +296,29 @@ rainbow
 **yoshi**
 
 <img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/yoshi.png" width="89%" height="89%">
+
+
+**moxxi***
+
+<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/moxxi.png" width="89%" height="89%">
+
+
+**carmine**
+
+<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/carmine.png" width="89%" height="89%">
+
+**bluefish**
+
+<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/bluefish.png" width="89%" height="89%">
+
+**joker***
+
+<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/joker.png" width="89%" height="89%">
+
+**rach\***
+
+<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/rach.png" width="89%" height="89%">
+
+
 
 *"The last color she remembered was the indigo chips in the headstone. After that she became as color conscious as a hen."* 

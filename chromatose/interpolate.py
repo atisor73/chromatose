@@ -54,7 +54,7 @@ def _pair_interpolate(start, end, num,
 
 def palpolate(
     palette,
-    desired_length,
+    desired_length=256,
     method='rgb',
     curve=False,
     directions=['up','down','up']
@@ -85,7 +85,7 @@ def palpolate(
     output : list of interpolated palette
     """
     
-    if desired_length <= len(palette)*2:
+    if desired_length <= len(palette)*1.5:
         return palette
         
     palette = list(palette)

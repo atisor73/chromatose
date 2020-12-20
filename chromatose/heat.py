@@ -60,7 +60,9 @@ def heatmap(
     --------
     outputs plot directly, no returns unless return_palette is set to True
     """
-
+    palette = list(palette)
+    palette = hex_palette(palette)
+    
     if interpolate == True:
         colors = palpolate( palette,
                             desired_length,
@@ -69,7 +71,7 @@ def heatmap(
                             directions=directions )
                             
     else: colors = palette
-        
+    
     mapper = LinearColorMapper( palette=colors,
                                 low=_df.value.min(),
                                 high=_df.value.max() )

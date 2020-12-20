@@ -56,7 +56,7 @@ def _rug(x, y, p, color):
 
 def swatch(
     palette,
-    alpha=1.0
+    alpha=1.0,
     ):
     """
     Displays palette via bokeh. Hover for hex/rgb value.
@@ -67,7 +67,6 @@ def swatch(
          list of hex strings or rgb tuples or HTML names, any combination
     alpha : fraction between 0.0 and 1.0
         alpha transparency of entire palette
-        
     Returns
     ---------
     output : displays plot, no return
@@ -87,9 +86,12 @@ def swatch(
 
     df['hex']=palette
     df['rgb']=hex_to_rgb(palette)
-
-    height, width = 62, 72*len(palette)
+    
+    height = 62
+    width = height*len(palette)+60
+    if len(palette) > 5: width = 62*len(palette)
     if len(palette) > 10: width=650
+    
     size = height/1.2
     p = bokeh.plotting.figure(width=width, height=height,
                                    x_range=(-1,len(palette)),
@@ -179,8 +181,14 @@ def palplot(
         return p
     
     def _pie():
-        if len(palette) < 9: line_color = bg_color
-        else: line_color = None
+        if len(palette) < 9:
+            line_color = bg_color
+            line_width = 0.5
+        else:
+            line_color = None
+            line_width = 0.01
+        
+        
         width, height = 300, 300
         angles = [0.216875, 0.1545, 0.127375, 0.1069, 0.103925,
                  0.055875, 0.04665,0.0355, 0.032275, 0.03, 0.018975,
@@ -208,7 +216,7 @@ def palplot(
                    start_angle=bokeh.transform.cumsum('angle',include_zero=True),
                    end_angle=bokeh.transform.cumsum('angle'),
                    line_color=line_color, # "palette", # -> (no spaces btw wedges)
-                   line_width=0.5,
+                   line_width=line_width,
                    fill_color="palette",
                    fill_alpha=alpha,
                    source=df
@@ -308,7 +316,7 @@ def palplot(
             else: p.triangle(x=x,y=y,color=palette[i],size=6,alpha=1)
             _rug(x, y, p, palette[i])
         
-        if fit_line: p.line(x=(0,50),y=(0,50),color='black')     # line_fit
+        if fit_line: p.line(x=(0,500),y=(0,500),color='black')     # line_fit
         
         # cleaning
         p.xgrid.grid_line_color, p.ygrid.grid_line_color = None, None
@@ -333,7 +341,7 @@ def palplot(
     if _panel == True:
         if len(palette) > 7:
             glyph = pn.widgets.Select(
-                options=['lines','scatter'],
+                options=['lines','scatter','map'],
                 width=375, margin=[3,4], value='lines')
         else:
             glyph = pn.widgets.Select(
@@ -344,12 +352,14 @@ def palplot(
             if glyph == "points": return _points()
             if glyph == "lines": return _line()
             if glyph == "scatter": return _scatter()
+            map = heat.heatmap(palette, interpolate=False, return_plot=True)
+            if glyph == "map": return map
         
     #**********************************************************************
-    if len(palette) > 40:
-        warnings.warn("Big palette! Un-interpolated heat map instead. ")
+    if len(palette) > 30:
         map = heat.heatmap(palette, interpolate=False, return_plot=True)
-        bokeh.io.show(bokeh.layouts.layout([[[_pie(), _swatch()], map]]))
+        spacer = bokeh.layouts.Spacer(height=20)
+        bokeh.io.show(bokeh.layouts.layout([[[_pie(), _swatch()], [spacer, map]]]))
         return
         
     if plot=="swatch": return _swatch()
