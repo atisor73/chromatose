@@ -5,6 +5,24 @@ A package for storing and visualizing palettes, and constructing new ones via in
 
 
 
+## `palettes` :art:
+|       |      |      |      |          |
+|----------|----------|----------|----------|----------|
+frieda | plath | selah | blonde | honeycombe
+crepuscule | leather | gucci | sandbar | fiestaware
+chilaquiles | eleven | splenda | gremlin | pollen
+medium | juniper | polya | ostrich | fraiche
+cheshire | carmine | joan | pinot | addams
+minuit | fugazi | clementine | leda | pugsley
+bellhooks | wes | lysergic | pepo |  reese
+lufte | oolong | pitaya | alice | neko
+belle | spiff | yoshi | phoebe | pam
+menthol | dwight | riley | mona | eeyore
+rainbow | BuPu9 | BuPu256 | holst | bluefish 
+joker | joker256 |  rach |  rach256 | moxxi
+moxxi256 | salvia |  salvia256 | 
+
+
 ## `viz` :eyes:
 
 ### ct.palplot( ) 
@@ -85,24 +103,9 @@ There are a multitude of beautiful gradients in packages like bokeh and colorcet
     *'down' pushes intermediate values lower (darker)*
 
 
-## `palettes` :art:
-|       |      |      |      |          |
-|----------|----------|----------|----------|----------|
-frieda | plath | selah | blonde | honeycombe
-crepuscule | leather | gucci | sandbar | fiestaware
-chilaquiles | eleven | splenda | gremlin | pollen
-medium | juniper | polya | ostrich | fraiche
-cheshire | carmine | joan | pinot | addams
-minuit | fugazi | clementine | leda | pugsley
-bellhooks | wes | lysergic | pepo |  reese
-lufte | oolong | pitaya | alice | neko
-belle | spiff | yoshi | phoebe | pam
-menthol | dwight | riley | mona | eeyore
-rainbow | BuPu9 | BuPu256 | holst | bluefish 
-joker | joker256 |  rach |  rach256 | moxxi
-moxxi256 | salvia |  salvia256 | 
 
 
+## gallery :rainbow:
 **frieda**
 
 <img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/frieda.png" width="89%" height="89%">
