@@ -8,10 +8,8 @@ A package for storing and visualizing palettes, and constructing new ones via in
 ## `viz` :eyes:
 
 ### ct.swatch( )
-watch me swatch... 
-
-<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/1swatch.jpg" width="60%" height="60%">
-
+watch me swatch...
+<!-- <img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/1swatch.jpg" width="100%" height="100%"> -->
 - **`palette`** : list or iterable  
     any combination of hex strings or rgb tuples or HTML names
 - `alpha` : fraction between 0.0 and 1.0  
@@ -31,10 +29,6 @@ Visualizations include swatches, pies, points, lines, scatters. Somewhat helpful
 
 ### ct.heatmap( )
 Volcano data lifted from R. Hot stuff.
-<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/5heatmap.png" width="65%" height="65%">
-
-Default interpolation (below), but can switch it off (above). 
-
 
 - **`palette`** : list or iterable   
     any combination of hex strings or rgb tuples or HTML
@@ -68,9 +62,9 @@ Default interpolation (below), but can switch it off (above).
 
 There are a multitude of beautiful gradients in packages like bokeh and colorcet that are, for the most part, static. The interpolation scheme here can be used to create entirely new ones given only a few endpoints. This part is still in development, but currently uses linear or polynomial fits in color space metrics RGB, HSL, or HSV. Heatmaps are a good way to visualize the results!
 
-<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/3interpolate.jpg" width="100%" height="100%">
+<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/3interpolate.png" width="100%" height="100%">
 
-<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/4interpolate.jpg" width="100%" height="100%">
+<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/4interpolate.png" width="100%" height="100%">
 
 - **`palette`** : list or iterable   
     any combination of hex strings or rgb tuples or HTML
@@ -100,9 +94,7 @@ bellhooks | wes | lysergic | pepo |  reese
 lufte | oolong | pitaya | alice | neko
 belle | spiff | yoshi | phoebe | pam
 menthol | dwight | riley | mona | eeyore
-rainbow | bluefish | BuPu9 | BuPu256 | holst
-joker | joker256 | rach | rach256 | moxxi
-moxxi256 | salvia | salvia256
+rainbow
 
 
 **frieda**
@@ -214,7 +206,7 @@ moxxi256 | salvia | salvia256
 
 <img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/pinot.png" width="89%" height="89%">
 
-**salvia***
+**salvia**
 
 <img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/salvia.png" width="89%" height="89%">
 
@@ -300,7 +292,7 @@ moxxi256 | salvia | salvia256
 <img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/yoshi.png" width="89%" height="89%">
 
 
-**moxxi***
+**moxxi**
 
 <img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/moxxi.png" width="89%" height="89%">
 
