@@ -7,14 +7,6 @@ A package for storing and visualizing palettes, and constructing new ones via in
 
 ## `viz` :eyes:
 
-### ct.swatch( )
-watch me swatch...
-<!-- <img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/1swatch.jpg" width="100%" height="100%"> -->
-- **`palette`** : list or iterable  
-    any combination of hex strings or rgb tuples or HTML names
-- `alpha` : fraction between 0.0 and 1.0  
-    *alpha transparency of entire palette*
-
 ### ct.palplot( ) 
 Visualizations include swatches, pies, points, lines, scatters. Somewhat helpful for seeing how colors behave on a plot, in dense or scattered visuals. Sometimes colors look great together on a swatch, but not so great in their pointillistic forms. 
 <img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/2palplot.jpg" width="100%" height="100%">
@@ -26,10 +18,21 @@ Visualizations include swatches, pies, points, lines, scatters. Somewhat helpful
     *alpha transparency of entire palette* 
 - `shuffle` : boolean  
     *shuffles palette*
+    
+<!-- 
+### ct.swatch( )
+watch me swatch...
+ <img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/1swatch.jpg" width="100%" height="100%"> 
+- **`palette`** : list or iterable  
+    any combination of hex strings or rgb tuples or HTML names
+- `alpha` : fraction between 0.0 and 1.0  
+    *alpha transparency of entire palette*
+ -->
 
 ### ct.heatmap( )
 Volcano data lifted from R. Hot stuff.  
 <img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/5heatmap.png" width="56%" height="56%">
+
 Default interpolation (below) but can also turn this off (above).  
 
 - **`palette`** : list or iterable   
