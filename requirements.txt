@@ -1,5 +1,4 @@
 numpy
 scipy
 pandas
-colour
-bokeh==1.4.0
+bokeh>=1.4.0
