@@ -16,8 +16,8 @@ try:
     _panel = True
 except:
     _panel = False
-    
-    
+
+
 def _clean_plot(p, bg_color):
     p.background_fill_color=bg_color
     p.axis.visible=False
@@ -28,12 +28,12 @@ def _clean_plot(p, bg_color):
 def _generate_scatter(x_range, size, slope=1, glyph="circle"):
     x = np.random.uniform(low=x_range[0],high=x_range[1],size=size)
     y = slope*x
-    
+
     if glyph == "circle":
         x_error = np.random.choice([-1,1])*np.random.random(size=size)
         mu, sigma = 0, np.random.random(size)
         y_error = mu + sigma * np.random.standard_cauchy(size=size)
-        
+
     elif glyph == "triangle":
         x_error = np.random.choice([-1,1],size=size)*np.random.lognormal(-0.5,1,size=size)
         c = np.random.choice([-1,1],size=size)*np.random.random(size)
@@ -60,7 +60,7 @@ def swatch(
     ):
     """
     Displays palette via bokeh. Hover for hex/rgb value.
-    
+
     Arguments
     ---------
     palette : list or iterable
@@ -86,12 +86,12 @@ def swatch(
 
     df['hex']=palette
     df['rgb']=hex_to_rgb(palette)
-    
+
     height = 62
     width = height*len(palette)+60
     if len(palette) > 5: width = 62*len(palette)
     if len(palette) > 10: width=650
-    
+
     size = height/1.2
     p = bokeh.plotting.figure(width=width, height=height,
                                    x_range=(-1,len(palette)),
@@ -101,8 +101,8 @@ def swatch(
     p = _clean_plot(p, 'white')
     bokeh.io.show(p)
 
-    
-    
+
+
 def palplot(
     palette,
     plot='all',
@@ -114,7 +114,7 @@ def palplot(
     """
     Displays palette via bokeh.
     Hover for hex/rgb value.
-    
+
     Arguments
     ---------
     palette : list or iterable
@@ -136,7 +136,7 @@ def palplot(
         'click_policy' : boolean, default False
             if True, legend is on plot and can click/hide
             if False, legend is offside, no overlap
-            
+
     Returns
     --------
     output : if panel is installed, returns panel layout
@@ -154,22 +154,22 @@ def palplot(
 
     palette = list(palette)
     if shuffle == True: np.random.shuffle(palette)
-    
+
     try: _copy_palette = palette.copy()       # copy so legend displays original inputs
     except: raise TypeError("Palette should be a list or something")
-    
+
     palette = hex_palette(palette)
     length = len(palette)
-    
-        
+
+
     def _swatch():
         df = pd.DataFrame(dict(palette=palette,
                            x=np.arange(len(palette)),
                            y=[0]*len(palette)  ))
-        
+
         df['hex']=palette
         df['rgb']=hex_to_rgb(palette)
-        
+
         height, width = 60, 300
         size = height/1.2
         p = bokeh.plotting.figure(width=width, height=height,
@@ -179,7 +179,7 @@ def palplot(
         p.square(source=df, x='x',y='y', size=size, color='palette',alpha=alpha)
         p = _clean_plot(p, bg_color)
         return p
-    
+
     def _pie():
         if len(palette) < 9:
             line_color = bg_color
@@ -187,21 +187,21 @@ def palplot(
         else:
             line_color = None
             line_width = 0.01
-        
-        
+
+
         width, height = 300, 300
         angles = [0.216875, 0.1545, 0.127375, 0.1069, 0.103925,
                  0.055875, 0.04665,0.0355, 0.032275, 0.03, 0.018975,
                  0.0131, 0.0128, 0.00925, 0.007075, 0.00635, 0.005125,
                  0.003825, 0.003525, 0.002925, 0.002, 0.0013, 0.001, 0.002875]
-        
+
         df = pd.DataFrame(dict( angle=[a*2*np.pi for a in angles],
                                 palette=(palette*12)[:len(angles)], ))
-        
+
         if length > 8:
             wedges = np.array([1/length]*length*2)
             angles = wedges /np.sum(wedges)
-        
+
             top = pd.DataFrame({'angle':[a*2*np.pi for a in angles[:int(len(angles)/2)]],
                                 'palette':palette})
             bot = pd.DataFrame({'angle':[a*2*np.pi for a in angles[:int(len(angles)/2)]],
@@ -209,7 +209,7 @@ def palplot(
             df = pd.concat([top, bot])
         df['hex']=(palette*12)[:len(angles)]
         df['rgb']=hex_to_rgb((palette*12)[:len(angles)])
-        
+
         p = bokeh.plotting.figure(width=width, height=height,
                                   x_range=(-1.1,1.1),tooltips=TOOLTIPS)
         p.wedge(x=0,y=0,radius=1,
@@ -223,7 +223,7 @@ def palplot(
                )
         p = _clean_plot(p, bg_color)
         return p
-    
+
     def _points():
 
         n = 500
@@ -239,12 +239,12 @@ def palplot(
                      legend_label=f'{_copy_palette[i]}',alpha=alpha)
             p.line(x,fits[i],color=palette[i],line_width=3,
                    legend_label=f'{_copy_palette[i]}',line_alpha=alpha)
-        
+
         p.legend.click_policy='hide'
         p.legend.location="top_left"
         p = _clean_plot(p, bg_color)
         return p
-    
+
     def _line():
         n = 500
         x = np.linspace(0,4,n)
@@ -253,20 +253,20 @@ def palplot(
             ys[i] = scipy.stats.gamma.pdf(x, a=3, loc=0, scale=1/(i+1.4))
 
         p = bokeh.plotting.figure(width=400,height=300)
-        
+
         if len(palette) < 11:
             for i,y in enumerate(ys):
                 p.line(x,ys[i],color=palette[i],line_width=3.5,
                        legend_label=f'{_copy_palette[i]}',line_alpha=alpha)
-                
+
             p.legend.click_policy='hide'
             p.legend.location="top_right"
             p.width=400
-            
+
         else:
             for i,y in enumerate(ys):
                 p.line(x,ys[i],color=palette[i],line_width=3.5,)
-                
+
             legend = bokeh.models.Legend(
                     items=[(palette[i], [p.line(color=palette[i],
                                                 line_width=3.5,
@@ -275,20 +275,24 @@ def palplot(
                     location='center')
             p.add_layout(legend, 'right')
             p.width=525
-            
-        p.background_fill_color=bg_color
-        p.axis.visible=False
-        p.toolbar.autohide=True
+
+        p = _clean_plot(p, bg_color)
+
+        if bg_color!="white":
+            p.xgrid.grid_line_color, p.ygrid.grid_line_color = None, None
+            p.xaxis.visible, p.yaxis.visible = False,False
+            p.xaxis.major_tick_line_color, p.yaxis.major_tick_line_color = None, None
+            p.xaxis.minor_tick_line_color, p.yaxis.minor_tick_line_color = None, None
         return p
-    
+
     click_policy, fit_line = False, True
     try:
         if scatter_kwargs['click_policy'] == True: click_policy = True
         if scatter_kwargs['line'] == False:        fit_line = False
     except: pass
-    
+
     # inspired by @jmaasch's scatter plots in R
-    
+
     def _scatter():
         x_ranges = []                         # manually constructing ranges
         for _ in range(len(palette)):
@@ -300,7 +304,8 @@ def palplot(
 
         p = bokeh.plotting.figure(x_range=(-0.6, 1.01*xmax),     # make plot
                                   y_range=(-0.6, 1.01*xmax),
-                                  height=300,width=400)
+                                  height=300,width=400,
+                                 )
         size = 30
         # begin scattering and rugging
         for i, x_range in enumerate(x_ranges):
@@ -315,16 +320,17 @@ def palplot(
                 p.triangle(x=x,y=y,color=palette[i],size=6,alpha=1,legend_label=f"{palette[i]}")
             else: p.triangle(x=x,y=y,color=palette[i],size=6,alpha=1)
             _rug(x, y, p, palette[i])
-        
+
         if fit_line: p.line(x=(0,500),y=(0,500),color='black')     # line_fit
-        
+
         # cleaning
         p.xgrid.grid_line_color, p.ygrid.grid_line_color = None, None
         p.xaxis.visible, p.yaxis.visible = False,False
         p.xaxis.major_tick_line_color, p.yaxis.major_tick_line_color = None, None
         p.xaxis.minor_tick_line_color, p.yaxis.minor_tick_line_color = None, None
         p.toolbar.autohide=True
-        
+        p.background_fill_color=bg_color
+
         # fitting legend
         if click_policy == True:
             p.legend.click_policy='hide'
@@ -337,7 +343,7 @@ def palplot(
             p.add_layout(legend, 'right')
             p.width=525
         return p
-        
+
     if _panel == True:
         if len(palette) > 7:
             glyph = pn.widgets.Select(
@@ -354,24 +360,22 @@ def palplot(
             if glyph == "scatter": return _scatter()
             map = heat.heatmap(palette, interpolate=False, return_plot=True)
             if glyph == "map": return map
-        
+
     #**********************************************************************
     if len(palette) > 30:
         map = heat.heatmap(palette, interpolate=False, return_plot=True)
         spacer = bokeh.layouts.Spacer(height=20)
         bokeh.io.show(bokeh.layouts.layout([[[_pie(), _swatch()], [spacer, map]]]))
         return
-        
+
     if plot=="swatch": return _swatch()
     if plot=="pie": return _pie()
     if plot=="points": return _points()
     if plot=="scatter": return _scatter()
     if plot=="line": return _line()
-        
+
     if plot=="all":
         if _panel == True:
-            return pn.Row(pn.Column(_pie(), _swatch()), pn.Column(glyph,data))
+            return pn.Row(pn.Column(_pie(), _swatch()), pn.Column(glyph, data))
         elif _panel == False:
             bokeh.io.show(bokeh.layouts.layout([[_pie(), _points()], _swatch()]))
-            
-            

@@ -37,6 +37,7 @@ Visualizations include swatches, pies, points, lines, scatters. Somewhat helpful
 - `shuffle` : boolean  
     *shuffles palette*
     
+
 <!-- 
 ### ct.swatch( )
 watch me swatch...
@@ -323,7 +324,8 @@ On the left are the input palettes, and on the right are the output palettes all
 
 **rach\***
 
-<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/rach.png" width="85%" height="85%">
+<img src="https://raw.githubusercontent.c
+om/atisor73/chromatose/master/imgs/rach.png" width="85%" height="85%">
 
 
 
