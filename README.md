@@ -157,10 +157,6 @@ On the left are the input palettes, and on the right are the output palettes all
 
 <img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/pitaya.png" width="85%" height="85%">
 
-**crepuscule**
-
-<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/crepuscle.png" width="85%" height="85%">
-
 **spiff**
 
 <img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/spiff.png" width="85%" height="85%">
@@ -324,8 +320,7 @@ On the left are the input palettes, and on the right are the output palettes all
 
 **rach\***
 
-<img src="https://raw.githubusercontent.c
-om/atisor73/chromatose/master/imgs/rach.png" width="85%" height="85%">
+<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/rach.png" width="85%" height="85%">
 
 
 

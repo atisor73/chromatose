@@ -161,6 +161,10 @@ def palplot(
     palette = hex_palette(palette)
     length = len(palette)
 
+    # determining light-dark background for legend text
+    bg_avg = (np.sum(hex_to_rgb(hex_palette([bg_color])[0]))/3)
+    switch = False
+    if bg_avg <= 100: switch = True
 
     def _swatch():
         df = pd.DataFrame(dict(palette=palette,
@@ -242,6 +246,9 @@ def palplot(
 
         p.legend.click_policy='hide'
         p.legend.location="top_left"
+        p.legend.background_fill_color = bg_color
+        if switch:
+            p.legend.label_text_color = "lightgray"
         p = _clean_plot(p, bg_color)
         return p
 
@@ -283,6 +290,8 @@ def palplot(
             p.xaxis.visible, p.yaxis.visible = False,False
             p.xaxis.major_tick_line_color, p.yaxis.major_tick_line_color = None, None
             p.xaxis.minor_tick_line_color, p.yaxis.minor_tick_line_color = None, None
+            p.legend.background_fill_color = bg_color
+            if switch: p.legend.label_text_color = "lightgray"
         return p
 
     click_policy, fit_line = False, True
@@ -330,12 +339,15 @@ def palplot(
         p.xaxis.minor_tick_line_color, p.yaxis.minor_tick_line_color = None, None
         p.toolbar.autohide=True
         p.background_fill_color=bg_color
+        p.legend.background_fill_color=bg_color
+        if switch:
+            p.legend.label_text_color="lightgray"
 
         # fitting legend
         if click_policy == True:
             p.legend.click_policy='hide'
             p.legend.location="bottom_right"
-            p.width=450
+            p.width=415
         else:
             legend = bokeh.models.Legend(
                     items=[(palette[i], [p.circle(color=palette[i])]) for i in range(len(palette))],
