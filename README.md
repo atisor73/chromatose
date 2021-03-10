@@ -7,7 +7,8 @@ A package for storing and visualizing palettes, and constructing new ones via in
 
 ## `palettes` :art:
 <center>discrete</center>
-|       |      |      |      |          |
+
+|          |          |         |           |          |
 |----------|----------|----------|----------|----------|
 frieda | plath | selah | blonde | honeycombe
 crepuscule | leather | gucci | sandbar | fiestaware
@@ -22,10 +23,11 @@ menthol | dwight | riley | mona | eeyore
 rory  | pudding | marmalade | polaris | trefoil
 harmon | abed | shirley | surely |  annie
 pierce | britta | strogatz | lutz | writhe
-perl  |  rainbow | diverging |   |
+perl  |  rainbow | diverging | ---  | ----
 
 
 <center>monochromatic continuous</center>
+
 |       |      |      |      |
 |----------|----------|----------|----------|
 warble | warble256 | waitomo | waitomo256
@@ -36,6 +38,7 @@ moxxi  |  moxxi256 |  salvia | salvia256
 
 
 <center>polychromatic continuous</center>
+
 |          |          |          |          |
 |----------|----------|----------|----------|
  bluefish | BuPu9 | BuPu256 | holst
@@ -386,7 +389,7 @@ On the left are the input palettes, and on the right are the output palettes all
 
 <img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/diverging.png" width="85%" height="85%">
 
-# monochrome-continuous
+## `monochrome continuous`
 
 **salvia\***
 
@@ -428,7 +431,7 @@ On the left are the input palettes, and on the right are the output palettes all
 
 <img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/crest.png" width="85%" height="85%">
 
-# polychromatic continuous
+## `polychromatic continuous`
 
 **bluefish**
 
