@@ -511,7 +511,7 @@ On the left are the input palettes, and on the right are the output palettes all
 
 **emporium256**
 
-<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/empporium256.png" width="85%" height="85%">
+<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/emporium256.png" width="85%" height="85%">
 
 **betan256**
 
