@@ -502,13 +502,25 @@ On the left are the input palettes, and on the right are the output palettes all
 
 <img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/rach.png" width="85%" height="85%">
 
-**betan256**
-
-<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/betan256.png" width="90%" height="85%">
-
 **blink256**
 
 <img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/blink256.png" width="90%" height="85%">
+
+**otterpop256**
+
+<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/otterpop256.png" width="90%" height="85%">
+
+**gummi256**
+
+<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/gummi256.png" width="90%" height="85%">
+
+**emporium256**
+
+<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/empporium256.png" width="90%" height="85%">
+
+**betan256**
+
+<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/betan256.png" width="90%" height="85%">
 
 **rue256**
 
