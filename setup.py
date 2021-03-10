@@ -4,11 +4,11 @@ long_description = "Chromatose is a package for storing and visualizing palettes
 
 setup(
     name="chromatose",
-    version="0.0.3",
+    version="0.0.4",
     description="Personal palette collection, mini-palette visualizer & interpolator",
     long_description = long_description,
     url="https://github.com/atisor73/chromatose",
-    download_url="https://github.com/atisor73/chromatose/archive/v0.0.3.tar.gz",
+    download_url="https://github.com/atisor73/chromatose/archive/v0.0.4.tar.gz",
     license="MIT",
     author='Rosita Fu',
     author_email='rosita.fu99@gmail.com',

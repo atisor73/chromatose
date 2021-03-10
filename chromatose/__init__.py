@@ -13,6 +13,6 @@ from .utils import *
 from .heat import *
 
 __author__ = "Rosita Fu"
-__version__ = "0.0.3"
+__version__ = "0.0.4"
 __license__ = "MIT"
 __email__ = "rfu@caltech.edu"
