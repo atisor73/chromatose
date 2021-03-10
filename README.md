@@ -6,12 +6,6 @@ A package for storing and visualizing palettes, and constructing new ones via in
 
 ## `palettes` :art:
 
-\[[discrete](https://github.com/atisor73/chromatose#discrete)\]
-
-\[[monochromatic continuous](https://github.com/atisor73/chromatose#polychromatic-continuous)\]
-
-\[[polychromatic continuous](https://github.com/atisor73/chromatose#polychromatic-continuous)]
-
 |          |          |         |           |          |
 |----------|----------|----------|----------|----------|
 frieda | plath | selah | blonde | honeycombe
@@ -36,6 +30,7 @@ emporium | paired  | category20a  | category20b  | category20c
 
 \* *available as xxx256*
 
+\[[discrete](https://github.com/atisor73/chromatose#discrete)\] \[[monochromatic continuous](https://github.com/atisor73/chromatose#polychromatic-continuous)\] \[[polychromatic continuous](https://github.com/atisor73/chromatose#polychromatic-continuous)] \[[bokeh](https://github.com/atisor73/chromatose#bokeh)\]
 
 
 ## `viz` :eyes:
