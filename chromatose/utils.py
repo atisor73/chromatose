@@ -196,6 +196,42 @@ palette_dict = {
     "mona": mona,
     "eeyore": eeyore,
     "rainbow":rainbow,
+    "rory":rory,
+    "pudding":pudding,
+    "marmalade":marmalade,
+    "polaris":polaris,
+    "trefoil":trefoil,
+    "harmon":harmon,
+    "abed":abed,
+    "shirley":shirley,
+    "surely":surely,
+    "annie":annie,
+    "pierce":pierce,
+    "britta":britta,
+    "strogatz":strogatz,
+    "lutz":lutz,
+    "writhe":writhe,
+    "perl":perl,
+    "diverging":diverging,
+    "warble":warble,
+    "waitomo":waitomo,
+    "vylette":vylette,
+    "pom":pom,
+    "lava":lava,
+    "pumpkin":pumpkin,
+    "pinctada":pinctada,
+    "nacre":nacre,
+    "crest":crest,
+    "blink":blink,
+    "betan":betan,
+    "rue":rue,
+    "otterpop":otterpop,
+    "gummi":gummi,
+    "emporium":emporium,
+    "paired":paired,
+    "category20a":category20a,
+    "category20b":category20b,
+    "category20c":category20c,
 }
 
 def hex_to_rgb(palette):
@@ -210,7 +246,7 @@ def _rgb_hue_sat_light_chroma_val(tupple):
     '''retrieves hue, saturation, lightness, chroma and value from single color'''
     r, g, b = tupple
     r, g, b = r/256, g/256, b/256
-    
+
     # rgb to hsl
     value = max(r,g,b)
     chroma = value-min(r,g,b)
@@ -231,7 +267,7 @@ def _rgb_hue_sat_light_chroma_val(tupple):
 def _rgb_to_hsv(tupple):
     h, sL, sV, l, c, v = _rgb_hue_sat_light_chroma_val(tupple)
     return (h, sV, v)
-    
+
 def _rgb_to_hsl(tupple):
     h, sL, sV, l, c, v = _rgb_hue_sat_light_chroma_val(tupple)
     return (h, sL, l)
@@ -244,7 +280,7 @@ def _hcxm_rgb(h, c, x, m):
     elif 180 <= h%360 < 240: _r, _g, _b = (0, x, c)
     elif 240 <= h%360 < 300: _r, _g, _b = (x, 0, c)
     elif 300 <= h%360 < 360: _r, _g, _b = (c, 0, x)
-        
+
     scale = lambda _ : int(np.round((_+m)*255,0))
     r, g, b = scale(_r), scale(_g), scale(_b)
     return r, g, b

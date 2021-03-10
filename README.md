@@ -400,6 +400,8 @@ On the left are the input palettes, and on the right are the output palettes all
 **moxxi\***
 
 <img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/moxxi.png" width="85%" height="85%">
+<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/moxxi256.png" width="90%" height="90%">
+
 
 **lava\***
 
