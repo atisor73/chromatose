@@ -26,8 +26,6 @@ pierce | britta | strogatz | lutz | writhe
 perl  |  rainbow | diverging | ???  | ???
 warble\* | waitomo\*  | vylette\*  |  pom\*  |  lava\*
 pumpkin\*  | pinctada\*  | nacre\* | moxxi\* | salvia\*
-??? | ??? | ??? | ??? | ???
----  | ---  | ---  | ---  | --- 
 bluefish | BuPu\* | holst | joker\* | rach\*
 blink\*  |  betan\* | rue\*  | otterpop\*  |  gummi\*
 emporium | paired  | category20a  | category20b  | category20c
