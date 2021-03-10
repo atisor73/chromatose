@@ -6,7 +6,7 @@ A package for storing and visualizing palettes, and constructing new ones via in
 
 
 ## `palettes` :art:
-<em><p align="center">... discrete ...</p></em>
+*discrete*
 
 |          |          |         |           |          |
 |----------|----------|----------|----------|----------|
@@ -26,7 +26,7 @@ pierce | britta | strogatz | lutz | writhe
 perl  |  rainbow | diverging | ???  | ???
 
 
-<p align="center">... monochrome continuous ...</p>
+*monochrome continuous*
 
 |          |          |          |          |
 |----------|----------|----------|----------|
@@ -36,7 +36,7 @@ lava  | lava256  | pumpkin  |  pumpkin256
 pinctada  |  pinctada256 |  nacre |  nacre256
 moxxi  |  moxxi256 |  salvia | salvia256
 
-<p align="center">... polychromatic continuous ...</p>
+*polychromatic continuous*
 
 |          |          |          |          |
 |----------|----------|----------|----------|
