@@ -6,7 +6,6 @@ A package for storing and visualizing palettes, and constructing new ones via in
 
 
 ## `palettes` :art:
-*discrete*
 
 |          |          |         |           |          |
 |----------|----------|----------|----------|----------|
@@ -30,6 +29,7 @@ bluefish | BuPu\* | holst | joker\* | rach\*
 blink\*  |  betan\* | rue\*  | otterpop\*  |  gummi\*
 emporium | paired  | category20a  | category20b  | category20c
 
+\*: *available as xxx256*
 
 
 
