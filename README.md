@@ -29,7 +29,7 @@ bluefish | BuPu\* | holst | joker\* | rach\*
 blink\*  |  betan\* | rue\*  | otterpop\*  |  gummi\*
 emporium | paired  | category20a  | category20b  | category20c
 
-\*: *available as xxx256*
+\* *available as xxx256*
 
 
 
