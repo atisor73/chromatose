@@ -430,14 +430,17 @@ On the left are the input palettes, and on the right are the output palettes all
 **blink\***
 
 <img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/blink.png" width="85%" height="85%">
+<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/blink256.png" width="85%" height="85%">
 
 **betan\***
 
 <img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/betan.png" width="85%" height="85%">
+<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/betan256.png" width="85%" height="85%">
 
 **rue\***
 
 <img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/rue.png" width="85%" height="85%">
+<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/rue256.png" width="85%" height="85%">
 
 **otterpop\***
 
