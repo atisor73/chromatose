@@ -13,7 +13,7 @@ frieda | plath | selah | blonde | honeycombe
 crepuscule | leather | gucci | sandbar | fiestaware
 chilaquiles | eleven | splenda | gremlin | pollen
 medium | juniper | polya | ostrich | fraiche
-cheshire | carmine | joan | pinot | addams
+cheshire | carmine | joan\* | pinot | addams
 minuit | fugazi | clementine | leda | pugsley
 bellhooks | wes | lysergic | pepo |  reese
 lufte | oolong | pitaya | alice | neko
@@ -371,6 +371,10 @@ On the left are the input palettes, and on the right are the output palettes all
 <img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/diverging.png" width="85%" height="85%">
 
 ## `monochrome continuous`
+
+**joan\***
+
+<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/joan256.png" width="90%" height="90%">
 
 **salvia\***
 
