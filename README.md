@@ -1,11 +1,12 @@
 # chromatose
 <hr>
 A package for storing and visualizing palettes, and constructing new ones via interpolation. Now pippable!
-<br> 
+<br>
 
 
 
 ## `palettes` :art:
+<center>discrete</center>
 |       |      |      |      |          |
 |----------|----------|----------|----------|----------|
 frieda | plath | selah | blonde | honeycombe
@@ -18,60 +19,85 @@ bellhooks | wes | lysergic | pepo |  reese
 lufte | oolong | pitaya | alice | neko
 belle | spiff | yoshi | phoebe | pam
 menthol | dwight | riley | mona | eeyore
-rainbow | BuPu9 | BuPu256 | holst | bluefish 
-joker | joker256 |  rach |  rach256 | moxxi
-moxxi256 | salvia |  salvia256 | 
+rory  | pudding | marmalade | polaris | trefoil
+harmon | abed | shirley | surely |  annie
+pierce | britta | strogatz | lutz | writhe
+perl  |  rainbow | diverging |   |
+
+
+<center>monochromatic continuous</center>
+|       |      |      |      |
+|----------|----------|----------|----------|
+warble | warble256 | waitomo | waitomo256
+vylette | vylette256 | pom | pom256
+lava  | lava256  | pumpkin  |  pumpkin256
+pinctada  |  pinctada256 |  nacre |  nacre256
+moxxi  |  moxxi256 |  salvia | salvia256
+
+
+<center>polychromatic continuous</center>
+|          |          |          |          |
+|----------|----------|----------|----------|
+ bluefish | BuPu9 | BuPu256 | holst
+ joker |  joker256 | rach | rach256
+ blink |  blink256 |  betan | betan256
+ rue   |  rue256  | otterpop  | otterpop256
+gummi  | gummi256  | gummi20  | otterpop20
+ emporium | - | - | -
+paired  | category20a  | category20b  | category20c
+
+
 
 
 ## `viz` :eyes:
 
-### ct.palplot( ) 
-Visualizations include swatches, pies, points, lines, scatters. Somewhat helpful for seeing how colors behave on a plot, in dense or scattered visuals. Sometimes colors look great together on a swatch, but not so great in their pointillistic forms.  
-<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/2palplot.jpg" width="110%" height="105%">  
-- **`palette`** : list or iterable  
+### ct.palplot( )
+Visualizations include swatches, pies, points, lines, scatters. Somewhat helpful for seeing how colors behave on a plot, in dense or scattered visuals. Sometimes colors look great together on a swatch, but not so great in their pointillistic forms.
+<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/2palplot.jpg" width="110%" height="105%">
+- **`palette`** : list or iterable
     any combination of hex strings or rgb tuples or HTML
-- `bg_color` : HTML or hex string  
+- `bg_color` : HTML or hex string
     *background fill color*
-- `alpha` : fraction between 0.0 and 1.0  
-    *alpha transparency of entire palette* 
-- `shuffle` : boolean  
+- `alpha` : fraction between 0.0 and 1.0
+    *alpha transparency of entire palette*
+- `shuffle` : boolean
     *shuffles palette*
-    
 
-<!-- 
+
+<!--
 ### ct.swatch( )
 watch me swatch...
- <img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/1swatch.jpg" width="100%" height="100%"> 
-- **`palette`** : list or iterable  
+ <img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/1swatch.jpg" width="100%" height="100%">
+- **`palette`** : list or iterable
     any combination of hex strings or rgb tuples or HTML names
-- `alpha` : fraction between 0.0 and 1.0  
+- `alpha` : fraction between 0.0 and 1.0
     *alpha transparency of entire palette*
  -->
 
 ### ct.heatmap( )
-Volcano data lifted from R. Hot stuff.   
-<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/5heatmap.png" width="56%" height="56%">   
+Volcano data lifted from R. Hot stuff.
+<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/5heatmap.png" width="56%" height="56%">
 
-Default interpolation (below) but can also turn this off (above).  
+Default interpolation (below) but can also turn this off (above).
 
-- **`palette`** : list or iterable   
+- **`palette`** : list or iterable
     any combination of hex strings or rgb tuples or HTML
-- `interpolate` : boolean  
+- `interpolate` : boolean
     *if True, interpolates palette*
     *if False, generates heatmap with input directly*
-- `desired_length` : integer  
+- `desired_length` : integer
     *approximate desired length of final palette*
-- `interpolation_method` : string 'rgb' or 'hsv' or 'hsl'  
+- `interpolation_method` : string 'rgb' or 'hsv' or 'hsl'
     *interpolation metric*
-- `curve` : boolean  
-    *if True, fit to 2ndº polynomial*  
+- `curve` : boolean
+    *if True, fit to 2ndº polynomial*
     *if False, simple linear interpolation*
-- `directions` : list of 3 strings, 'up' or 'down'  
-    *each entry corresponds to r, g, b*  
-    *'up' pushes intermediate values higher (lighter)*  
+- `directions` : list of 3 strings, 'up' or 'down'
+    *each entry corresponds to r, g, b*
+    *'up' pushes intermediate values higher (lighter)*
     *'down' pushes intermediate values lower (darker)*
-- `return_palette` : boolean  
-    *if True, returns interpolated palette as list*  
+- `return_palette` : boolean
+    *if True, returns interpolated palette as list*
     *if False, no returns*
 
 
@@ -81,29 +107,29 @@ Default interpolation (below) but can also turn this off (above).
 ## `interpolation` :scissors:
 
 ### ct.palpolate( )
- `palpolate` (<em>pal</em>-(ette inter)-<em>polate</em>):   
-    input lists of any size and user can control output size. 
+ `palpolate` (<em>pal</em>-(ette inter)-<em>polate</em>):
+    input lists of any size and user can control output size.
 
 There are a multitude of beautiful gradients in packages like bokeh and colorcet that are, for the most part, static. The interpolation scheme here can be used to create entirely new ones given only a few endpoints. This part is still in development, but currently uses linear or polynomial fits in color space metrics RGB, HSL, or HSV. Heatmaps are a good way to visualize the results!
 
 <img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/3interpolate1.png" width="85%" height="85%">
 
-On the left are the input palettes, and on the right are the output palettes all of size 256. 
+On the left are the input palettes, and on the right are the output palettes all of size 256.
 <img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/3interpolate2.png" width="110%" height="100%">
 
 
-- **`palette`** : list or iterable   
+- **`palette`** : list or iterable
     any combination of hex strings or rgb tuples or HTML
-- **`desired_length`** : integer  
+- **`desired_length`** : integer
     approximate desired length of final palette
-- `method` : string 'rgb' or 'hsv' or 'hsl'  
+- `method` : string 'rgb' or 'hsv' or 'hsl'
     *interpolation metric, default 'rgb'*
-- `curve` : boolean  
-    *if True, fit t 2ndº polynomial*  
+- `curve` : boolean
+    *if True, fit t 2ndº polynomial*
     *if False, simple linear interpolation*
-- `directions` : list of 3 strings, 'up' or 'down'  
-    *each entry corresponds to r, g, b*  
-    *'up' pushes intermediate values higher (lighter)*  
+- `directions` : list of 3 strings, 'up' or 'down'
+    *each entry corresponds to r, g, b*
+    *'up' pushes intermediate values higher (lighter)*
     *'down' pushes intermediate values lower (darker)*
 
 
@@ -202,6 +228,10 @@ On the left are the input palettes, and on the right are the output palettes all
 
 <img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/polya.png" width="85%" height="85%">
 
+**strogatz**
+
+<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/strogatz.png" width="85%" height="85%">
+
 **cheshire**
 
 <img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/cheshire.png" width="85%" height="85%">
@@ -214,10 +244,6 @@ On the left are the input palettes, and on the right are the output palettes all
 **pinot**
 
 <img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/pinot.png" width="85%" height="85%">
-
-**salvia**
-
-<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/salvia.png" width="85%" height="85%">
 
 
 **addams**
@@ -264,6 +290,50 @@ On the left are the input palettes, and on the right are the output palettes all
 
 <img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/wes.png" width="85%" height="85%">
 
+**rory**
+
+<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/rory.png" width="85%" height="85%">
+
+**pudding**
+
+<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/pudding.png" width="85%" height="85%">
+
+**marmalade**
+
+<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/marmalade.png" width="85%" height="85%">
+
+**polaris**
+
+<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/polaris.png" width="85%" height="85%">
+
+**trefoil**
+
+<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/trefoil.png" width="85%" height="85%">
+
+**harmon**
+
+<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/harmon.png" width="85%" height="85%">
+
+**abed**
+
+<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/abed.png" width="85%" height="85%">
+
+**shirley**
+
+<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/shirley.png" width="85%" height="85%">
+
+**annie**
+
+<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/annie.png" width="85%" height="85%">
+
+**pierce**
+
+<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/pierce.png" width="85%" height="85%">
+
+**britta**
+
+<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/britta.png" width="85%" height="85%">
+
 **belle**
 
 <img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/belle.png" width="85%" height="85%">
@@ -300,21 +370,96 @@ On the left are the input palettes, and on the right are the output palettes all
 
 <img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/yoshi.png" width="85%" height="85%">
 
-
-**moxxi**
-
-<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/moxxi.png" width="85%" height="85%">
-
-
 **carmine**
 
 <img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/carmine.png" width="85%" height="85%">
+
+**writhe**
+
+<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/writhe.png" width="85%" height="85%">
+
+**perl**
+
+<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/perl.png" width="85%" height="85%">
+
+**diverging**
+
+<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/diverging.png" width="85%" height="85%">
+
+# monochrome-continuous
+
+**salvia\***
+
+<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/salvia.png" width="85%" height="85%">
+
+**warble\***
+
+<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/warble.png" width="85%" height="85%">
+
+**waitomo\***
+
+<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/waitomo.png" width="85%" height="85%">
+
+**vylette\***
+
+<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/vylette.png" width="85%" height="85%">
+
+**pom\***
+
+<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/pom.png" width="85%" height="85%">
+
+**moxxi\***
+
+<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/moxxi.png" width="85%" height="85%">
+
+**lava\***
+
+<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/lava.png" width="85%" height="85%">
+
+**pumpkin\***
+
+<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/pumpkin.png" width="85%" height="85%">
+
+**nacre\***
+
+<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/nacre.png" width="85%" height="85%">
+
+**crest\***
+
+<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/crest.png" width="85%" height="85%">
+
+# polychromatic continuous
 
 **bluefish**
 
 <img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/bluefish.png" width="85%" height="85%">
 
-**joker***
+**blink\***
+
+<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/blink.png" width="85%" height="85%">
+
+**betan\***
+
+<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/betan.png" width="85%" height="85%">
+
+**rue\***
+
+<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/rue.png" width="85%" height="85%">
+
+**otterpop\***
+
+<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/otterpop.png" width="85%" height="85%">
+
+**gummi\***
+
+<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/gummi.png" width="85%" height="85%">
+
+**emporium\***
+
+<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/emporium.png" width="85%" height="85%">
+
+
+**joker\***
 
 <img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/joker.png" width="85%" height="85%">
 
@@ -324,4 +469,4 @@ On the left are the input palettes, and on the right are the output palettes all
 
 
 
-*"The last color she remembered was the indigo chips in the headstone. After that she became as color conscious as a hen."* 
+*"The last color she remembered was the indigo chips in the headstone. After that she became as color conscious as a hen."*
