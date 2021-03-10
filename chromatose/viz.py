@@ -263,7 +263,7 @@ def palplot(
 
         if len(palette) < 11:
             for i,y in enumerate(ys):
-                p.line(x,ys[i],color=palette[i],line_width=3.5,
+                p.line(x,ys[i],color=palette[::-1][i],line_width=3.5,
                        legend_label=f'{_copy_palette[i]}',line_alpha=alpha)
 
             p.legend.click_policy='hide'
@@ -272,7 +272,7 @@ def palplot(
 
         else:
             for i,y in enumerate(ys):
-                p.line(x,ys[i],color=palette[i],line_width=3.5,)
+                p.line(x,ys[i],color=palette[::-1][i],line_width=3.5,)
 
             legend = bokeh.models.Legend(
                     items=[(palette[i], [p.line(color=palette[i],
