@@ -6,7 +6,7 @@ A package for storing and visualizing palettes, and constructing new ones via in
 
 
 ## `palettes` :art:
-<center>discrete</center>
+<!-- <center>discrete</center> -->
 
 |          |          |         |           |          |
 |----------|----------|----------|----------|----------|
@@ -23,12 +23,12 @@ menthol | dwight | riley | mona | eeyore
 rory  | pudding | marmalade | polaris | trefoil
 harmon | abed | shirley | surely |  annie
 pierce | britta | strogatz | lutz | writhe
-perl  |  rainbow | diverging | ---  | ----
+perl  |  rainbow | diverging | ASDF  | ASDF
 
 
-<center>monochromatic continuous</center>
+<!-- <center>monochromatic continuous</center> -->
 
-|       |      |      |      |
+|          |          |          |          |
 |----------|----------|----------|----------|
 warble | warble256 | waitomo | waitomo256
 vylette | vylette256 | pom | pom256
@@ -37,16 +37,16 @@ pinctada  |  pinctada256 |  nacre |  nacre256
 moxxi  |  moxxi256 |  salvia | salvia256
 
 
-<center>polychromatic continuous</center>
+<!-- <center>polychromatic continuous</center> -->
 
 |          |          |          |          |
 |----------|----------|----------|----------|
- bluefish | BuPu9 | BuPu256 | holst
- joker |  joker256 | rach | rach256
- blink |  blink256 |  betan | betan256
- rue   |  rue256  | otterpop  | otterpop256
+bluefish | BuPu9 | BuPu256 | holst
+joker |  joker256 | rach | rach256
+blink |  blink256 |  betan | betan256
+rue   |  rue256  | otterpop  | otterpop256
 gummi  | gummi256  | gummi20  | otterpop20
- emporium | - | - | -
+emporium | ASDF | ASDF | ASDF
 paired  | category20a  | category20b  | category20c
 
 
