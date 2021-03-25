@@ -614,6 +614,5 @@ On the left are the input palettes, and on the right are the output palettes all
 <img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/category20c.png" width="85%" height="80%">
 
 <br>
-<br>
-<hr>
+
 *"The last color she remembered was the indigo chips in the headstone. After that she became as color conscious as a hen."*
