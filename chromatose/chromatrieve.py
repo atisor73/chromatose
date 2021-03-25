@@ -5,11 +5,10 @@ def retriever(s):
     return globals()[s]
 
 def main():
-    parser = argparse.ArgumentParser(description='palette retriever')
+    parser = argparse.ArgumentParser(description='Palette retriever')
     parser.add_argument('palette',
-                        help="name of chromatose palette",
+                        help="name of chromatose palette       (str)",
                         type=str,
-                        default="polaris",
                         )
     args = parser.parse_args()
 

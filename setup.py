@@ -14,7 +14,9 @@ setup(
     author_email='rosita.fu99@gmail.com',
     packages=find_packages(),
     entry_points ={ 'console_scripts':
-                        ['chromatrieve = chromatose.chromatrieve:main'] },
+                        ['chromatrieve = chromatose.chromatrieve:main',
+                         'chromextract = chromatose.chromextract:main'
+                        ] },
     install_requires=['numpy','scipy','pandas','bokeh'],
     include_package_data=True,
     classifiers=[

@@ -36,12 +36,6 @@ emporium | paired  | category20a  | category20b  | category20c
 
 \[[discrete](https://github.com/atisor73/chromatose#discrete)\] \[[monochrome continuous](https://github.com/atisor73/chromatose#monochrome-continuous)\] \[[polychromatic continuous](https://github.com/atisor73/chromatose#polychromatic-continuous)] \[[bokeh](https://github.com/atisor73/chromatose#bokeh)\]
 
-<!-- ### chromatrieve -->
-Palettes can be retrieved from command line:
- ```sh
- chromatrieve PALETTE_NAME
- ```
-
 
 ## `viz` :eyes:
 
@@ -139,7 +133,50 @@ On the left are the input palettes, and on the right are the output palettes all
   - `sort` : boolean, default False
   amateur sort by luminance
 
-## gallery :rainbow:
+## `command line tools` :pick:
+Palettes can be retrieved from command line:
+ ```sh
+ >>> chromatrieve leda
+ >>> ... 
+ >>> ['#2c2f30', '#8fa7d7', '#afd7d6', '#aa3751', '#f5b3b8']
+
+ usage: chromatrieve [-h] palette
+
+palette retriever
+
+positional arguments:
+  palette     name of chromatose palette (str)
+
+optional arguments:
+  -h, --help  show this help message and exit
+```
+
+Palettes can be extracted from command line:
+ ```sh
+ >>> chromextract egg.png
+ >>> ...
+ >>> K-Means:    ['#050002', '#0c1c7b', '#013adc', '#1b143a', '#294254']
+ >>> Median Cut: ['#040000', '#080006', '#1e1b3c', '#1e2d61', '#0330bd']
+
+usage: chromextract [-h] [-n] [-r] [-s] [-d] path
+
+Palette extraction from image path. Defaults to 5 colors.
+
+positional arguments:
+  path             path to image
+
+optional arguments:
+  -h, --help       show this help message and exit
+  -n , --ncolors   length of palette
+  -r , --resize    resize for efficiency
+  -s , --sort      sort by luminance
+  -d , --display   serve panel object
+
+ ```
+
+
+
+# gallery :rainbow:
 
 ## `discrete`
 
