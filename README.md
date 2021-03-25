@@ -248,14 +248,13 @@ On the left are the input palettes, and on the right are the output palettes all
 
 <img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/indomie.png" width="85%" height="85%">
 
-**juniper**
-
-<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/juniper.png" width="85%" height="85%">
-
-
 **strogatz**
 
 <img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/strogatz.png" width="85%" height="85%">
+
+**juniper**
+
+<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/juniper.png" width="85%" height="85%">
 
 **minuit**
 
@@ -305,25 +304,13 @@ On the left are the input palettes, and on the right are the output palettes all
 
 <img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/britta.png" width="85%" height="85%">
 
-**neko**
-
-<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/neko.png" width="85%" height="85%">
-
-**diverging**
-
-<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/diverging.png" width="85%" height="85%">
-
-**lutz**
-
-<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/lutz.png" width="85%" height="85%">
-
-**moonbow**
-
-<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/moonbow.png" width="85%" height="85%">
-
 **eeyore**
 
 <img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/eeyore.png" width="85%" height="85%">
+
+**neko**
+
+<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/neko.png" width="85%" height="85%">
 
 **maggie**
 
@@ -333,13 +320,13 @@ On the left are the input palettes, and on the right are the output palettes all
 
 <img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/peanuts.png" width="85%" height="85%">
 
-**naval**
-
-<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/naval.png" width="85%" height="85%">
-
 **eleven**
 
 <img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/eleven.png" width="85%" height="85%">
+
+**naval**
+
+<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/naval.png" width="85%" height="85%">
 
 **fugazi**
 
@@ -356,6 +343,19 @@ On the left are the input palettes, and on the right are the output palettes all
 **wes**
 
 <img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/wes.png" width="85%" height="85%">
+
+**diverging**
+
+<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/diverging.png" width="85%" height="85%">
+
+**lutz**
+
+<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/lutz.png" width="85%" height="85%">
+
+**moonbow**
+
+<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/moonbow.png" width="85%" height="85%">
+
 
 **chilaquiles**
 
@@ -427,45 +427,46 @@ On the left are the input palettes, and on the right are the output palettes all
 
 <img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/salvia.png" width="85%" height="85%">
 
-**warble\***
-
-<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/warble.png" width="85%" height="85%">
-
-**waitomo\***
-
-<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/waitomo.png" width="85%" height="85%">
-
-**vylette\***
-
-<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/vylette.png" width="85%" height="85%">
-
 **pom\***
 
 <img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/pom.png" width="85%" height="85%">
-
-**moxxi\***
-
-<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/moxxi.png" width="85%" height="85%">
 
 **lava\***
 
 <img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/lava.png" width="85%" height="85%">
 
+**moxxi\***
+
+<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/moxxi.png" width="85%" height="85%">
+
+**joan\***
+
+<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/joan.png" width="85%" height="85%">
+
+**waitomo\***
+
+<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/waitomo.png" width="85%" height="85%">
+
+**warble\***
+
+<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/warble.png" width="85%" height="85%">
+
+
+**vylette\***
+
+<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/vylette.png" width="85%" height="85%">
+
 **pumpkin\***
 
 <img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/pumpkin.png" width="85%" height="85%">
-
-**nacre\***
-
-<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/nacre.png" width="85%" height="85%">
 
 **crest\***
 
 <img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/crest.png" width="85%" height="85%">
 
-**joan\***
+**nacre\***
 
-<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/joan.png" width="85%" height="85%">
+<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/nacre.png" width="85%" height="85%">
 
 **salvia256**
 
@@ -514,9 +515,13 @@ On the left are the input palettes, and on the right are the output palettes all
 
 ## `polychromatic continuous`
 
-**betan\***
+**joker\***
 
-<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/betan.png" width="85%" height="85%">
+<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/joker.png" width="85%" height="85%">
+
+**rach\***
+
+<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/rach.png" width="85%" height="85%">
 
 **orb\***
 
@@ -529,6 +534,10 @@ On the left are the input palettes, and on the right are the output palettes all
 **rue\***
 
 <img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/rue.png" width="85%" height="85%">
+
+**betan\***
+
+<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/betan.png" width="85%" height="85%">
 
 **bluefish**
 
@@ -546,21 +555,13 @@ On the left are the input palettes, and on the right are the output palettes all
 
 <img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/emporium.png" width="85%" height="85%">
 
-**joker\***
+**perl256**
 
-<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/joker.png" width="85%" height="85%">
-
-**rach\***
-
-<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/rach.png" width="85%" height="85%">
+<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/perl256.png" width="85%" height="85%">
 
 **orb256**
 
 <img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/orb256.png" width="85%" height="85%">
-
-**perl256**
-
-<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/perl256.png" width="85%" height="85%">
 
 **blink256**
 
@@ -586,13 +587,13 @@ On the left are the input palettes, and on the right are the output palettes all
 
 <img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/rue256.png" width="85%" height="85%">
 
-**joker256**
-
-<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/joker256.png" width="85%" height="85%">
-
 **rach256**
 
 <img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/rach256.png" width="85%" height="85%">
+
+**joker256**
+
+<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/joker256.png" width="85%" height="85%">
 
 ## `bokeh`
 
