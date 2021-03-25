@@ -459,10 +459,6 @@ On the left are the input palettes, and on the right are the output palettes all
 
 <img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/joan.png" width="85%" height="85%">
 
-**joan256**
-
-<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/joan256.png" width="85%" height="85%">
-
 **salvia256**
 
 <img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/salvia256.png" width="85%" height="85%">
@@ -496,6 +492,10 @@ On the left are the input palettes, and on the right are the output palettes all
 
 <img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/pumpkin256.png" width="85%" height="85%">
 
+**joan256**
+
+<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/joan256.png" width="85%" height="85%">
+
 **nacre256**
 
 <img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/nacre256.png" width="85%" height="85%">
@@ -509,6 +509,10 @@ On the left are the input palettes, and on the right are the output palettes all
 **betan\***
 
 <img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/betan.png" width="85%" height="85%">
+
+**orb\***
+
+<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/orb.png" width="85%" height="85%">
 
 **blink\***
 
@@ -541,6 +545,14 @@ On the left are the input palettes, and on the right are the output palettes all
 **rach\***
 
 <img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/rach.png" width="85%" height="85%">
+
+**orb256**
+
+<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/orb256.png" width="85%" height="85%">
+
+**perl256**
+
+<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/perl256.png" width="85%" height="85%">
 
 **blink256**
 
