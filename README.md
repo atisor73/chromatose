@@ -1,6 +1,9 @@
 # chromatose
 <hr>
-A package for storing and visualizing palettes, and constructing new ones via polynomial interpolation and image extraction. Now pippable! *This package borrows inspiration from @jmaasch's scatterplots in her package [`sanzo`](https://github.com/jmaasch/sanzo), and uses extraction algorithms from @qTipTip's package [`Pylette`](https://github.com/qTipTip/Pylette).*
+A package for storing and visualizing palettes, and constructing new ones via polynomial interpolation and image extraction. Now pippable!
+<br><br>
+
+*This package borrows inspiration from @jmaasch's scatterplots in her package [`sanzo`](https://github.com/jmaasch/sanzo), and uses extraction algorithms from @qTipTip's package [`Pylette`](https://github.com/qTipTip/Pylette).*
 
 
 ## `palettes` :art:
@@ -622,7 +625,7 @@ optional arguments:
 
 <img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/joker256.png" width="85%" height="85%">
 
-## `bokeh`
+## `[bokeh]`(https://github.com/atisor73/chromatose#palettes-art)
 
 **paired**
 
