@@ -181,7 +181,7 @@ def palplot(
                                        y_range=(-height,height),
                                        tooltips=TOOLTIPS)
         p.square(source=df, x='x',y='y', size=size, color='palette',alpha=alpha)
-        p = _clean_plot(p, bg_color)
+        p = _clean_plot(p, 'white')
         return p
 
     def _pie():

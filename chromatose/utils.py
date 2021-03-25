@@ -318,8 +318,11 @@ def hsl_to_rgb(palette):
     if type(palette[0])==float: return _hsl_to_rgb(palette)
     return [_hsl_to_rgb(color) for color in palette]
 
-
-
+def luminance_sort(rgb):
+    weights = np.array([0.2126, 0.7152, 0.0722])
+    lum = [sum(np.array(list(c)) * weights) for c in rgb]
+    rgb_sort = [x for _, x in sorted(zip(lum, rgb))]
+    return rgb_sort
 
 def hex_palette(palette):
     ''' REFORMATTING INPUT PALETTE ..........'''

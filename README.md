@@ -1,7 +1,9 @@
 # chromatose
 <hr>
-A package for storing and visualizing palettes, and constructing new ones via interpolation. Now pippable!
-<br>
+A package for storing and visualizing palettes, and constructing new ones via polynomial interpolation and image extraction. Now pippable!
+<br><br>
+
+*This package borrows inspiration from @jmaasch's scatterplots in her R color package [`sanzo`](https://github.com/jmaasch/sanzo) (featuring the legendary Sanzo Wada's palettes) and extraction algorithms from @qTipTip's package [`Pylette`](https://github.com/qTipTip/Pylette).*
 
 
 ## `palettes` :art:
@@ -58,6 +60,7 @@ watch me swatch...
     *alpha transparency of entire palette*
  -->
 
+<!--
 ### ct.heatmap( )
 Volcano data lifted from R. Hot stuff.
 <img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/5heatmap.png" width="56%" height="56%">
@@ -69,7 +72,7 @@ Default interpolation (below) but can also turn this off (above).
 - `interpolate` : boolean
     *if True, interpolates palette*
     *if False, generates heatmap with input directly*
-- `desired_length` : integer
+- `n_colors` : integer
     *approximate desired length of final palette*
 - `interpolation_method` : string 'rgb' or 'hsv' or 'hsl'
     *interpolation metric*
@@ -84,7 +87,7 @@ Default interpolation (below) but can also turn this off (above).
     *if True, returns interpolated palette as list*
     *if False, no returns*
 
-
+ -->
 
 
 
@@ -98,13 +101,13 @@ There are a multitude of beautiful gradients in packages like bokeh and colorcet
 
 <img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/3interpolate1.png" width="85%" height="85%">
 
-On the left are the input palettes, and on the right are the output palettes all of size 256.
+On the left are the input palettes, and on the right are the output palettes all approximately of size 256.
 <img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/3interpolate2.png" width="110%" height="100%">
 
 
 - **`palette`** : list or iterable
     any combination of hex strings or rgb tuples or HTML
-- **`desired_length`** : integer
+- **`n_colors`** : integer
     approximate desired length of final palette
 - `method` : string 'rgb' or 'hsv' or 'hsl'
     *interpolation metric, default 'rgb'*
@@ -256,18 +259,6 @@ On the left are the input palettes, and on the right are the output palettes all
 
 <img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/leda.png" width="85%" height="85%">
 
-**pugsley**
-
-<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/pugsley.png" width="85%" height="85%">
-
-**bellhooks**
-
-<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/bellhooks.png" width="85%" height="85%">
-
-**oolong**
-
-<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/oolong.png" width="85%" height="85%">
-
 **alice**
 
 <img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/alice.png" width="85%" height="85%">
@@ -344,17 +335,29 @@ On the left are the input palettes, and on the right are the output palettes all
 
 <img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/riley.png" width="85%" height="85%">
 
-**ostrich**
-
-<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/ostrich.png" width="85%" height="85%">
-
 **eeyore**
 
 <img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/eeyore.png" width="85%" height="85%">
 
+**ostrich**
+
+<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/ostrich.png" width="85%" height="85%">
+
 **yoshi**
 
 <img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/yoshi.png" width="85%" height="85%">
+
+**pugsley**
+
+<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/pugsley.png" width="85%" height="85%">
+
+**bellhooks**
+
+<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/bellhooks.png" width="85%" height="85%">
+
+**oolong**
+
+<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/oolong.png" width="85%" height="85%">
 
 **carmine**
 
@@ -545,8 +548,9 @@ On the left are the input palettes, and on the right are the output palettes all
 
 **category20c**
 
-<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/category20c.png" width="85%" height="85%">
+<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/category20c.png" width="85%" height="80%">
 
 <br>
-
+<br>
+<hr>
 *"The last color she remembered was the indigo chips in the headstone. After that she became as color conscious as a hen."*

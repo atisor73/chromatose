@@ -1,7 +1,6 @@
 import numpy as np
 from .utils import *
 
-
 def curver(xs, direction):
     Δ = max(xs) - min(xs)
     a, b, c = Δ/25, Δ/2, 1000
@@ -9,7 +8,7 @@ def curver(xs, direction):
     down = (xs+a) - (xs-b)**2/c
     if direction=="up": return up
     if direction=="down": return down
-    
+
 def _pair_interpolate(start, end, num,
                        method='hsv',
                        redundant=True,
@@ -24,7 +23,7 @@ def _pair_interpolate(start, end, num,
         xs = np.linspace(start_x, end_x, num)
         ys = np.linspace(start_y, end_y, num)
         zs = np.linspace(start_z, end_z, num)
-        
+
         if curve==True:
             xs = curver(xs-start_x, directions[0]) + start_x  # curve r up
             ys = curver(ys-start_y, directions[1]) + start_y  # curve g down
@@ -44,17 +43,17 @@ def _pair_interpolate(start, end, num,
     ys = np.linspace(start_y, end_y, num)
     zs = np.linspace(start_z, end_z, num)
     _ = [(x, y, z)for x, y, z in zip(xs, ys, zs)]
-    
+
     function = dict_function[method][1]
     palette = rgb_to_hex(function(_))
-    
+
     if redundant==False: return palette
     return palette[:-1] # don't include last one
 
 
 def palpolate(
     palette,
-    desired_length=256,
+    n_colors=256,
     method='rgb',
     curve=False,
     directions=['up','down','up']
@@ -62,12 +61,12 @@ def palpolate(
     """
     Interpolation of input palette to a longer palette of desired length.
     Can do linear or polynomial interpolation for RGB.
-    
+
     Arguments
     ---------
     palette : list
          iterable of any combination of hex strings, rgb tuples, HTML names
-    desired_length : integer
+    n_colors : integer
          approximate desired length of final palette
     method : string 'rgb' or 'hsv' or 'hsl'
          interpolation metric, default 'rgb'
@@ -79,24 +78,24 @@ def palpolate(
         each entry corresponds to r, g, b
         'up' pushes intermediate values higher (lighter)
         'down' pushes intermediate values lower (darker)
-        
+
     Returns
     ---------
     output : list of interpolated palette
     """
-    
-    if desired_length <= len(palette)*1.5:
+
+    if n_colors <= len(palette)*1.5:
         return palette
-        
+
     palette = list(palette)
     palette = hex_palette(palette)
-            
+
     # BEGIN INTERPOLATION........................................
     interpolated_palette = []
-    num = int(desired_length / (len(palette)-1))
+    num = int(n_colors / (len(palette)-1))
     redundant = True
     if len(palette)==2: redundant=False        # no need to exclude last one
-        
+
     for i in range(len(palette[:-1])):
         if i == len(palette)-2: redundant=False
         lst = _pair_interpolate(palette[i], palette[i+1], num,

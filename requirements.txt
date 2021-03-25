@@ -1,4 +1,6 @@
 numpy
 scipy
 pandas
+pillow
+scikit-learn
 bokeh>=1.4.0

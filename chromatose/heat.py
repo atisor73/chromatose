@@ -18,12 +18,12 @@ _df = _df.drop(columns=' 1 ')
 _df = _df.melt(id_vars='index')
 _df = _df.rename(columns={'index':'row','variable':'col'})
 _df = _df.astype('float')
-    
-    
+
+
 def heatmap(
     palette,
     interpolate=True,
-    desired_length=256,
+    n_colors=256,
     interpolation_method='rgb',
     curve=False,
     directions=['up','down','up'],
@@ -32,7 +32,7 @@ def heatmap(
     ):
     """
     Displays heatmap via bokeh. Hover for hex/rgb value.
-    
+
     Arguments
     ---------
     palette : list
@@ -40,8 +40,8 @@ def heatmap(
     interpolate : boolean
         If True, will interpolate the palette using palpolate
         If False, will generate heatmap with input palette
-        To set size of final interpolation, can modify 'desired_length'
-    desired_length : integer
+        To set size of final interpolation, can modify 'n_colors'
+    n_colors : integer
          approximate desired length of final palette
     interpolation_method : string 'rgb' or 'hsv' or 'hsl'
          interpolation metric, default 'rgb'
@@ -55,23 +55,23 @@ def heatmap(
     return_palette : boolean
         if True, returns interpolated palette as list
         if False, no returns
-    
+
     Returns
     --------
     outputs plot directly, no returns unless return_palette is set to True
     """
     palette = list(palette)
     palette = hex_palette(palette)
-    
+
     if interpolate == True:
         colors = palpolate( palette,
-                            desired_length,
+                            n_colors,
                             method=interpolation_method,
                             curve=curve,
                             directions=directions )
-                            
+
     else: colors = palette
-    
+
     mapper = LinearColorMapper( palette=colors,
                                 low=_df.value.min(),
                                 high=_df.value.max() )
@@ -94,7 +94,7 @@ def heatmap(
             </div>
         </div>
         """
-    
+
     # PLOTTING...........................................................................
     p = bokeh.plotting.figure(width=600, height=300,
                           x_range=(_df.row.min()+1, _df.row.max()),
@@ -117,7 +117,7 @@ def heatmap(
     p.axis.major_tick_line_color = None
     p.xaxis.visible, p.yaxis.visible = False, False
     p.toolbar.autohide=True
-    
+
     if return_plot == True:
         return p
     else:
@@ -125,4 +125,3 @@ def heatmap(
 
     if return_palette == True:
         return colors
-        
