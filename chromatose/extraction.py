@@ -103,7 +103,7 @@ def extract(path,
     Arguments:
     ----------
     path : image path                                (str)
-    n_colors : desired colors                        (int)
+    n_colors : desired length                        (int)
     method : either K-means or median-cut algorithm  (str)
         'kmeans', 'median', 'both'
     resize : shrink image for quicker return         (bool)

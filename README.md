@@ -3,7 +3,7 @@
 A package for storing and visualizing palettes, and constructing new ones via polynomial interpolation and image extraction. Now pippable!
 <br><br>
 
-*This package borrows inspiration from @jmaasch's scatterplots in her R color package [`sanzo`](https://github.com/jmaasch/sanzo) (featuring the legendary Sanzo Wada's palettes) and extraction algorithms from @qTipTip's package [`Pylette`](https://github.com/qTipTip/Pylette).*
+*This package borrows inspiration from @jmaasch's scatterplots in her package [`sanzo`](https://github.com/jmaasch/sanzo), and uses extraction algorithms from @qTipTip's package [`Pylette`](https://github.com/qTipTip/Pylette).*
 
 
 ## `palettes` :art:
@@ -23,7 +23,9 @@ menthol | dwight | riley | mona | eeyore
 rory  | pudding | marmalade | polaris | trefoil
 harmon | abed | shirley | surely |  annie
 pierce | britta | strogatz | lutz | writhe
-perl  |  rainbow | diverging | ???  | ???
+perl\* | roosh  | seafare | heliotrope | moonbow
+peanuts | naval | indomie  |  maggie | rainbow
+diverging | ??? | ???  | ??? | orb\*
 warble\* | waitomo\*  | vylette\*  |  pom\*  |  lava\*
 pumpkin\*  | pinctada\*  | nacre\* | moxxi\* | salvia\*
 bluefish | BuPu\* | holst | joker\* | rach\*
@@ -33,6 +35,12 @@ emporium | paired  | category20a  | category20b  | category20c
 \* *available as xxx256*
 
 \[[discrete](https://github.com/atisor73/chromatose#discrete)\] \[[monochrome continuous](https://github.com/atisor73/chromatose#monochrome-continuous)\] \[[polychromatic continuous](https://github.com/atisor73/chromatose#polychromatic-continuous)] \[[bokeh](https://github.com/atisor73/chromatose#bokeh)\]
+
+<!-- ### chromatrieve -->
+Palettes can be retrieved from command line:
+ ```sh
+ chromatrieve PALETTE_NAME
+ ```
 
 
 ## `viz` :eyes:
@@ -120,6 +128,16 @@ On the left are the input palettes, and on the right are the output palettes all
     *'down' pushes intermediate values lower (darker)*
 
 
+## `extraction` :camera:
+### ct.extract( )
+ - **`path`** : string of image path
+ - **`n_colors`** : integer desired length
+ - **`method`** : 'kmeans' or 'median' or 'both'
+   algorithm of extraction either k-means clustering or median cut, default k-means
+ - `resize` : boolean, default True
+ resizing samples a smaller image, speeds up extraction
+  - `sort` : boolean, default False
+  amateur sort by luminance
 
 ## gallery :rainbow:
 
