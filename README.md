@@ -147,22 +147,16 @@ Palettes can be extracted from command line:
  >>> K-Means:    ['#050002', '#0c1c7b', '#013adc', '#1b143a', '#294254']
  >>> Median Cut: ['#040000', '#080006', '#1e1b3c', '#1e2d61', '#0330bd']
 
->>> chromextract -h
-
-usage: chromextract [-h] [-n] [-r] [-s] [-d] path
-
 Palette extraction from image path using both k-means and median cut
 algorithms. Defaults to 5 colors, resized, unsorted, and not displayed.
 
-positional arguments:
   path             path to image
 
-optional arguments:
   -h, --help       show this help message and exit
   -n , --ncolors   length of palette (int, default 5)
   -r , --resize    resize for efficiency (bool, default True)
   -s , --sort      sort by luminance (bool, default False)
-  -d , --display   serve pillow swatches (bool, default False)
+  -d , --display   display pillow swatches (bool, default False)
  ```
 
 # gallery :rainbow:

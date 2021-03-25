@@ -41,7 +41,7 @@ def main():
     parser.add_argument('-s','--sort', type=str2bool, default=False, metavar='',
                         help="sort by luminance     (bool, default False)",)
     parser.add_argument('-d','--display', type=str2bool, default=False, metavar='',
-                        help="serve pillow swatches (bool, default False)")
+                        help="display pillow swatches (bool, default False)")
 
     args = parser.parse_args()
 
