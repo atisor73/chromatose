@@ -625,7 +625,7 @@ optional arguments:
 
 <img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/joker256.png" width="85%" height="85%">
 
-## `[bokeh]`(https://github.com/atisor73/chromatose#palettes-art)
+## [`bokeh`](https://github.com/atisor73/chromatose#palettes-art)
 
 **paired**
 
