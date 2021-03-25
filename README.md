@@ -269,6 +269,14 @@ On the left are the input palettes, and on the right are the output palettes all
 
 <img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/wes.png" width="85%" height="85%">
 
+**pam**
+
+<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/pam.png" width="85%" height="85%">
+
+**dwight**
+
+<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/dwight.png" width="85%" height="85%">
+
 **marmalade**
 
 <img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/marmalade.png" width="85%" height="85%">
@@ -296,6 +304,22 @@ On the left are the input palettes, and on the right are the output palettes all
 **britta**
 
 <img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/britta.png" width="85%" height="85%">
+
+**neko**
+
+<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/neko.png" width="85%" height="85%">
+
+**diverging**
+
+<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/diverging.png" width="85%" height="85%">
+
+**lutz**
+
+<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/lutz.png" width="85%" height="85%">
+
+**moonbow**
+
+<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/moonbow.png" width="85%" height="85%">
 
 **eeyore**
 
@@ -377,10 +401,6 @@ On the left are the input palettes, and on the right are the output palettes all
 
 <img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/bellhooks.png" width="85%" height="85%">
 
-**neko**
-
-<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/neko.png" width="85%" height="85%">
-
 **belle**
 
 <img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/belle.png" width="85%" height="85%">
@@ -388,14 +408,6 @@ On the left are the input palettes, and on the right are the output palettes all
 **phoebe**
 
 <img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/phoebe.png" width="85%" height="85%">
-
-**pam**
-
-<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/pam.png" width="85%" height="85%">
-
-**dwight**
-
-<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/dwight.png" width="85%" height="85%">
 
 **ostrich**
 
@@ -408,10 +420,6 @@ On the left are the input palettes, and on the right are the output palettes all
 **carmine**
 
 <img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/carmine.png" width="85%" height="85%">
-
-**diverging**
-
-<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/diverging.png" width="85%" height="85%">
 
 ## `monochrome continuous`
 
