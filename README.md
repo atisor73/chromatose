@@ -144,250 +144,204 @@ On the left are the input palettes, and on the right are the output palettes all
 ## `discrete`
 
 **frieda**
-
 <img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/frieda.png" width="85%" height="85%">
 
 
-
 **plath**
-
 <img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/plath.png" width="85%" height="85%">
 
 **selah**
-
 <img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/selah.png" width="85%" height="85%">
 
 **blonde**
-
 <img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/blonde.png" width="85%" height="85%">
 
 **honeycombe**
-
 <img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/honeycombe.png" width="85%" height="85%">
 
 **lysergic**
-
 <img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/lysergic.png" width="85%" height="85%">
 
-
 **pepo**
-
 <img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/pepo.png" width="85%" height="85%">
 
 **reese**
-
 <img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/reese.png" width="85%" height="85%">
 
 **rainbow**
-
 <img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/rainbow.png" width="85%" height="85%">
 
 **lufte**
-
 <img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/lufte.png" width="85%" height="85%">
 
 **pitaya**
-
 <img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/pitaya.png" width="85%" height="85%">
 
 **spiff**
-
 <img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/spiff.png" width="85%" height="85%">
 
 **leather**
-
 <img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/leather.png" width="85%" height="85%">
 
-**eleven**
-
-<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/eleven.png" width="85%" height="85%">
-
-**chilaquiles**
-
-<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/chilaquiles.png" width="85%" height="85%">
-
-**fiestaware**
-
-<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/fiestaware.png" width="85%" height="85%">
-
-**splenda**
-
-<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/splenda.png" width="85%" height="85%">
-
 **medium**
-
 <img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/medium.png" width="85%" height="85%">
 
-**juniper**
-
-<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/juniper.png" width="85%" height="85%">
-
-**pollen**
-
-<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/pollen.png" width="85%" height="85%">
-
-
-**fraiche**
-
-<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/fraiche.png" width="85%" height="85%">
-
-**polya**
-
-<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/polya.png" width="85%" height="85%">
-
-**strogatz**
-
-<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/strogatz.png" width="85%" height="85%">
-
-**cheshire**
-
-<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/cheshire.png" width="85%" height="85%">
-
-
-**joan**
-
-<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/joan.png" width="85%" height="85%">
-
-**pinot**
-
-<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/pinot.png" width="85%" height="85%">
-
-
 **addams**
-
 <img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/addams.png" width="85%" height="85%">
 
-**minuit**
-
-<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/minuit.png" width="85%" height="85%">
-
-**fugazi**
-
-<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/fugazi.png" width="85%" height="85%">
-
-**clementine**
-
-<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/clementine.png" width="85%" height="85%">
-
 **mona**
-
 <img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/mona.png" width="85%" height="85%">
 
 **leda**
-
 <img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/leda.png" width="85%" height="85%">
 
-**alice**
-
-<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/alice.png" width="85%" height="85%">
-
-**wes**
-
-<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/wes.png" width="85%" height="85%">
-
 **rory**
-
 <img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/rory.png" width="85%" height="85%">
 
 **pudding**
-
 <img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/pudding.png" width="85%" height="85%">
 
-**marmalade**
-
-<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/marmalade.png" width="85%" height="85%">
-
 **polaris**
-
 <img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/polaris.png" width="85%" height="85%">
 
 **trefoil**
-
 <img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/trefoil.png" width="85%" height="85%">
 
-**harmon**
-
-<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/harmon.png" width="85%" height="85%">
-
-**abed**
-
-<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/abed.png" width="85%" height="85%">
-
-**shirley**
-
-<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/shirley.png" width="85%" height="85%">
-
-**annie**
-
-<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/annie.png" width="85%" height="85%">
-
-**pierce**
-
-<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/pierce.png" width="85%" height="85%">
-
-**britta**
-
-<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/britta.png" width="85%" height="85%">
-
-**belle**
-
-<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/belle.png" width="85%" height="85%">
-
-**neko**
-
-<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/neko.png" width="85%" height="85%">
-
-**phoebe**
-
-<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/phoebe.png" width="85%" height="85%">
-
-**pam**
-
-<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/pam.png" width="85%" height="85%">
-
-**dwight**
-
-<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/dwight.png" width="85%" height="85%">
-
-**riley**
-
-<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/riley.png" width="85%" height="85%">
-
-**eeyore**
-
-<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/eeyore.png" width="85%" height="85%">
-
-**ostrich**
-
-<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/ostrich.png" width="85%" height="85%">
-
-**yoshi**
-
-<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/yoshi.png" width="85%" height="85%">
-
-**pugsley**
-
-<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/pugsley.png" width="85%" height="85%">
-
-**bellhooks**
-
-<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/bellhooks.png" width="85%" height="85%">
-
-**oolong**
-
-<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/oolong.png" width="85%" height="85%">
-
-**carmine**
-
-<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/carmine.png" width="85%" height="85%">
-
 **writhe**
-
 <img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/writhe.png" width="85%" height="85%">
 
 **perl**
-
 <img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/perl.png" width="85%" height="85%">
+
+**roosh**
+<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/roosh.png" width="85%" height="85%">
+
+**heliotrope**
+<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/heliotrope.png" width="85%" height="85%">
+
+**indomie**
+<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/indomie.png" width="85%" height="85%">
+
+**juniper**
+<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/juniper.png" width="85%" height="85%">
+
+
+**strogatz**
+<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/strogatz.png" width="85%" height="85%">
+
+**minuit**
+<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/minuit.png" width="85%" height="85%">
+
+**alice**
+<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/alice.png" width="85%" height="85%">
+
+**wes**
+<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/wes.png" width="85%" height="85%">
+
+**marmalade**
+<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/marmalade.png" width="85%" height="85%">
+
+**harmon**
+<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/harmon.png" width="85%" height="85%">
+
+**abed**
+<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/abed.png" width="85%" height="85%">
+
+**shirley**
+<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/shirley.png" width="85%" height="85%">
+
+**annie**
+<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/annie.png" width="85%" height="85%">
+
+**pierce**
+<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/pierce.png" width="85%" height="85%">
+
+**britta**
+<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/britta.png" width="85%" height="85%">
+
+**eeyore**
+<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/eeyore.png" width="85%" height="85%">
+
+**maggie**
+<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/maggie.png" width="85%" height="85%">
+
+**peanuts**
+<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/peanuts.png" width="85%" height="85%">
+
+**naval**
+<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/naval.png" width="85%" height="85%">
+
+**eleven**
+<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/eleven.png" width="85%" height="85%">
+
+**fugazi**
+<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/fugazi.png" width="85%" height="85%">
+
+**clementine**
+<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/clementine.png" width="85%" height="85%">
+
+**alice**
+<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/alice.png" width="85%" height="85%">
+
+**wes**
+<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/wes.png" width="85%" height="85%">
+
+**chilaquiles**
+<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/chilaquiles.png" width="85%" height="85%">
+
+**splenda**
+<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/splenda.png" width="85%" height="85%">
+
+**fiestaware**
+<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/fiestaware.png" width="85%" height="85%">
+
+**pollen**
+<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/pollen.png" width="85%" height="85%">
+
+**fraiche**
+<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/fraiche.png" width="85%" height="85%">
+
+**polya**
+<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/polya.png" width="85%" height="85%">
+
+**cheshire**
+<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/cheshire.png" width="85%" height="85%">
+
+**pugsley**
+<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/pugsley.png" width="85%" height="85%">
+
+**bellhooks**
+<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/bellhooks.png" width="85%" height="85%">
+
+**oolong**
+<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/oolong.png" width="85%" height="85%">
+
+**belle**
+<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/belle.png" width="85%" height="85%">
+
+**neko**
+<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/neko.png" width="85%" height="85%">
+
+**phoebe**
+<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/phoebe.png" width="85%" height="85%">
+
+**pam**
+<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/pam.png" width="85%" height="85%">
+
+**dwight**
+<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/dwight.png" width="85%" height="85%">
+
+**riley**
+<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/riley.png" width="85%" height="85%">
+
+**ostrich**
+<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/ostrich.png" width="85%" height="85%">
+
+**yoshi**
+<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/yoshi.png" width="85%" height="85%">
+
+**carmine**
+<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/carmine.png" width="85%" height="85%">
 
 **diverging**
 
