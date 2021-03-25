@@ -137,48 +137,37 @@ On the left are the input palettes, and on the right are the output palettes all
 Palettes can be retrieved from command line:
  ```sh
  >>> chromatrieve leda
- >>> ... 
+ >>> ...
  >>> ['#2c2f30', '#8fa7d7', '#afd7d6', '#aa3751', '#f5b3b8']
-
- usage: chromatrieve [-h] palette
-
-palette retriever
-
-positional arguments:
-  palette     name of chromatose palette (str)
-
-optional arguments:
-  -h, --help  show this help message and exit
 ```
 
 Palettes can be extracted from command line:
  ```sh
  >>> chromextract egg.png
- >>> ...
  >>> K-Means:    ['#050002', '#0c1c7b', '#013adc', '#1b143a', '#294254']
  >>> Median Cut: ['#040000', '#080006', '#1e1b3c', '#1e2d61', '#0330bd']
 
+>>> chromextract -h
+
 usage: chromextract [-h] [-n] [-r] [-s] [-d] path
 
-Palette extraction from image path. Defaults to 5 colors.
+Palette extraction from image path using both k-means and median cut
+algorithms. Defaults to 5 colors, resized, unsorted, and not displayed.
 
 positional arguments:
   path             path to image
 
 optional arguments:
   -h, --help       show this help message and exit
-  -n , --ncolors   length of palette
-  -r , --resize    resize for efficiency
-  -s , --sort      sort by luminance
-  -d , --display   serve panel object
-
+  -n , --ncolors   length of palette (int, default 5)
+  -r , --resize    resize for efficiency (bool, default True)
+  -s , --sort      sort by luminance (bool, default False)
+  -d , --display   serve pillow swatches (bool, default False)
  ```
-
-
 
 # gallery :rainbow:
 
-## `discrete`
+## [`discrete`](https://github.com/atisor73/chromatose#viz)
 
 **frieda**
 
@@ -321,10 +310,6 @@ optional arguments:
 
 <img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/harmon.png" width="85%" height="85%">
 
-**abed**
-
-<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/abed.png" width="85%" height="85%">
-
 **shirley**
 
 <img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/shirley.png" width="85%" height="85%">
@@ -340,6 +325,10 @@ optional arguments:
 **britta**
 
 <img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/britta.png" width="85%" height="85%">
+
+**abed**
+
+<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/abed.png" width="85%" height="85%">
 
 **eeyore**
 
@@ -458,7 +447,11 @@ optional arguments:
 
 <img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/carmine.png" width="85%" height="85%">
 
-## `monochrome continuous`
+
+
+
+
+## [`monochrome continuous`](https://github.com/atisor73/chromatose#viz)
 
 **salvia\***
 
@@ -550,7 +543,7 @@ optional arguments:
 
 <img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/crest256.png" width="85%" height="85%">
 
-## `polychromatic continuous`
+## [`polychromatic continuous`](https://github.com/atisor73/chromatose#viz)
 
 **joker\***
 
