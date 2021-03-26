@@ -91,16 +91,13 @@ def _widgeting(n=None, palette=None):
     return widgets, max_width, min(n, len(palette))
 
 def palpicker(n=None, palette=None):
-    """
-    Pass in either integer number or palette
-    Max of 8.
-    """
+    """ Pass in an integer or a palette. Returns colorpicker widget. """
     button = pn.widgets.Button(name="record", button_type="primary",
                                height=40, margin=[15, 0, 0, 0])
     def prnt(event):
         print("[", end="")
         for widget in widgets:
-            print(f" \"{widget.value},\" ", end="    ")
+            print(f" \"{widget.value}\", ", end="    ")
         print("]")
     button.on_click(prnt)
 
