@@ -218,6 +218,8 @@ palette_dict = {
     "moonbow": moonbow,
     "peanuts": peanuts,
     "naval": naval,
+    "quinone":quinone,
+    "quinoline":quinoline,
     "indomie": indomie,
     "maggie": maggie,
     "orb": orb,

@@ -24,11 +24,13 @@ crepuscule = ['#3c8588',
              '#dbad4e',
              '#efedce',]
 
-juniper = ['#b1516a',
-            '#af9c85',
-            '#bbc9a2',
-            '#ebd5a2',
-            '#595353']
+juniper = ['#237683',
+            '#C9375B',
+            '#35477D',
+            '#cd5c5c',
+            '#FB9E91',
+            '#8A6086',
+           ]
 
 plath = ['#30343f',
            '#a84b43',
@@ -89,13 +91,17 @@ gremlin = ['#3a5b84',
            '#836a00',
            '#002c59']
 
-pollen = ["#fB9e91",
-          "#461a84",
-          "#f5f0e3",
-          "#b4b6d8",
-          '#ffd082',
-#         '#9dab86',
-         ]
+pollen = ['#fB9e91',
+          '#604d89',
+          '#f5f0e3',
+          '#b4b6d8',
+          '#ffd082']
+
+bollen = ['#eB8e81',
+        '#503d79',
+        '#c1b6b2',
+        '#a9b0d0',
+        '#efc072']
 
 medium = ['#e3a201',
           '#6762ab',
@@ -116,13 +122,22 @@ polya = ["#A43955",
          "#738C79",
          "#ECBE13"]
 
-ostrich = [ # turn alpha on
-    "navy",
-    "orangered",
-    "teal",
-    "midnightblue",
-    '#d45d79',
-    ]
+ostrich = ['#ee5500', 'teal', 'midnightblue', '#d45d79'] # TURN ALPHA ON
+
+quinone =  [
+            "#991a40",
+            "#1c0517",
+            "#9db0bb",
+            "#ae3f03",
+            (210, 150, 160)
+           ]
+
+quinoline = [
+            "#B22c56",
+            "#2c1527",
+            "#ca6f13",
+            (225, 170, 170),
+           ]
 
 fraiche = ['#472b62',
            "#f5f0e3",
@@ -521,14 +536,11 @@ yoshi = ["#111129",
          "#cd355c",
          "#d0e44e"]
 
-phoebe = ["#f71237",
-          "#1c0517",
-          "#8ba794",
-          "#fe5f8e",
-          "#fde4d1",
-          "#991a40",
-          "#eeecec",
-         ]
+phoebe = ['#1c0517',
+          '#8ba794',
+          '#ee5f8e',
+          '#fde4d1',
+          '#991a40',]
 
 pam = ["#634131",
        "#448168",
@@ -5873,6 +5885,8 @@ all_palettes = ["selah",
                 "heliotrope",
                 "roosh",
                 "seafare",
+                "quinone",
+                "quinoline",
                 "perl",
                 "perl256",
                 "orb",
