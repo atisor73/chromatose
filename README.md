@@ -103,8 +103,8 @@ Default interpolation (below) but can also turn this off (above).
     input lists of any size and user can control output size.
 
 There are a multitude of beautiful gradients in packages like bokeh and colorcet that are, for the most part, static. The interpolation scheme here can be used to create entirely new ones given only a few endpoints. This part is still in development, but currently uses linear or polynomial fits in color space metrics RGB, HSL, or HSV. Heatmaps are a good way to visualize the results!
-
-<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/3interpolate1.png" width="60%" height="60%">
+<!-- 
+<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/3interpolate1.png" width="60%" height="60%"> -->
 
 On the left are the input palettes, and on the right are the output palettes all approximately of size 256.
 <img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/3interpolate2.png" width="100%" height="91%">
