@@ -133,11 +133,10 @@ On the left are the input palettes, and on the right are the output palettes all
   - `sort` : boolean, default False
   amateur sort by luminance
 
-## `command line tools` :pick:
+## `command-line tools` :pick:
 Palettes can be retrieved from command line:
  ```sh
  >>> chromatrieve leda
- >>> ...
  >>> ['#2c2f30', '#8fa7d7', '#afd7d6', '#aa3751', '#f5b3b8']
 ```
 
@@ -152,11 +151,10 @@ algorithms. Defaults to 5 colors, resized, unsorted, and not displayed.
 
   path             path to image
 
-  -h, --help       show this help message and exit
   -n , --ncolors   length of palette (int, default 5)
   -r , --resize    resize for efficiency (bool, default True)
-  -s , --sort      sort by luminance (bool, default False)
   -d , --display   display pillow swatches (bool, default False)
+  -s , --show      display pillow swatches (bool, default False)
  ```
 
 # gallery :rainbow:
@@ -252,7 +250,7 @@ algorithms. Defaults to 5 colors, resized, unsorted, and not displayed.
 
 <img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/writhe.png" width="85%" height="85%">
 
-**perl**
+**perl\***
 
 <img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/perl.png" width="85%" height="85%">
 
@@ -393,9 +391,9 @@ algorithms. Defaults to 5 colors, resized, unsorted, and not displayed.
 
 <img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/splenda.png" width="85%" height="85%">
 
-**riley**
+<!-- **riley**
 
-<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/riley.png" width="85%" height="85%">
+<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/riley.png" width="85%" height="85%"> -->
 
 **pollen**
 
@@ -408,14 +406,14 @@ algorithms. Defaults to 5 colors, resized, unsorted, and not displayed.
 **cheshire**
 
 <img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/cheshire.png" width="85%" height="85%">
-
+<!--
 **pugsley**
 
-<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/pugsley.png" width="85%" height="85%">
+<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/pugsley.png" width="85%" height="85%"> -->
 
-**oolong**
+<!-- **oolong**
 
-<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/oolong.png" width="85%" height="85%">
+<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/oolong.png" width="85%" height="85%"> -->
 
 **bellhooks**
 
@@ -437,9 +435,9 @@ algorithms. Defaults to 5 colors, resized, unsorted, and not displayed.
 
 <img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/yoshi.png" width="85%" height="85%">
 
-**carmine**
+<!-- **carmine**
 
-<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/carmine.png" width="85%" height="85%">
+<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/carmine.png" width="85%" height="85%"> -->
 
 
 

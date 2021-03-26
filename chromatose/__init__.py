@@ -13,6 +13,8 @@ from .interpolate import *
 from .utils import *
 from .heat import *
 from .extraction import *
+from .colorpicker import *
+
 
 __author__ = "Rosita Fu"
 __version__ = "1.0.0"
