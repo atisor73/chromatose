@@ -6,32 +6,33 @@ pn.extension()
 
 from .utils import *
 
-# css = """
-# .bk.panel-container {
-#     background: "#999999";          /* light gray background*/
-#     border-radius: 10px;            /* circular edge */
-#     border: 0px #e6472c solid;         /* border properties */
-#
-# }
-# .bk.panel-colorpicker {
-#     font-family: "Open Sans"
-#     font-size: 33px;
-#     background: "#ff0000";
-#     border: 0px #e6472c solid;         /* border properties */
-# }
-# .bk.panel-button {
-#     font-family: "Open Sans"
-#     font-size: 55px;
-# }
-# .bk.panel-pane {
-#     text-align: center;
-# }
-# """
-# pn.extension(raw_css = [css])
+css = """
+.bk.panel-container {
+    background: "#999999";          /* light gray background*/
+    border-radius: 50px;            /* circular edge */
+    border: 0px #e6472c solid;         /* border properties */
+
+}
+.bk.panel-colorpicker {
+    font-family: "Open Sans"
+    font-size: 33px;
+    background: "#ff0000";
+    border: 0px #e6472c solid;         /* border properties */
+}
+.bk.panel-button {
+    font-family: "Open Sans"
+    font-size: 35px;
+}
+.bk.panel-pane {
+    text-align: center;
+}
+"""
+pn.extension(raw_css = [css])
 
 def _get_dimensions(n):
     d_width = {1: 300, 2: 300, 3: 400, 4: 600,
-               5: 600, 6: 600, 7: 750, 8: 750,}
+               5: 600, 6: 750, 7: 775, 8: 900,
+               9: 1000, 10: 1100, 11: 1200, 12: 1300}
     max_width = d_width[n]
     width = int(max_width / n )
     height = int(1.1*width)
@@ -58,23 +59,28 @@ def _widgeting(n=None, palette=None):
                          '#e7298a',
                          '#66a61e'
                        ]
-    if   (n == None) & (palette==None):              n, palette = 5, diverging[:5]
+    if   (n == None) & (palette==None):
+        n, palette = 5, diverging[:5]
+        warnings.warn("\nEmpty input. Using default...", stacklevel=3)
     elif (n == None) & (type(palette) == list):      n = len(palette)
     elif (type(n) == int) & (palette == None):       palette = diverging[:n]
     elif (type(n) == int) & (type(palette) == list): palette = palette[:n]
-    elif (type(n) == list):
+    elif (type(n) == list) & (palette==None):
         palette = n
         n = len(palette)
-
+    elif (type(n) == list) & (type(palette) == int):
+        _ = n.copy()
+        n = palette
+        palette = _[:n]
     elif (type(n) in [str, tuple]):
-        return pn.widgets.ColorPicker(value=n, width=350, height=250)
+        return pn.widgets.ColorPicker(value=n, width=350, height=250, css_classes=["panel-colorpicker"])
 
     else:
-        warnings.warn("\nInvalid input. Using default...", stacklevel=2)
+        warnings.warn("\nInvalid input. Using default...", stacklevel=3)
         n, palette = 5, diverging
-    if n > 8:
-        warnings.warn("\n'n' too large. Capping n = 8", stacklevel=2)
-        n = 8
+    if n > 12:
+        warnings.warn("\n Input 'n' is too large. Capping 'n' @ first 12", stacklevel=2)
+        n = 12
     palette = hex_palette(palette)
 
     width, height, max_width = _get_dimensions(n)
@@ -84,7 +90,8 @@ def _widgeting(n=None, palette=None):
                     width=width,
                     height=height,
                     margin=(-10, -10, -10, -10),
-                    sizing_mode="stretch_both"
+                    sizing_mode="stretch_both",
+                    css_classes=["panel-colorpicker"]
                     )
                for i in range(min(n, len(palette))) ]
 
@@ -93,7 +100,9 @@ def _widgeting(n=None, palette=None):
 def palpicker(n=None, palette=None):
     """ Pass in an integer or a palette. Returns colorpicker widget. """
     button = pn.widgets.Button(name="record", button_type="primary",
-                               height=40, margin=[15, 0, 0, 0])
+                               height=40, margin=[15, 0, 0, 0],
+                               css_classes=["panel-button"]
+                               )
     def prnt(event):
         print("[", end="")
         for widget in widgets:
@@ -101,13 +110,17 @@ def palpicker(n=None, palette=None):
         print("]")
     button.on_click(prnt)
 
-    if type(n) in [str, tuple]:
+    if (type(n) in [str, tuple]) or (n==1):
+        if n == 1: n = "#253237"
+        if type(n) == tuple: n = "#%02x%02x%02x" % n
+
         picker = pn.widgets.ColorPicker(
                     value=n,
                     width=300,
                     height=125,
                     background="grey",
-                    margin=[0, 0, 0, 0]
+                    margin=[0, 0, 0, 0],
+                    css_classes=['panel-colorpicker']
                 )
         pane = pn.pane.Markdown(
                     object=str(picker.value),
@@ -117,7 +130,8 @@ def palpicker(n=None, palette=None):
                         'font-size':'12px',
                          'font-style':'normal',
                          'color':'#666666',
-                    }
+                    },
+                    align='center'
                 )
 
         def callback(*events):
@@ -138,6 +152,7 @@ def palpicker(n=None, palette=None):
                                      'font-style':'normal',
                                      'color':'#666666',
                                     },
+                             align='center'
                              ) for _ in range(n)]
 
     def callback0(*events):
@@ -200,5 +215,6 @@ def palpicker(n=None, palette=None):
     return pn.Column(
             pn.Row(*panes, width=max_width),
             pn.Row(*widgets, width=max_width),
-            button
+            button,
+            css_classes=["panel-container"]
            )

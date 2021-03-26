@@ -7,10 +7,12 @@ Date: 25 March 2021
 
 import warnings
 import numpy as np
+import panel as pn
 from PIL import Image
 from sklearn.cluster import KMeans
 from .utils import *
-
+from .viz import *
+pn.extension()
 
 class _ColorBox(object):
     """
@@ -97,7 +99,8 @@ def extract(path,
             n_colors=5,
             method='kmeans',
             resize=True,
-            sort=False
+            sort=False,
+            show=False
             ):
     '''
     Arguments:
@@ -130,6 +133,20 @@ def extract(path,
         if sort: k, m = luminance_sort(k), luminance_sort(m)
         k, m = rgb_to_hex(k), rgb_to_hex(m)
         palettes = {"kmeans": k, "median": m}
+        if show:
+            print("      ", k)
+            print("      ", m)
+            return pn.Column(palplot(k), palplot(m))
+            # return pn.Column(pn.pane.Markdown(f"      {k}",
+            #                     style={'font-family':'Open Sans', 'font-size':'17px'},
+            #                     align="center"
+            #                     ),
+            #                  palplot(k),
+            #                  pn.pane.Markdown(f"      {m}",
+            #                     style={'font-family':'Open Sans', 'font-size':'17px'},
+            #                     align='center'
+            #                     ),
+            #                  palplot(m))
         return [k, m]
     else:
         warnings.warn("\nWarning: Defaulting to K-means ...",stacklevel=2)
@@ -137,4 +154,8 @@ def extract(path,
 
     if sort: colors = luminance_sort(colors)
     palette = rgb_to_hex(colors)
+
+    if show:
+        print("      ", palette, end="\n\n")
+        return palplot(palette)
     return palette
