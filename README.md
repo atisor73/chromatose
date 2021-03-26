@@ -103,7 +103,7 @@ Default interpolation (below) but can also turn this off (above).
     input lists of any size and user can control output size.
 
 There are a multitude of beautiful gradients in packages like bokeh and colorcet that are, for the most part, static. The interpolation scheme here can be used to create entirely new ones given only a few endpoints. This part is still in development, but currently uses linear or polynomial fits in color space metrics RGB, HSL, or HSV. Heatmaps are a good way to visualize the results!
-<!-- 
+<!--
 <img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/3interpolate1.png" width="60%" height="60%"> -->
 
 On the left are the input palettes, and on the right are the output palettes all approximately of size 256.
@@ -126,17 +126,19 @@ On the left are the input palettes, and on the right are the output palettes all
 
 
 ## `extraction` :camera:
+Testing out panel's new colorpicker widget! Useful for adjusting palettes to personal tastes.
+
 ### ct.extract( )
  - **`path`** : string of image path
- - **`n_colors`** : integer desired length
+ - **`n_colors`** : integer number of colors to extract
  - **`method`** : 'kmeans' or 'median' or 'both'
    algorithm of extraction either k-means clustering or median cut, default k-means
  - `resize` : boolean, default True
  resizing samples a smaller image, speeds up extraction
   - `sort` : boolean, default False
   amateur sort by luminance
-
-Testing out panel's new colorpicker widget! Useful for adjusting palettes to personal tastes.
+  - `show` : boolean, default True
+  prints palette, and returns panel object
 
 ## `command-line tools` :point_down:
 Palettes can be retrieved from command line:

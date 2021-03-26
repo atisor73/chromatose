@@ -100,7 +100,7 @@ def extract(path,
             method='kmeans',
             resize=True,
             sort=False,
-            show=False
+            show=True
             ):
     '''
     Arguments:
@@ -111,6 +111,7 @@ def extract(path,
         'kmeans', 'median', 'both'
     resize : shrink image for quicker return         (bool)
     sort : amateur sort by luminance                 (bool)
+    show : prints hex and returns panel object       (bool)
 
     Returns:
     --------
