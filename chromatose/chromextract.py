@@ -46,7 +46,7 @@ def main():
     args = parser.parse_args()
     print("...")
     km, mc = get_palette(args.path, args.ncolors, "both", args.resize, False)
-    if args.display:
+    if args.display or args.show:
         print(f"K-Means    (left):  {km}")
         print(f"Median Cut (right): {mc}")
         km, mc = hex_to_rgb(km), hex_to_rgb(mc)

@@ -230,10 +230,6 @@ algorithms. Defaults to 5 colors, resized, unsorted, and not displayed.
 
 <img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/leda.png" width="85%" height="85%">
 
-**quinone**
-
-<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/quinone.png" width="85%" height="85%">
-
 **rory**
 
 <img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/rory.png" width="85%" height="85%">
@@ -277,6 +273,11 @@ algorithms. Defaults to 5 colors, resized, unsorted, and not displayed.
 **juniper**
 
 <img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/juniper.png" width="85%" height="85%">
+
+**quinone**
+
+<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/quinone.png" width="85%" height="85%">
+
 
 **minuit**
 
