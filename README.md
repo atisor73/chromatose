@@ -25,7 +25,7 @@ harmon | abed | shirley | surely |  annie
 pierce | britta | strogatz | lutz | writhe
 perl\* | roosh  | seafare | heliotrope | moonbow
 peanuts | naval | indomie  |  maggie | rainbow
-diverging | ??? | ???  | ??? | orb\*
+??? | quinone | quinoline  | diverging | orb\*
 warble\* | waitomo\*  | vylette\*  |  pom\*  |  lava\*
 pumpkin\*  | pinctada\*  | nacre\* | moxxi\* | salvia\*
 bluefish | BuPu\* | holst | joker\* | rach\*
@@ -230,6 +230,10 @@ algorithms. Defaults to 5 colors, resized, unsorted, and not displayed.
 
 <img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/leda.png" width="85%" height="85%">
 
+**quinone**
+
+<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/quinone.png" width="85%" height="85%">
+
 **rory**
 
 <img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/rory.png" width="85%" height="85%">
@@ -333,6 +337,10 @@ algorithms. Defaults to 5 colors, resized, unsorted, and not displayed.
 **maggie**
 
 <img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/maggie.png" width="85%" height="85%">
+
+**quinoline**
+
+<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/quinoline.png" width="85%" height="85%">
 
 **peanuts**
 
