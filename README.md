@@ -143,13 +143,13 @@ Testing out panel's new colorpicker widget! Useful for adjusting palettes to per
 ## `command-line tools` :point_down:
 Palettes can be retrieved from command line:
  ```sh
- >>> chromatrieve leda
+ >>> chromatose leda
  >>> ['#2c2f30', '#8fa7d7', '#afd7d6', '#aa3731', '#f5b3b8']
 ```
 
 Palettes can be extracted from command line:
  ```sh
- >>> chromextract egg.png
+ >>> extract egg.png
  >>> K-Means:    ['#050002', '#0c1c7b', '#013adc', '#1b143a', '#294254']
  >>> Median Cut: ['#040000', '#080006', '#1e1b3c', '#1e2d61', '#0330bd']
 
@@ -160,7 +160,6 @@ algorithms. Defaults to 5 colors, resized, unsorted, and not displayed.
 
   -n , --ncolors   length of palette (int, default 5)
   -r , --resize    resize for efficiency (bool, default True)
-  -d , --display   display pillow swatches (bool, default False)
   -s , --show      display pillow swatches (bool, default False)
  ```
 
@@ -369,14 +368,6 @@ algorithms. Defaults to 5 colors, resized, unsorted, and not displayed.
 **clementine**
 
 <img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/clementine.png" width="73%" height="73%">
-
-**alice**
-
-<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/alice.png" width="73%" height="73%">
-
-**wes**
-
-<img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/wes.png" width="73%" height="73%">
 
 **diverging**
 

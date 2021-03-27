@@ -38,15 +38,13 @@ def main():
                         help="length of palette     (int, default 5)",)
     parser.add_argument('-r','--resize',type=str2bool, default=True, metavar='',
                         help="resize for efficiency (bool, default True)",)
-    parser.add_argument('-d','--display', type=str2bool, default=False, metavar='',
-                        help="display pillow swatches (bool, default False)")
     parser.add_argument('-s','--show', type=str2bool, default=False, metavar='',
                         help="display pillow swatches (bool, default False)")
 
     args = parser.parse_args()
     print("...")
     km, mc = get_palette(args.path, args.ncolors, "both", args.resize, False)
-    if args.display or args.show:
+    if args.show:
         print(f"K-Means    (left):  {km}")
         print(f"Median Cut (right): {mc}")
         km, mc = hex_to_rgb(km), hex_to_rgb(mc)

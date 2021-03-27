@@ -4,18 +4,18 @@ long_description = "Chromatose is a package for storing and visualizing palettes
 
 setup(
     name="chromatose",
-    version="1.0.0",
+    version="1.0.1",
     description="Personal palette collection, palette visualizer, interpolator, and extractor",
     long_description=long_description,
     url="https://github.com/atisor73/chromatose",
-    download_url="https://github.com/atisor73/chromatose/archive/v1.0.0.tar.gz",
+    download_url="https://github.com/atisor73/chromatose/archive/v1.0.1.tar.gz",
     license="MIT",
     author='Rosita Fu',
     author_email='rosita.fu99@gmail.com',
     packages=find_packages(),
     entry_points ={ 'console_scripts':
-                        ['chromatrieve = chromatose.chromatrieve:main',
-                         'chromextract = chromatose.chromextract:main'
+                        ['chromatose = chromatose.chromatrieve:main',
+                         'extract = chromatose.chromextract:main'
                         ] },
     install_requires=['numpy','scipy','pandas','bokeh'],
     include_package_data=True,
