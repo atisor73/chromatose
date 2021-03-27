@@ -17,6 +17,6 @@ from .colorpicker import *
 
 
 __author__ = "Rosita Fu"
-__version__ = "1.0.1"
+__version__ = "1.0.2"
 __license__ = "MIT"
 __email__ = "rfu@caltech.edu"
