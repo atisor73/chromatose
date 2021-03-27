@@ -20,6 +20,7 @@ def get_palette(path, n_colors, method, resize, sort):
                    method=method,
                    resize=resize,
                    sort=sort,
+                   show=False
                    )
 
 def imager(n, palette):
