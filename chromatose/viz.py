@@ -12,7 +12,7 @@ from . import palettes
 
 try:
     import panel as pn     # see if panel is installed
-    pn.extension()
+#    pn.extension()
     _panel = True
 except:
     _panel = False

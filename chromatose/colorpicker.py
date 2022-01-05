@@ -2,7 +2,6 @@
 import warnings
 import numpy as np
 import panel as pn
-pn.extension()
 
 from .utils import *
 

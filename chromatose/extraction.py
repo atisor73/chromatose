@@ -12,7 +12,6 @@ from PIL import Image
 from sklearn.cluster import KMeans
 from .utils import *
 from .viz import *
-pn.extension()
 
 class _ColorBox(object):
     """

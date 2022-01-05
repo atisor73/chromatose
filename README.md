@@ -2,7 +2,6 @@
 <hr>
 A package for storing and visualizing palettes, and constructing new ones via polynomial interpolation and image extraction. Now pippable!
 <br><br>
-
 *This package borrows inspiration from @jmaasch's scatterplots in her package [`sanzo`](https://github.com/jmaasch/sanzo), and uses extraction algorithms from @qTipTip's package [`Pylette`](https://github.com/qTipTip/Pylette).*
 
 
@@ -59,11 +58,12 @@ Testing out panel's new colorpicker widget! Useful for adjusting palettes to per
 ### ct.swatch( )
 watch me swatch...
  <img src="https://raw.githubusercontent.com/atisor73/chromatose/master/imgs/1swatch.jpg" width="100%" height="100%">
+
 - **`palette`** : list or iterable
     any combination of hex strings or rgb tuples or HTML names
 - `alpha` : fraction between 0.0 and 1.0
     *alpha transparency of entire palette*
- -->
+     -->
 
 <!--
 ### ct.heatmap( )
@@ -126,7 +126,7 @@ On the left are the input palettes, and on the right are the output palettes all
 
 
 ## `extraction` :camera:
-Testing out panel's new colorpicker widget! Useful for adjusting palettes to personal tastes.
+Extract palette of size `n_colors` from image given image path using k-means or median cut algorithms.
 
 ### ct.extract( )
  - **`path`** : string of image path
@@ -136,16 +136,16 @@ Testing out panel's new colorpicker widget! Useful for adjusting palettes to per
  - `resize` : boolean, default True
  resizing samples a smaller image, speeds up extraction
   - `sort` : boolean, default False
-  amateur sort by luminance
+    amateur sort by luminance
   - `show` : boolean, default True
-  prints palette, and returns panel object
+    prints palette and returns panel object
 
 ## `command-line tools` :point_down:
 Palettes can be retrieved from command line:
  ```sh
  >>> chromatose leda
  >>> ['#2c2f30', '#8fa7d7', '#afd7d6', '#aa3731', '#f5b3b8']
-```
+ ```
 
 Palettes can be extracted from command line:
  ```sh
