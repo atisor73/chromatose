@@ -4,8 +4,11 @@ A package for storing and visualizing palettes, and constructing new ones via po
 <br><br>
 *This package borrows inspiration from @jmaasch's scatterplots in her package [`sanzo`](https://github.com/jmaasch/sanzo), and uses extraction algorithms from @qTipTip's package [`Pylette`](https://github.com/qTipTip/Pylette).*
 
+<br>
+<br>
 
-## `palettes` :art:
+
+# Palettes :art:
 
 |          |          |         |           |          |
 |----------|----------|----------|----------|----------|
@@ -94,6 +97,49 @@ Default interpolation (below) but can also turn this off (above).
 
  -->
 
+<br>
+<br>
+
+# `Color mapping` 
+
+### map_palette( )
+Given palette and 1D quantitative axis, returns list of mapped colors. Uses min and max to first and last of palette
+ - **`q`** : 1D quantitative axis, numpy array
+ - **`palette`** : color palette to map to
+ - Returns `colors`: list of mapped colors
+
+### map_palette_thresh( )
+Given palette and 1D quantitative axis, returns list of mapped colors. Instead of min and max of dataset, uses customized end points. 
+
+For example, a dataset may range from (-1, 1), and you want extreme colors to reflect those bounds, not necessarily your dataset's range. 
+ - **`q`** : 1D quantitative axis, numpy array
+ - **`palette`** : color palette to map to
+ - **`q_min_thresh`** : minimum threshold, default -infinity
+ - **`q_max_thresh`** : maximum threshold, default +infinity
+ - **`min_color`** : color to map minimum threshold to (otherwise set to first color in palette)
+ - **`max_color`** : color to map maximum threshold to (otherwise set to last color in palette)
+ - **`nan_color`** : color to map nan values to
+ - Returns **`colors`**: list of mapped colors
+
+
+### map_palette_diverging( )
+For customizing diverging palettes with variable breakpoints and thresholds.
+
+For example, a dataset may range from (-x, +y), and you want zero to be the color/point at which the colors diverge.
+
+This function assumes you pass in a balanced palette, but 'midpoint' can approximately adjust this.
+ - **`q`** : 1D quantitative axis, numpy array
+ - **`palette`** : color palette to map to
+ - **`q_dividing`** : dividing numeric value corresponding to divergence in palette
+ - **`q_min_thresh`** : minimum threshold, default -infinity
+ - **`q_max_thresh`** : maximum threshold, default -infinity
+ - **`nan_color`** : color to map nan values to, default black
+ - **`midpoint`** : fraction, where to set midpoint of colorbar to, default 0.5
+ - Returns **`colors`**: list of mapped colors
+
+
+<br>
+<br>
 
 
 # Interpolation 
@@ -124,6 +170,8 @@ On the left are the input palettes, and on the right are the output palettes all
     *'up' pushes intermediate values higher (lighter)*
     *'down' pushes intermediate values lower (darker)*
 
+<br>
+<br>
 
 # Extraction :camera:
 Extract palette of size `n_colors` from image given image path using k-means or median cut algorithms.
@@ -140,47 +188,8 @@ Extract palette of size `n_colors` from image given image path using k-means or 
   - `show` : boolean, default True
     prints palette and returns panel object
 
-
-# `Color mapping` 
-
-### map_palette( )
-Given palette and 1D quantitative axis, returns list of mapped colors. Uses min and max to first and last of palette
- - **`q`** : 1D quantitative axis, numpy array
- - **`palette`** : color palette to map to
- - Returns `colors`: list of mapped colors
-
-### map_palette_thresh( )
-Given palette and 1D quantitative axis, returns list of mapped colors. Instead of min and max of dataset, uses customized end points. 
-
-For example, a dataset may range from (-1, 1), and you want extreme colors to reflect those bounds, not necessarily your dataset's range. 
-
- - **`q`** : 1D quantitative axis, numpy array
- - **`palette`** : color palette to map to
- - **`q_min_thresh`** : minimum threshold, default -infinity
- - **`q_max_thresh`** : maximum threshold, default +infinity
- - **`min_color`** : color to map minimum threshold to (otherwise set to first color in palette)
- - **`max_color`** : color to map maximum threshold to (otherwise set to last color in palette)
- - **`nan_color`** : color to map nan values to
- - Returns **`colors`**: list of mapped colors
-
-
-### map_palette_diverging( )
-For customizing diverging palettes with variable breakpoints and thresholds.
-
-For example, a dataset may range from (-x, +y), and you want zero to be the color/point at which the colors diverge.
-
-This function assumes you pass in a balanced palette, but 'midpoint' can approximately adjust this.
-
- - **`q`** : 1D quantitative axis, numpy array
- - **`palette`** : color palette to map to
- - **`q_dividing`** : dividing numeric value corresponding to divergence in palette
- - **`q_min_thresh`** : minimum threshold, default -infinity
- - **`q_max_thresh`** : maximum threshold, default -infinity
- - **`nan_color`** : color to map nan values to, default black
- - **`midpoint`** : fraction, where to set midpoint of colorbar to, default 0.5
-
- - Returns **`colors`**: list of mapped colors
-
+<br>
+<br>
 
 # Command line tools
 Palettes can be retrieved from command line:
@@ -204,6 +213,9 @@ algorithms. Defaults to 5 colors, resized, unsorted, and not displayed.
   -r , --resize    resize for efficiency (bool, default True)
   -s , --show      display pillow swatches (bool, default False)
  ```
+<br>
+<br>
+
 
 # Gallery :rainbow:
 
