@@ -156,13 +156,30 @@ For example, a dataset may range from (-1, 1), and you want extreme colors to re
 
  - **`q`** : 1D quantitative axis, numpy array
  - **`palette`** : color palette to map to
- - **`q_max_thresh`** : maximum threshold, default +infinity
  - **`q_min_thresh`** : minimum threshold, default -infinity
- - **`max_color`** : color to map maximum threshold to (otherwise set to last color in palette)
+ - **`q_max_thresh`** : maximum threshold, default +infinity
  - **`min_color`** : color to map minimum threshold to (otherwise set to first color in palette)
+ - **`max_color`** : color to map maximum threshold to (otherwise set to last color in palette)
  - **`nan_color`** : color to map nan values to
  - Returns **`colors`**: list of mapped colors
 
+
+### map_palette_diverging( )
+For customizing diverging palettes with variable breakpoints and thresholds.
+
+For example, a dataset may range from (-x, +y), and you want zero to be the color/point at which the colors diverge.
+
+This function assumes you pass in a balanced palette, but 'midpoint' can approximately adjust this.
+
+ - **`q`** : 1D quantitative axis, numpy array
+ - **`palette`** : color palette to map to
+ - **`q_dividing`** : dividing numeric value corresponding to divergence in palette
+ - **`q_min_thresh`** : minimum threshold, default -infinity
+ - **`q_max_thresh`** : maximum threshold, default -infinity
+ - **`nan_color`** : color to map nan values to, default black
+ - **`midpoint`** : fraction, where to set midpoint of colorbar to, default 0.5
+
+ - Returns **`colors`**: list of mapped colors
 
 
 # Command line tools
