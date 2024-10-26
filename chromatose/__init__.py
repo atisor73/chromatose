@@ -14,9 +14,9 @@ from .utils import *
 from .heat import *
 from .extraction import *
 from .colorpicker import *
-
+from .mapper import *
 
 __author__ = "Rosita Fu"
-__version__ = "1.0.2"
+__version__ = "2.0.0"
 __license__ = "MIT"
-__email__ = "rfu@caltech.edu"
+__email__ = "rosita.fu99@gmail.com"

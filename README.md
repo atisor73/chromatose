@@ -36,7 +36,7 @@ emporium | paired  | category20a  | category20b  | category20c
 \[[discrete](https://github.com/atisor73/chromatose#discrete)\] \[[monochrome continuous](https://github.com/atisor73/chromatose#monochrome-continuous)\] \[[polychromatic continuous](https://github.com/atisor73/chromatose#polychromatic-continuous)] \[[bokeh](https://github.com/atisor73/chromatose#bokeh)\]
 
 
-## `viz` :eyes:
+# Viz :eyes:
 
 ### ct.palplot( )
 Visualizations include swatches, pies, points, lines, scatters. Somewhat helpful for seeing how colors behave on a plot, in dense or scattered visuals. Sometimes colors look great together on a swatch, but not so great in their pointillistic forms.
@@ -96,7 +96,7 @@ Default interpolation (below) but can also turn this off (above).
 
 
 
-## `interpolation` :scissors:
+# Interpolation 
 
 ### ct.palpolate( )
  `palpolate` (<em>pal</em>-(ette inter)-<em>polate</em>):
@@ -125,7 +125,7 @@ On the left are the input palettes, and on the right are the output palettes all
     *'down' pushes intermediate values lower (darker)*
 
 
-## `extraction` :camera:
+# Extraction :camera:
 Extract palette of size `n_colors` from image given image path using k-means or median cut algorithms.
 
 ### ct.extract( )
@@ -140,7 +140,32 @@ Extract palette of size `n_colors` from image given image path using k-means or 
   - `show` : boolean, default True
     prints palette and returns panel object
 
-## `command-line tools` :point_down:
+
+# `Color mapping` 
+
+### map_palette( )
+Given palette and 1D quantitative axis, returns list of mapped colors. Uses min and max to first and last of palette
+ - **`q`** : 1D quantitative axis, numpy array
+ - **`palette`** : color palette to map to
+ - Returns `colors`: list of mapped colors
+
+### map_palette_thresh( )
+Given palette and 1D quantitative axis, returns list of mapped colors. Instead of min and max of dataset, uses customized end points. 
+
+For example, a dataset may range from (-1, 1), and you want extreme colors to reflect those bounds, not necessarily your dataset's range. 
+
+ - **`q`** : 1D quantitative axis, numpy array
+ - **`palette`** : color palette to map to
+ - **`q_max_thresh`** : maximum threshold, default +infinity
+ - **`q_min_thresh`** : minimum threshold, default -infinity
+ - **`max_color`** : color to map maximum threshold to (otherwise set to last color in palette)
+ - **`min_color`** : color to map minimum threshold to (otherwise set to first color in palette)
+ - **`nan_color`** : color to map nan values to
+ - Returns **`colors`**: list of mapped colors
+
+
+
+# Command line tools
 Palettes can be retrieved from command line:
  ```sh
  >>> chromatose leda
@@ -163,7 +188,7 @@ algorithms. Defaults to 5 colors, resized, unsorted, and not displayed.
   -s , --show      display pillow swatches (bool, default False)
  ```
 
-# gallery :rainbow:
+# Gallery :rainbow:
 
 ## [`discrete`](https://github.com/atisor73/chromatose#palettes-art)
 
