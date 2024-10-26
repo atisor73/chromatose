@@ -38,6 +38,8 @@ emporium | paired  | category20a  | category20b  | category20c
 
 \[[discrete](https://github.com/atisor73/chromatose#discrete)\] \[[monochrome continuous](https://github.com/atisor73/chromatose#monochrome-continuous)\] \[[polychromatic continuous](https://github.com/atisor73/chromatose#polychromatic-continuous)] \[[bokeh](https://github.com/atisor73/chromatose#bokeh)\]
 
+<br>
+<br>
 
 # Viz :eyes:
 
